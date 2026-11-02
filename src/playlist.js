@@ -12,6 +12,7 @@ export class TrainingPlaylist {
     if(!this.mode)return null;
     return {...this.base,skills:[...this.base.skills],drill:this.mode,duration:this.duration,difficulty:this.difficulty,
       playlistId:this.id,playlistIndex:this.index,rehearsal:false,seed:((this.base.seed??0)+this.index)>>>0,
+      ...(this.mode==='combat'?{combatHazards:true,combatCircuit:'on'}:{}),
       ...(this.mode==='vault'?{champion:'quinn',speed:330,level:Math.max(6,this.base.level)}:{})};
   }
   complete(report){

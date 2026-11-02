@@ -110,8 +110,8 @@ async function selectChampion(id,{defaults=true}={}){
       $('animationClip').replaceChildren(...clips.map(c=>{const option=document.createElement('option');option.value=c.name;option.textContent=(leblancClipLabels[c.name]||c.name)+' · '+c.name;return option;}));$('animationClip').value=id==='quinn'?'quinn_idle1':id==='syndra'?'syndra_idle1':'idle1';
     }
     combatView.syndraEffects.setOrbAnchors?.(id==='syndra'?[1,2,3].map(n=>model.getObjectByName('Buffbone_CSTM_Orb_'+n)):[]);
-    if(defaults&&id==='quinn'){if(ui.drill!=='vault')ui.selectDrill('combat');$('combatCircuit').value='off';$('combatHazards').checked=false;const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.668*(1+.031*growth)).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
-    if(defaults&&id==='syndra'){ui.selectDrill('combat');$('combatCircuit').value='off';$('combatHazards').checked=false;$('controls').hidden=false;const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.658+.625*.02*growth).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
+    if(defaults&&id==='quinn'){if(ui.drill!=='vault')ui.selectDrill('combat');const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.668*(1+.031*growth)).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
+    if(defaults&&id==='syndra'){ui.selectDrill('combat');$('controls').hidden=false;const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.658+.625*.02*growth).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
     if(defaults){speed=champions[id].moveSpeed;$('speed').value=speed;$('speedValue').textContent=speed+' u/s';}
     setPlayerAnimation(false);window.__modelLoaded=true;$('status').textContent='● '+champions[id].name+' pronta · modelos e animações originais';
     return true;

@@ -27,3 +27,10 @@ test('playlist scores compare across playlists but not with single-life standalo
   const a=new TrainingPlaylist(base),b=new TrainingPlaylist(base);assert.equal(settingsKey(a.config()),settingsKey(b.config()));
   const {playlistId,playlistIndex,...standalone}=a.config();assert.notEqual(settingsKey(standalone),settingsKey(a.config()));
 });
+
+test('playlist combat cannot inherit isolated warmup settings from champion selection or another drill',()=>{
+  const p=new TrainingPlaylist({...base,combatHazards:false,combatCircuit:'off'});
+  while(p.mode!=='combat')p.complete({config:p.config()});
+  assert.equal(p.config().combatHazards,true);assert.equal(p.config().combatCircuit,'on');
+  assert.equal(p.base.combatHazards,false);assert.equal(p.base.combatCircuit,'off');
+});

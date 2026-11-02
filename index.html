@@ -82,7 +82,7 @@
             <label>Velocidade de ataque <output id="attackSpeedValue">1,50 / s</output><input id="attackSpeed" type="range" min="0.5" max="3" step="0.01" value="1.5" /></label>
             <label>Prioridade do ataque-movimento<select id="attackPriority"><option value="cursor">Alvo próximo do cursor</option><option value="champion">Alvo próximo do campeão</option></select></label>
             <label><input id="bindLeft" type="checkbox" checked /> Vincular ataque-movimento ao esquerdo</label>
-            <label><input id="combatHazards" type="checkbox" checked /> Habilidades durante o combate</label>
+            <label><input id="combatHazards" type="checkbox" checked /> Pressão inimiga · desmarcar para aquecimento</label>
             <p class="hint">A mostra o alcance até o clique esquerdo. Direito no alvo ataca; direito no chão move. S cancela a ordem. Desative as habilidades para aquecer.</p>
             <p class="hint" id="combatTargetHint">Alvos com 600 de vida reaparecem após cair. Dano fixo de treino: 60 por ataque; cada habilidade recebida tira 100 de vida.</p>
             <p class="hint" id="combatCircuitHint">Circuito avançado: três alvos, trocas imprevisíveis e passos de 45 / 70 / 95 u para pontuar ataques consecutivos. Intensidade pede três disparos por alvo; os demais, dois. Atacar parado continua causando dano, mas não completa o objetivo. O prazo considera sua velocidade de ataque.</p>
@@ -134,7 +134,7 @@
         <p>Percorra os nove modos, um por vez, com a mesma duração e dificuldade.</p>
         <div class="session-options"><label>Tempo de cada bloco<select id="playlistDuration"><option value="60">60 segundos</option><option value="90">90 segundos</option><option value="120">120 segundos</option></select></label><label>Dificuldade<select id="playlistDifficulty"><option value="1">Fácil · Leitura</option><option value="2" selected>Médio · Consistência</option><option value="3">Difícil · Intensidade</option></select></label></div>
         <p id="playlistEstimate"></p><ol id="playlistOrder"></ol>
-        <p class="hint">Mantém seu campeão, perfil e ajustes. Quinn × LeBlanc usa Quinn; depois, seu campeão retorna. Pausas e carregamento não contam no relógio. Habilidades em curso terminam antes da troca. Se a vida acabar, ela é restaurada e a queda fica registrada para completar o tempo do bloco.</p>
+        <p class="hint">Mantém seu campeão e perfil. Kiting sempre inclui circuito e habilidades inimigas. Quinn × LeBlanc usa Quinn; depois, seu campeão retorna. Pausas e carregamento não contam no relógio. Habilidades em curso terminam antes da troca. Se a vida acabar, ela é restaurada e a queda fica registrada para completar o tempo do bloco.</p>
         <button id="beginPlaylist" type="submit" class="primary">Iniciar playlist ▶</button>
       </form>
       <section id="playlistSummary" hidden><p id="playlistSummaryText"></p><div id="playlistReports"></div></section>
