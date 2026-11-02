@@ -1,0 +1,254 @@
+{
+  "skinScale": 1.2999999523162842,
+  "texture": "quinn_base_tx_cm.png",
+  "model": "quinn.glb",
+  "valorSkinScale": 2.5,
+  "valorTexture": "quinnvalor_base_tx_cm.png",
+  "valorModel": "valor.glb",
+  "models": [
+    {
+      "file": "quinn.glb",
+      "mesh": "ASSETS/Characters/Quinn/Skins/Base/Quinn_Base.skn",
+      "skeleton": "ASSETS/Characters/Quinn/Skins/Base/Quinn_Base.skl",
+      "animations": [
+        "assets/characters/quinn/skins/base/animations/quinn_death.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_attack1.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell1.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell3_dash.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell3_flip.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_run.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_idle1_in.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_idle1.anm",
+        "assets/characters/quinn/skins/base/animations/recall_quinn_new.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_run_fast.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_joke.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_laugh.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_taunt.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_channel.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_channel_leadin.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_channel_windup.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_idle2.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_idle3.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_leadin.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_respawn.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_run_haste.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_dance_in.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_dance.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_attack2.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_attack3.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_attack4.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_crit.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_attack1_p.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_stunned.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_flap.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_glide.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_idle.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_runin.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_idlein.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_channel.anm",
+        "assets/characters/quinn/skins/base/animations/quinn_spell4_idle_tra.anm"
+      ],
+      "clips": [
+        "quinn_attack1",
+        "quinn_attack1_p",
+        "quinn_attack2",
+        "quinn_attack3",
+        "quinn_attack4",
+        "quinn_channel",
+        "quinn_channel_leadin",
+        "quinn_channel_windup",
+        "quinn_crit",
+        "quinn_dance",
+        "quinn_dance_in",
+        "quinn_death",
+        "quinn_idle1",
+        "quinn_idle1_in",
+        "quinn_idle2",
+        "quinn_idle3",
+        "quinn_joke",
+        "quinn_laugh",
+        "quinn_respawn",
+        "quinn_run",
+        "quinn_run_fast",
+        "quinn_run_haste",
+        "quinn_spell1",
+        "quinn_spell3_dash",
+        "quinn_spell3_flip",
+        "quinn_spell4",
+        "quinn_spell4_channel",
+        "quinn_spell4_flap",
+        "quinn_spell4_glide",
+        "quinn_spell4_idle",
+        "quinn_spell4_idlein",
+        "quinn_spell4_idle_tra",
+        "quinn_spell4_leadin",
+        "quinn_spell4_runin",
+        "quinn_stunned",
+        "quinn_taunt",
+        "recall_quinn_new"
+      ],
+      "materials": [
+        "Quinn_Base_Body_Mat"
+      ]
+    },
+    {
+      "file": "valor.glb",
+      "mesh": "ASSETS/Characters/QuinnValor/Skins/Base/QuinnValor.skn",
+      "skeleton": "ASSETS/Characters/QuinnValor/Skins/Base/QuinnValor.skl",
+      "animations": [
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_attack1.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_attack2.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_channel.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_channel_windup.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_idle1.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_spell3_dash.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_spell4_in.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_run_flap.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_run_glide.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_attack3.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_idle1_in.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_run_in.anm",
+        "assets/characters/quinnvalor/skins/base/animations/quinnvalor_death.anm"
+      ],
+      "clips": [
+        "quinnvalor_attack1",
+        "quinnvalor_attack2",
+        "quinnvalor_attack3",
+        "quinnvalor_channel",
+        "quinnvalor_channel_windup",
+        "quinnvalor_death",
+        "quinnvalor_idle1",
+        "quinnvalor_idle1_in",
+        "quinnvalor_run_flap",
+        "quinnvalor_run_glide",
+        "quinnvalor_run_in",
+        "quinnvalor_spell3_dash",
+        "quinnvalor_spell4_in"
+      ],
+      "materials": [
+        "Base_MAT"
+      ]
+    },
+    {
+      "file": "valor-q.glb",
+      "mesh": "assets/characters/quinn/skins/base/particles/quinn_base_q_mis_valor.skn",
+      "skeleton": "assets/characters/quinn/skins/base/particles/quinn_base_q_mis_valor.skl",
+      "animations": [
+        "assets/characters/quinn/skins/base/particles/quinn_base_q_mis_birdflight.anm"
+      ],
+      "clips": [
+        "quinn_base_q_mis_birdflight"
+      ],
+      "materials": [
+        "___Default1"
+      ]
+    },
+    {
+      "file": "valor-hit.glb",
+      "mesh": "assets/characters/quinn/skins/base/particles/quinn_base_q_aoe_unit_tar_valor.skn",
+      "skeleton": "assets/characters/quinn/skins/base/particles/quinn_base_q_aoe_unit_tar_valor.skl",
+      "animations": [
+        "assets/characters/quinn/skins/base/particles/quinn_base_q_aoe_unit_tar_valor.anm"
+      ],
+      "clips": [
+        "quinn_base_q_aoe_unit_tar_valor"
+      ],
+      "materials": [
+        "___Default1"
+      ]
+    },
+    {
+      "file": "valor-cast.glb",
+      "mesh": "assets/characters/quinn/skins/base/particles/quinnvalor_q.skn",
+      "skeleton": "assets/characters/quinn/skins/base/particles/quinnvalor_q.skl",
+      "animations": [
+        "assets/characters/quinn/skins/base/particles/quinnvalor_q_bird_cast04.anm",
+        "assets/characters/quinn/skins/base/particles/quinnvalor_q_bird_flight04.anm",
+        "assets/characters/quinn/skins/base/particles/quinnvalor_dive.anm",
+        "assets/characters/quinn/skins/base/particles/quinnvalor_respawn.anm"
+      ],
+      "clips": [
+        "quinnvalor_dive",
+        "quinnvalor_q_bird_cast04",
+        "quinnvalor_q_bird_flight04",
+        "quinnvalor_respawn"
+      ],
+      "materials": [
+        "___Default1"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "file": "quinn_base_tx_cm.png",
+      "source": "assets/characters/quinn/skins/base/quinn_base_tx_cm.tex"
+    },
+    {
+      "file": "quinnvalor_props_01.png",
+      "source": "assets/characters/quinn/skins/base/particles/quinnvalor_props_01.tex"
+    },
+    {
+      "file": "quinn_base_q_aoe_unit_tar_valor.png",
+      "source": "assets/characters/quinn/skins/base/particles/quinn_base_q_aoe_unit_tar_valor.tex"
+    },
+    {
+      "file": "quinn_base_q_mis_valor.png",
+      "source": "assets/characters/quinn/skins/base/particles/quinn_base_q_mis_valor.tex"
+    },
+    {
+      "file": "quinn_base_r_channel_whisp.png",
+      "source": "assets/characters/quinn/skins/base/particles/quinn_base_r_channel_whisp.tex"
+    },
+    {
+      "file": "quinn_base_r_light.png",
+      "source": "assets/characters/quinn/skins/base/particles/quinn_base_r_light.tex"
+    },
+    {
+      "file": "quinnvalor_base_tx_cm.png",
+      "source": "assets/characters/quinnvalor/skins/base/quinnvalor_base_tx_cm.tex"
+    }
+  ],
+  "graphClips": {
+    "Death": "quinn_death",
+    "Attack1_BASE": "quinn_attack1",
+    "Spell1": "quinn_spell1",
+    "Spell2": "quinn_attack1",
+    "Spell3_Dash": "quinn_spell3_dash",
+    "Spell3_Flip": "quinn_spell3_flip",
+    "Run_Base": "quinn_run",
+    "Idle1_In": "quinn_idle1_in",
+    "Idle1_Base": "quinn_idle1",
+    "Recall": "recall_quinn_new",
+    "Run_Fast": "quinn_run_fast",
+    "Joke": "quinn_joke",
+    "Laugh": "quinn_laugh",
+    "Taunt": "quinn_taunt",
+    "Channel": "quinn_channel",
+    "{85f5ff0e}": "quinn_channel_leadin",
+    "{eb81fc58}": "quinn_channel_windup",
+    "Idle2_Base": "quinn_idle2",
+    "{ce7c7aad}": "quinn_idle3",
+    "Spell4": "quinn_spell4",
+    "Spell4_In": "quinn_spell4_leadin",
+    "Respawn": "quinn_respawn",
+    "Recall_Winddown": "quinn_respawn",
+    "Run_Haste": "quinn_run_haste",
+    "Dance_IN_Base": "quinn_dance_in",
+    "Dance_Base": "quinn_dance",
+    "Attack2": "quinn_attack2",
+    "Attack3": "quinn_attack3",
+    "Attack4": "quinn_attack4",
+    "Crit": "quinn_crit",
+    "Attack1_P": "quinn_attack1_p",
+    "Stunned": "quinn_stunned",
+    "Channel_Wndup": "quinn_channel_windup",
+    "{612de21d}": "quinn_spell4_flap",
+    "{aa948a27}": "quinn_spell4_glide",
+    "{fa7f7bc7}": "quinn_spell4_idle",
+    "{cea83889}": "quinn_spell4_runin",
+    "{9cff9943}": "quinn_spell4_idlein",
+    "Spell4_Channel": "quinn_spell4_channel",
+    "{3195954a}": "quinn_spell4_idle_tra"
+  }
+}

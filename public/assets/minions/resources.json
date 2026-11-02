@@ -1,0 +1,148 @@
+{
+  "blue-melee": {
+    "model": "blue-melee.glb",
+    "texture": "blue-melee.png",
+    "scale": 0.699999988079071,
+    "idle": "minion_melee_idle",
+    "run": "minion_melee_run",
+    "death": "minion_melee_death",
+    "attacks": [
+      "minion_melee_attack",
+      "minion_melee_attack2",
+      "minion_melee_attack3",
+      "minion_melee_attack3b"
+    ],
+    "castTime": 0.393,
+    "sourceCharacter": "sru_orderminionmelee",
+    "clipResources": [
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_idle.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_run.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_attack.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death4.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death2.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death3.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_attack2.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_attack3.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_attack3b.anm"
+    ]
+  },
+  "blue-caster": {
+    "model": "blue-caster.glb",
+    "texture": "blue-caster.png",
+    "scale": 0.7599999904632568,
+    "idle": "minion_caster_idle",
+    "run": "minion_caster_run",
+    "death": "minion_caster_death3",
+    "attacks": [
+      "minion_caster_attack2",
+      "minion_caster_attack1"
+    ],
+    "castTime": 0.47,
+    "sourceCharacter": "sru_orderminionranged",
+    "clipResources": [
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_idle.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_death3.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_attack2.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_death.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_death2.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_run.anm",
+      "assets/characters/sru_orderminionranged/skins/base/animations/minion_caster_attack1.anm"
+    ]
+  },
+  "blue-siege": {
+    "model": "blue-siege.glb",
+    "texture": "blue-siege.png",
+    "scale": 0.925000011920929,
+    "idle": "cannon_order_idle1",
+    "run": "cannon_order_run1",
+    "death": "cannon_order_death1",
+    "attacks": [
+      "cannon_order_attack1",
+      "cannon_order_attack2",
+      "cannon_order_attack3"
+    ],
+    "castTime": 0.3,
+    "sourceCharacter": "sru_orderminionsiege",
+    "clipResources": [
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_attack1.anm",
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_attack2.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_win1.anm",
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_death1.anm",
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_idle1.anm",
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_run1.anm",
+      "assets/characters/sru_orderminionsiege/skins/base/animations/cannon_order_attack3.anm"
+    ]
+  },
+  "red-melee": {
+    "model": "red-melee.glb",
+    "texture": "red-melee.png",
+    "scale": 0.7400000095367432,
+    "idle": "minion_melee_idle",
+    "run": "minion_melee_run",
+    "death": "minion_melee_death",
+    "attacks": [
+      "minion_melee_attack",
+      "minion_melee_attack2",
+      "minion_melee_attack3"
+    ],
+    "castTime": 0.393,
+    "sourceCharacter": "sru_chaosminionmelee",
+    "clipResources": [
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_idle.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_run.anm",
+      "assets/characters/sru_chaosminionmelee/skins/base/animations/minion_melee_attack.anm",
+      "assets/characters/sru_chaosminionmelee/skins/base/animations/minion_melee_attack2.anm",
+      "assets/characters/sru_chaosminionmelee/skins/base/animations/minion_melee_attack3.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death2.anm",
+      "assets/characters/sru_orderminionmelee/skins/base/animations/minion_melee_death3.anm"
+    ]
+  },
+  "red-caster": {
+    "model": "red-caster.glb",
+    "texture": "red-caster.png",
+    "scale": 0.8700000047683716,
+    "idle": "minion_caster_idle",
+    "run": "minion_caster_run",
+    "death": "minion_caster_chaos_death_2",
+    "attacks": [
+      "minion_caster_attack",
+      "minion_caster_attack2"
+    ],
+    "castTime": 0.47,
+    "sourceCharacter": "sru_chaosminionranged",
+    "clipResources": [
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_idle.anm",
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_attack.anm",
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_attack2.anm",
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_chaos_death_2.anm",
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_chaos_death.anm",
+      "assets/characters/sru_chaosminionranged/skins/base/animations/minion_caster_run.anm"
+    ]
+  },
+  "red-siege": {
+    "model": "red-siege.glb",
+    "texture": "red-siege.png",
+    "scale": 0.925000011920929,
+    "idle": "cannon_chaos_idle1",
+    "run": "cannon_chaos_run1",
+    "death": "cannon_chaos_death1",
+    "attacks": [
+      "cannon_chaos_attack1",
+      "cannon_chaos_attack2",
+      "cannon_chaos_attack3"
+    ],
+    "castTime": 0.3,
+    "sourceCharacter": "sru_chaosminionsiege",
+    "clipResources": [
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_attack1.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_attack2.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_win1.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_death1.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_idle1.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_run1.anm",
+      "assets/characters/sru_chaosminionsiege/skins/base/animations/cannon_chaos_attack3.anm"
+    ]
+  }
+}

@@ -1,0 +1,1862 @@
+{
+  "source": "E:\\Riot Games\\League of Legends\\Game\\DATA\\FINAL\\Champions\\Leblanc.wad.client",
+  "sha256": "b49e087f1943e7b659fe251b6cd3eb57ad1f8ee82813a6f1929ea16258058dfc",
+  "parser": "CDTB 1.3.0",
+  "records": [
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/weaponspin.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/weaponspin.anm",
+      "offset": 17909395,
+      "size": 34518,
+      "sha256": "06504cc2ada8f477b91487ff4dc57d9018d16aff52972c2ef24b3e5ea00f4e42"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/color-hold.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/color-hold.tex",
+      "offset": 107096,
+      "size": 52,
+      "sha256": "8ff12a02c07482dc2d0697f593f1680381b3bd21ad952be5609d9681b8b166e1"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell3.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell3.anm",
+      "offset": 32331156,
+      "size": 170918,
+      "sha256": "118962043d8604a59bc0a2f80f343733dd19382caa4f04b5b181e3b848f45736"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin5_skins_skin61.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin5_skins_skin61.bin",
+      "offset": 94896,
+      "size": 382,
+      "sha256": "54777f08f8221b09c58b30351ebc4343d2a3a898816c970149a3ed31842d299b"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin55.bin",
+      "localPath": "data/characters/leblanc/animations/skin55.bin",
+      "offset": 1137251,
+      "size": 18224,
+      "sha256": "caa7da3f16a8bbab2dee5cb3b507791916c7d38c8db20d5111d232c983619277"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_block.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_block.tex",
+      "offset": 39594757,
+      "size": 87420,
+      "sha256": "d10f267326c33add7e3bb5f7a2ea2892245690f10a2f52393d6173d29a87793e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_cape_maskscroll.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_cape_maskscroll.tex",
+      "offset": 47867806,
+      "size": 43716,
+      "sha256": "0242543b4b66737938c6eabdc4a01b87a44482588206447fd915af3ee27f66f2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_sharpedge_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_sharpedge_dissolve.tex",
+      "offset": 47599137,
+      "size": 43716,
+      "sha256": "1429550263874be4df0a786c5d1a645c8746896c0d52e63208a67c182d282294"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin8.bin",
+      "localPath": "data/characters/leblanc/skins/skin8.bin",
+      "offset": 9166883,
+      "size": 31138,
+      "sha256": "09b9a66fdfb5b03528856c851361015c32c358092657b29d4b27e13abb1946aa"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin6_skins_skin61_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_ski.0bb47758b046b773.bin",
+      "offset": 1000500,
+      "size": 2242,
+      "sha256": "de01a2b7c1c720301958ebd08509048ad224b768c9ce5c6adb24aaba3825876c"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin27.bin",
+      "localPath": "data/characters/leblanc/skins/skin27.bin",
+      "offset": 16965574,
+      "size": 54492,
+      "sha256": "0c633b32d35e102eefbf33589783f0f4d2f83bc43ed6c804608e7458e92e0af5"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard_dissolve.tex",
+      "offset": 31508345,
+      "size": 43716,
+      "sha256": "4b1129b28420c10e84728d0ffe8658d8ba43edd53730a4952b5e1d70a4cf98ae"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin16.bin",
+      "localPath": "data/characters/leblanc/skins/skin16.bin",
+      "offset": 15063653,
+      "size": 105352,
+      "sha256": "7d80beb729b6cfbf9c765cf9a6fbb1eb0ddb73f8bde84c13473342e2001af397"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_wisps.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_wisps.tex",
+      "offset": 36822157,
+      "size": 87420,
+      "sha256": "8e3366295a3ccca1a8835f7cf634c0411afdc527bc890e7982511e5a358b333c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/generic_glowsoft.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/generic_glowsoft.tex",
+      "offset": 28911685,
+      "size": 5500,
+      "sha256": "0df6814ec2241433b0106c23e81b6b3ebaaea7bfac8dde8ee30e290d38a3d1f0"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_cape_scrollingenergy.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_cape_scrollingenergy.tex",
+      "offset": 33427222,
+      "size": 43716,
+      "sha256": "b37b851373c7c553376ed177036b220d434f9ec469f70c9f506f36079301b15a"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_q_stanceswapswipe01.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_q_stanceswapswipe01.scb",
+      "offset": 37093256,
+      "size": 49216,
+      "sha256": "6b55bfea1831942a61e5e200d2d71fbb65dd9c7bb378b58b45ac3da2fb5fe123"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin19_skins_skin2_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin54_skins_skin58_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin19_skins_skin2_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_ski.17cfc5c757405531.bin",
+      "offset": 5850765,
+      "size": 32357,
+      "sha256": "ffdc3c829cb94f74011b1cd8466b225bed86e24847d20b15d0e0a9fb9f443ec5"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin25.bin",
+      "localPath": "data/characters/leblanc/skins/skin25.bin",
+      "offset": 18483081,
+      "size": 54542,
+      "sha256": "c394af6200926ceaa2ccd40a1a7300f96351be530d51b8815c8ca4f2a1864736"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin54_skins_skin58.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin54_skins_skin58.bin",
+      "offset": 61941356,
+      "size": 544996,
+      "sha256": "e1e3b2b4e4fc2d2619b3df8d5fb9e821d40714361e1e6bc0f6f0de598a941d37"
+    },
+    {
+      "path": "data/final/champions/leblanc.wad.subchunktoc",
+      "localPath": "data/final/champions/leblanc.wad.subchunktoc",
+      "offset": 63706951,
+      "size": 78912,
+      "sha256": "b85e737df1b27c48839f41cacb4dc96e8e2af3aef6d8bbb3ed617d2f0b5b7026"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_mark_mult.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_mark_mult.tex",
+      "offset": 7632524,
+      "size": 21884,
+      "sha256": "132225b727cbd51ccfbda3797caf9d67b7362045d85e32cfac5986390a0fd9b3"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile06.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile06.tex",
+      "offset": 52153426,
+      "size": 43740,
+      "sha256": "ff9eba31f8b9e8675b85fd5e7a70512e037d922ed723d188e8be157ac01d574e"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin41.bin",
+      "localPath": "data/characters/leblanc/skins/skin41.bin",
+      "offset": 7523278,
+      "size": 72507,
+      "sha256": "9ab5a6f33334abceb0926303a1d292043de9c3a9b7a7ac4f8ab51b1d8c6eb027"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin10_skins_skin11_skins_skin2_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin10_skins_skin11_skins_skin2_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "offset": 4243455,
+      "size": 47191,
+      "sha256": "5630adf0bca2c298d4987e0b936e89763a39849fb7ccbc920e919040c6ae25b7"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin25_skins_skin26_skins_skin33.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin25_skins_skin26_skins_skin33.bin",
+      "offset": 101316,
+      "size": 10813,
+      "sha256": "1ffe7d8de55cffe4368c29be290cbcdb6a532705771716d12d7a7c089a1c500f"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_shard.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_shard.tex",
+      "offset": 5743316,
+      "size": 87420,
+      "sha256": "278aaa7492572f127fdb58265d86cb4cf6651d239bdd602b3f7f557b08dc1448"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/stunned.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/stunned.anm",
+      "offset": 72066155,
+      "size": 38298,
+      "sha256": "f3de3dccff559ac425aae3b2905495a2f94b43f65900ebedfcb225014386790c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/idle1.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/idle1.anm",
+      "offset": 9912125,
+      "size": 42778,
+      "sha256": "3ba11b43ba0cba5933f315ab32457bc5556135f28dde39a327f92e1751919678"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell3_run.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell3_run.anm",
+      "offset": 1615001,
+      "size": 166742,
+      "sha256": "b599b5a35b0aea5550aeddebca21e9f1717c670ca5981f16e879cc91e4a41f54"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_skin04_z_streak.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_skin04_z_streak.tex",
+      "offset": 7868560,
+      "size": 5492,
+      "sha256": "c675e9d571f6d779509864b6864cda59107c74c836292a9100d3e81e8b7852f6"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18.bin",
+      "offset": 60859968,
+      "size": 297348,
+      "sha256": "d6697ddb4d54e309965472f27c2a9d2a0746f2b5ec5b9476c4b57f88a5d843c1"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblanc_base.skn",
+      "localPath": "assets/characters/leblanc/skins/base/leblanc_base.skn",
+      "offset": 91676531,
+      "size": 655768,
+      "sha256": "759ef5fc21a71cd4449290db49494a05974160a3cda4867d1f308c39a0db07b2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_iconmask.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_iconmask.tex",
+      "offset": 12246352,
+      "size": 21884,
+      "sha256": "029c7955568bc79a4f633ea99114111f0cdcf1b83c0379015a8623474bbe5cb7"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin37.bin",
+      "localPath": "data/characters/leblanc/skins/skin37.bin",
+      "offset": 57833158,
+      "size": 72507,
+      "sha256": "439f856675af9fc3e6f7b8e250730e1d52c79fdd07612150befe5ce2a6853e09"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_skin04_e_chainmult.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_skin04_e_chainmult.tex",
+      "offset": 45147702,
+      "size": 5492,
+      "sha256": "824d5f4d8516869ea98f9cb9e5e74587f8cc6e715e78c1ffa695323ec0f2976b"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin56.bin",
+      "localPath": "data/characters/leblanc/skins/skin56.bin",
+      "offset": 54940095,
+      "size": 164242,
+      "sha256": "943d466e0b3b539bd2197be2a6eddea868ca3b297a2cc45c17e8beb6b6d7d257"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/draven_base_w_color-hold.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/draven_base_w_color-hold.tex",
+      "offset": 107132,
+      "size": 68,
+      "sha256": "bc06557b44402fee1498430bd4008df9598085f44b29fea2f02218473674b2f8"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_linearsplashes_02_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_linearsplashes_02_dissolve.tex",
+      "offset": 17632539,
+      "size": 21884,
+      "sha256": "dbc236209848f6af7589c3a1608c6e29a004509d1dc3d20ed969ea3a42262ffa"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_decal001_dissolve2.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_decal001_dissolve2.tex",
+      "offset": 13219440,
+      "size": 43716,
+      "sha256": "c66dd103fa4788936048437ad97d686354443a68af3086da07f671310b00e7ae"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin2.bin",
+      "localPath": "data/characters/leblanc/animations/skin2.bin",
+      "offset": 1303435,
+      "size": 14836,
+      "sha256": "ed951c09faa13cad7c332e5e1834b8b54ed0d747df249d7df90d6cc6540fe258"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin60.bin",
+      "localPath": "data/characters/leblanc/skins/skin60.bin",
+      "offset": 22379660,
+      "size": 48154,
+      "sha256": "e10d9d119c982c64ed15fca2e771aee26432a2fa60a9f121a472ac82cd793aaa"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin55_skins_skin56_skins_skin57.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin55_skins_skin56_skins_skin57.bin",
+      "offset": 1760548,
+      "size": 74489,
+      "sha256": "96084df8519f7014a703f674bc4df12d73c509647a17775a601ad5dd2109544e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/death.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/death.anm",
+      "offset": 3648846,
+      "size": 130638,
+      "sha256": "025abb667d5be47138455d81a21075c845f42edeeeb0b6faed04ed88a0c112ec"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/fireball.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/fireball.scb",
+      "offset": 18367814,
+      "size": 87612,
+      "sha256": "023830b0f88d9dcdbda2cdf543bbe12eae4734addaf540d695171319efddd698"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin29.bin",
+      "localPath": "data/characters/leblanc/skins/skin29.bin",
+      "offset": 1867804,
+      "size": 60130,
+      "sha256": "58c07819edebc3312b176d433f705475538164a2c929badbbd2279e39001e536"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_impact_showckwaves.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_impact_showckwaves.tex",
+      "offset": 14313166,
+      "size": 87420,
+      "sha256": "a1b16f33a3060906a558b27b3b699517fe9a10464f1d9895ec56899294d086bf"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin4.bin",
+      "localPath": "data/characters/leblanc/animations/skin4.bin",
+      "offset": 5701423,
+      "size": 15355,
+      "sha256": "910a315e31abbfb8a8d55337b4dc9bdc857936bd0ae12c2b7f8e9911df4ebf2f"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain.tex",
+      "offset": 13409259,
+      "size": 10972,
+      "sha256": "9ef3f58f598d0bbe15afc6507f0a930a1aadb78da71352f385e3d2865edecfcc"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin19.bin",
+      "localPath": "data/characters/leblanc/animations/skin19.bin",
+      "offset": 1311516,
+      "size": 15166,
+      "sha256": "2f53042821311e1641be1342cf47e1c4b9fc57658cee9ee6753084767d74ca4b"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin55_skins_skin56_skins_skin57_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_ski.3910af62c14ce05c.bin",
+      "offset": 103702,
+      "size": 151,
+      "sha256": "a0709296034572f704f1e022abc9b5dd478f9f582ba5c8a962ddd89d7e935f73"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin38.bin",
+      "localPath": "data/characters/leblanc/skins/skin38.bin",
+      "offset": 32631379,
+      "size": 72535,
+      "sha256": "15f5fcfffea8d9bbe7ceec6282ba833679ae6a4d0f1d8e6e3e0692bb8ddbd8cd"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin7.bin",
+      "localPath": "data/characters/leblanc/skins/skin7.bin",
+      "offset": 11122247,
+      "size": 31138,
+      "sha256": "5c0db38ae3705d7816d84967d339d135d3f1c604243922bdb2db197cf22d244b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/sharp_flash_08.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/sharp_flash_08.tex",
+      "offset": 17224754,
+      "size": 10948,
+      "sha256": "34552f04a581323ffae289fdf76f2e7e3ebda4b715921fb2ee6bd97eff2b6cc2"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin11.bin",
+      "localPath": "data/characters/leblanc/skins/skin11.bin",
+      "offset": 22421196,
+      "size": 31140,
+      "sha256": "b6f3bcff25d7f6067fc82bfa292dbcf6d22ea1f4c2a5ee6098934786e887d141"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin55.bin",
+      "localPath": "data/characters/leblanc/skins/skin55.bin",
+      "offset": 61827953,
+      "size": 190188,
+      "sha256": "7e0ce2ee4e7002b1fa1988f369af8710da3cb000d1ae5c4077fdbcd44fc448fa"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin9.bin",
+      "localPath": "data/characters/leblanc/skins/skin9.bin",
+      "offset": 17925953,
+      "size": 31138,
+      "sha256": "b38fea44bbeccf7c39e35ee74875602cd3f415c86da85dde98047504b6ccbf43"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_blur_sharp.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_blur_sharp.tex",
+      "offset": 1217191,
+      "size": 87420,
+      "sha256": "6495ad8a0eeba7ec496212f6316a8d9355cb9358b41bc3cdf270226475f113bb"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/skin01_generic_sparks_add.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/skin01_generic_sparks_add.tex",
+      "offset": 35814483,
+      "size": 10948,
+      "sha256": "19c8c80151a8cebdad4661e27fe58c1c5121b6778953727dbbb7871f22a6bea5"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/wavestar_betweenround_forcefieldekko_skin11_flare.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/wavestar_betweenround_forcefieldekko_skin11_flare.tex",
+      "offset": 40746336,
+      "size": 10948,
+      "sha256": "60a1eb2bea7ecaaa4af16822a05415988e5af75b97de05eb5c97cfaddb875973"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin58.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin58.bin",
+      "offset": 1003508,
+      "size": 4212,
+      "sha256": "780f82b080c7db18a3aeb737b4e3cf89ec0e8a82310ae3293bb6ad72a212e734"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2_recast_idle.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2_recast_idle.anm",
+      "offset": 1046854,
+      "size": 99536,
+      "sha256": "3923f26032037996d9f10d0b8ef2870b8c000a65eabc052e1c6cf252656591a3"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin36.bin",
+      "localPath": "data/characters/leblanc/skins/skin36.bin",
+      "offset": 57045761,
+      "size": 72578,
+      "sha256": "002bdee5f92feda08914b1b3fd22c6169c49c6f7e52985fab26c45f61c97a52e"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin59.bin",
+      "localPath": "data/characters/leblanc/animations/skin59.bin",
+      "offset": 1197962,
+      "size": 16446,
+      "sha256": "26566baa18b36e87a052b15b03f2a83f9dabf204cf400f8fb95312a41a788cfa"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_q_dissolve01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_q_dissolve01.tex",
+      "offset": 21544059,
+      "size": 21884,
+      "sha256": "eab503b807abb785ed9b2769cfa50bf8c6c0320774b9450038c5d4d75ab2fbdf"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin40_skins_skin41_skins_skin42_skins_skin43_skins_skin44.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin40_skins_skin41_skins_skin42_skins_skin43_skins_skin44.bin",
+      "offset": 36964854,
+      "size": 489301,
+      "sha256": "f38b65ca0a562f6ca87238168d08f4cf248e770760857c96113344d8f9c67874"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin31.bin",
+      "localPath": "data/characters/leblanc/skins/skin31.bin",
+      "offset": 8872662,
+      "size": 60226,
+      "sha256": "7dc52ccb0039f949d7252eabca8ef57d34bcd70ffe3728e2111e3ba3b0d8f54f"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc.bin",
+      "localPath": "data/characters/leblanc/leblanc.bin",
+      "offset": 12495781,
+      "size": 39601,
+      "sha256": "5615c59ed5d65faa54f2ca29dcdbd5446749fa1c7798fc6b56ca0d8d205594f5"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/recall.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/recall.anm",
+      "offset": 49139171,
+      "size": 703274,
+      "sha256": "a50267f74af2a7daee5daec5471f692f7fe0c33d27de3b3a2118b643d8a28bc5"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_geosphere.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_geosphere.scb",
+      "offset": 14569031,
+      "size": 18152,
+      "sha256": "4dfba540409ede6dbb29b7d0d01d522a084a3307cb67b55a6729596236ce3a69"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_distortion_color.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_distortion_color.tex",
+      "offset": 116048,
+      "size": 1404,
+      "sha256": "9736d261fcd3633f8875ef9630b2ad7aa23c303bfcb5ebb1b9647eed10bdad66"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin33.bin",
+      "localPath": "data/characters/leblanc/skins/skin33.bin",
+      "offset": 71242630,
+      "size": 859892,
+      "sha256": "e278162888104390f9c994fb8d01bf95b0654cda8489907b003670fc022366bc"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/taunt.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/taunt.anm",
+      "offset": 6317915,
+      "size": 237088,
+      "sha256": "1a9b5d37c6b3eaac869e942dffe1e115aece31dce64a2d4db9ddd9ab25521df1"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2_recast.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2_recast.anm",
+      "offset": 22174362,
+      "size": 99656,
+      "sha256": "e2285ab94865c2dd58c81d8a5897695503213ae887af8a0d089718073f42a5be"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_indicator_mult.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_indicator_mult.tex",
+      "offset": 33066861,
+      "size": 21884,
+      "sha256": "3516c4efdfbf994d5f9c054546d9fc89d86f4c533c2addce384e5c8cce19a7f7"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_missile01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_missile01.tex",
+      "offset": 33174312,
+      "size": 174812,
+      "sha256": "f15bc27aea316116602e6f3381e3b92a02ac796d7836d86f17ff5b5ddf6c2549"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard_dissolve02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard_dissolve02.tex",
+      "offset": 52323856,
+      "size": 43716,
+      "sha256": "0641beabedf079043682508ec3d7fbcbf3c9b436ba5d4bc3baf63010ab96c013"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin42.bin",
+      "localPath": "data/characters/leblanc/skins/skin42.bin",
+      "offset": 50145454,
+      "size": 72507,
+      "sha256": "f97b827888d726847aa757e1a427c0b894cff932aa21733561f03fd5a173a371"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/kayn_base_q_spikes_tex.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/kayn_base_q_spikes_tex.tex",
+      "offset": 50194411,
+      "size": 21884,
+      "sha256": "f6425f6ef4dc7323553d3a55a4fc3683f235ef42dee14089df8e448206216bc4"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin4.bin",
+      "localPath": "data/characters/leblanc/skins/skin4.bin",
+      "offset": 69858746,
+      "size": 667205,
+      "sha256": "155dec207b6cc2fb1993123d640a6a9a5116be2cfb3833243de3a1d5f9a50f8c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_avatarmeshtexture.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_avatarmeshtexture.tex",
+      "offset": 9196145,
+      "size": 87420,
+      "sha256": "1bd789fca5e5dff2d61698dc85c575ce59a4d6cb518abefeb0a4cc97ac4f7798"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblanc_base_tx_cm.tex",
+      "localPath": "assets/characters/leblanc/skins/base/leblanc_base_tx_cm.tex",
+      "offset": 107728616,
+      "size": 699076,
+      "sha256": "0066b8e56c7a4092aef024ebcbf4c1f659de3df4471085a89a15a6cde1ec0618"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/defaultcoloroverlifetime.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/defaultcoloroverlifetime.tex",
+      "offset": 107132,
+      "size": 68,
+      "sha256": "bc06557b44402fee1498430bd4008df9598085f44b29fea2f02218473674b2f8"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "offset": 54861809,
+      "size": 491126,
+      "sha256": "233f0274621d3945ab6263482082f95b6d300394baaf3dee4eb10685bb9678d3"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin14.bin",
+      "localPath": "data/characters/leblanc/skins/skin14.bin",
+      "offset": 22390382,
+      "size": 105474,
+      "sha256": "98a94f990d469af22a2f8d5075dd63d9056157d6cb245fa515718d743c8b12df"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile04_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile04_dissolve.tex",
+      "offset": 21332274,
+      "size": 21876,
+      "sha256": "88763b60d5333e5c56ee9f7835938456686a5c60b7ebb020f67e5a793fb01b60"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_ski.610dd69d15bbb73b.bin",
+      "offset": 2922739,
+      "size": 6684,
+      "sha256": "fd18e540429d623e34c7564f1d12afde8dfb833afc8d6c1b562c38ee3bea2d9e"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin22.bin",
+      "localPath": "data/characters/leblanc/skins/skin22.bin",
+      "offset": 13436317,
+      "size": 54542,
+      "sha256": "8f072c0480973090d4f38498d688b6a33217d1fcc9c35cd5ccb20dc1df02a669"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin17.bin",
+      "localPath": "data/characters/leblanc/skins/skin17.bin",
+      "offset": 7533601,
+      "size": 105474,
+      "sha256": "9bbb2e7523f3bab7950c322ac274e9a3e3b7cec64fd655cc7b70ec7a1b9b9465"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_glow.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_glow.tex",
+      "offset": 1253371,
+      "size": 21884,
+      "sha256": "86f854b46438453832b37a304d0bd9c9e656ca74cf196ea9c0f31055f4d3baaa"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune04.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune04.tex",
+      "offset": 12428071,
+      "size": 87420,
+      "sha256": "f7dc2837a1ea7b747fa72e3bf43b3e32d9fb489cf15079830d79c8d2999316cb"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_sparkle.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_sparkle.tex",
+      "offset": 4795630,
+      "size": 5500,
+      "sha256": "79d62813ddceb78fbbfc3949d9ecb5249a0bd05985c85f33c51d976d27b026af"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_glow.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_glow.tex",
+      "offset": 21080916,
+      "size": 21884,
+      "sha256": "8ee21b71477ac4ddf1090f51e9a855a90db7392fe88583faa1caf71d307918ce"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblancloadscreen_0.tex",
+      "localPath": "assets/characters/leblanc/skins/base/leblancloadscreen_0.tex",
+      "offset": 11024329,
+      "size": 86252,
+      "sha256": "427b8f7074920aa3ed0ea8b7852492af4bd12d6232c2abc04878d802760612c6"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune02.tex",
+      "offset": 32534866,
+      "size": 174812,
+      "sha256": "65847340e1d27951bdf2ec01439d17c90947e6afc5c32769d1101681d4dce059"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin54.bin",
+      "localPath": "data/characters/leblanc/skins/skin54.bin",
+      "offset": 6748506,
+      "size": 29031,
+      "sha256": "bca3053c3664e8bf783b13c81be4be643da54e9c004422a1c398424eb2e51de3"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin5.bin",
+      "localPath": "data/characters/leblanc/animations/skin5.bin",
+      "offset": 2919936,
+      "size": 14947,
+      "sha256": "e354de98da2bab40eb3edf515c79c03ad5fad0ced737ee998e9f4502fbc9cd4d"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin2.bin",
+      "localPath": "data/characters/leblanc/skins/skin2.bin",
+      "offset": 7801714,
+      "size": 23428,
+      "sha256": "ee5769b4f32dd3b63d3cb3904b4a9bcfd35bb8ccafba8fc8acc1ab8b616fe95a"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile02.tex",
+      "offset": 138552214,
+      "size": 87420,
+      "sha256": "ff5d6297cddd617c45de0655dbeddabe7597ea3eb8bde3b652f512452700ce6e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/run_homeguard.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/run_homeguard.anm",
+      "offset": 49866600,
+      "size": 69148,
+      "sha256": "20b8d1f90477757a849c9c7af7394b762ba27e6901c8dc59c409068e11dc938f"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin12.bin",
+      "localPath": "data/characters/leblanc/skins/skin12.bin",
+      "offset": 29975343,
+      "size": 109600,
+      "sha256": "c6cf2406bb6174d7c1c584688e2721a11bdaa5d88e83a2b18c71e6547a1aa40c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_color-bellcurve32.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_color-bellcurve32.tex",
+      "offset": 189265,
+      "size": 540,
+      "sha256": "c2f4d8fe11150642ec98843bfc7ae65bea5af4902585e63205e1fcef20830821"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin28.bin",
+      "localPath": "data/characters/leblanc/skins/skin28.bin",
+      "offset": 6729259,
+      "size": 54421,
+      "sha256": "3a2e5705c8478800f601c7a62528a1ec28eb69b86a8d1622a43943c316af2ced"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_aoering.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_aoering.tex",
+      "offset": 31657268,
+      "size": 5532,
+      "sha256": "5ac964273693beee21683db86606f026985eebc6511f4cadd707957427b207fe"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin47.bin",
+      "localPath": "data/characters/leblanc/skins/skin47.bin",
+      "offset": 13369140,
+      "size": 118822,
+      "sha256": "b198baf764074e6f8a40f78d337c52fd4ca8897352f9b7ddfa23d7b5051e934b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_generic_energytendril.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_generic_energytendril.scb",
+      "offset": 4524669,
+      "size": 28168,
+      "sha256": "69b382bcd5fd3bec0fa48ebedde907409e36edf396eba99f9f7656977d29cac6"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/morg_base_q_meshmult.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/morg_base_q_meshmult.tex",
+      "offset": 5879087,
+      "size": 21884,
+      "sha256": "eab88f073dea2954c599bcb55c968d800e414c44a5e09ceb973e68f509d6bd1b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_linearsplashes_02_gs.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_linearsplashes_02_gs.tex",
+      "offset": 37889902,
+      "size": 87420,
+      "sha256": "0ca0e1a0875698ccaa653de4ef3300f567ba625611bda95dc17f1bd7f6fd317c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_return_indicator_v02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_return_indicator_v02.tex",
+      "offset": 40725385,
+      "size": 87420,
+      "sha256": "97983e1449f3be30933116f67cbac117c09bdff3f939188055c88acb6e946cc2"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin1.bin",
+      "localPath": "data/characters/leblanc/skins/skin1.bin",
+      "offset": 11347615,
+      "size": 45663,
+      "sha256": "cdf331c7d39625adbc3a6a9ccb48a1e3d03bd3d7d840f3afa42d421a0d0be0fc"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin46.bin",
+      "localPath": "data/characters/leblanc/skins/skin46.bin",
+      "offset": 60170894,
+      "size": 118917,
+      "sha256": "6ea06839e2cc07e1d0d0db34e1e76f27e0be5f1ccdaeafed2914c0ef1612aa69"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_flameshape_errode.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_flameshape_errode.tex",
+      "offset": 12826922,
+      "size": 10948,
+      "sha256": "9ba34f2a7c8476701e54e65e7ffc861945d470559a96a522ffc6dc22cb8a2f14"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_returnindicator.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_returnindicator.tex",
+      "offset": 8303290,
+      "size": 21884,
+      "sha256": "46bdedb9aa41906b862a0e3ce0924b118be15d89208116fc093d8bc2c58bf4ed"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/anivia_base_z_indicatormesh01.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/anivia_base_z_indicatormesh01.scb",
+      "offset": 1881796,
+      "size": 9152,
+      "sha256": "70ff5334ec116a6a47298ef941ce0029cc28bc005fb5dfbc0308806d0d2900f4"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/naafiri_skin01_missilehead01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/naafiri_skin01_missilehead01.tex",
+      "offset": 44229353,
+      "size": 87420,
+      "sha256": "e671e2e2f606e72671efe871b6f3aba9d2493218571535a80e1b8b9d5e47e817"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin61.bin",
+      "localPath": "data/characters/leblanc/skins/skin61.bin",
+      "offset": 62106870,
+      "size": 709119,
+      "sha256": "a73264a2e11bbf72ceef27005ce159af45b0240849eb8e29327c0b6aee85c8a4"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/knockup.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/knockup.anm",
+      "offset": 70703864,
+      "size": 49758,
+      "sha256": "b9cb8532781988483b92dac9f32e50426162da9c418d95fff5738acc397e5ebe"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_skin29_gradient.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_skin29_gradient.tex",
+      "offset": 11022774,
+      "size": 2836,
+      "sha256": "580d688d731adb43974688e77f4b32e45f5a86f0e0e3d1d6c917e65da9dee10c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/caitlyn_skin22_passive_gradient.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/caitlyn_skin22_passive_gradient.tex",
+      "offset": 2757240,
+      "size": 5500,
+      "sha256": "72b00a133586c24e44c15311d5ee5301336b5dddab9b04451cc00c8d2c3700bf"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin44.bin",
+      "localPath": "data/characters/leblanc/skins/skin44.bin",
+      "offset": 50558562,
+      "size": 72578,
+      "sha256": "df5274a1b3b766025a67abd710e943a0487234642c746c64340eb4ab159b6b05"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/ezreal_skin21_q_animeburstmesh01.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/ezreal_skin21_q_animeburstmesh01.scb",
+      "offset": 10846651,
+      "size": 36364,
+      "sha256": "3ab719cf51f2857e10e5452b90322acbaa0f8d5bbd3cc7b42ca2fcdc322f51a2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_impactspike_2x2_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_impactspike_2x2_dissolve.tex",
+      "offset": 6199497,
+      "size": 21884,
+      "sha256": "cbeb99b0c12a85be63a717ce172bbb4c46fdaf9401c13ef5a150a403b15970e6"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_whitebox.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_whitebox.tex",
+      "offset": 107167,
+      "size": 36,
+      "sha256": "ff2137e5ee5e0e0bb23ce5622cb436169c5fe48996e22d1260d64810d8415d6f"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin21.bin",
+      "localPath": "data/characters/leblanc/skins/skin21.bin",
+      "offset": 37483167,
+      "size": 54542,
+      "sha256": "83087da736670806707dea1316e6d4461b52c8494fa05664314400b02a856bdd"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53.bin",
+      "offset": 33623531,
+      "size": 724447,
+      "sha256": "9cbb14ae534bc8cdef8788d9790683b85bb52f84d03dbc42841604dcc4824818"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin2_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin6_skins_skin61_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_sk.7af5044f19218af3.bin",
+      "offset": 100916,
+      "size": 540,
+      "sha256": "4877ee6391c4654c82538ca3c44235fab4b83393e656452327859167c55889b0"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin35.bin",
+      "localPath": "data/characters/leblanc/skins/skin35.bin",
+      "offset": 51093489,
+      "size": 72505,
+      "sha256": "3de77354c9ed77cd758995efab00fb3d028cc647205d6a1817b9f44e88ccbfce"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_icon03.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_icon03.tex",
+      "offset": 34996915,
+      "size": 87420,
+      "sha256": "faef1b42fa25dc01f67de8294c9fd8ca5969f001cf9b3b9fad8231a0c27a6f3c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain01.tex",
+      "offset": 944900,
+      "size": 43740,
+      "sha256": "a77e3c2fdeb69680530f40c7fd2a1ff5f722022048474c1af001d6d0dde1c1ed"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin18.bin",
+      "localPath": "data/characters/leblanc/skins/skin18.bin",
+      "offset": 18692498,
+      "size": 105448,
+      "sha256": "2d619b74f708f517386d7f725bb6db1c67bc7b0edeca4547017f43cc8669bcd1"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin25_skins_skin26.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin25_skins_skin26.bin",
+      "offset": 276677,
+      "size": 689,
+      "sha256": "4b346ebff58aadd110057f06ca725c36f2cc35ce9d6327a235f489a71c6c1b3c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/generic_holystrings_support.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/generic_holystrings_support.tex",
+      "offset": 12331675,
+      "size": 87420,
+      "sha256": "afefc65220a801b9df561435cefbf70bc4d734021f56289fc6effd595146d30d"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin13.bin",
+      "localPath": "data/characters/leblanc/skins/skin13.bin",
+      "offset": 47409786,
+      "size": 105545,
+      "sha256": "850be2635ef773b01ed8f0ed43b694d2222b4cb31825334443015af49ad3d22e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_generic_erosion01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_generic_erosion01.tex",
+      "offset": 13615909,
+      "size": 21884,
+      "sha256": "6240440f8f306d423ad9db0d7d14aa6918a8f8d683bb5a01050fe0b8e06e75ef"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin15_skins_skin16_skins_skin18_skins_skin5.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin15_skins_skin16_skins_skin18_skins_skin5.bin",
+      "offset": 958036,
+      "size": 1380,
+      "sha256": "8e788eb23514ba18143dd1eaec6fc5e536af3260a72263fcae722a3347797c50"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin15.bin",
+      "localPath": "data/characters/leblanc/skins/skin15.bin",
+      "offset": 49717453,
+      "size": 105352,
+      "sha256": "c2274e35bf126880712e9d056be5f34ee82e751e99477f26fea5347afcee16cb"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin59_skins_skin60.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin59_skins_skin60.bin",
+      "offset": 55581500,
+      "size": 1065227,
+      "sha256": "5dbcd2bdeaa0d44b47988e597c8c382cd680f35945eb2bd8a049f4bc28aa4664"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell1.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell1.anm",
+      "offset": 60017017,
+      "size": 97378,
+      "sha256": "80ed9f172720afce03b480898694f7b6fcaeb8716d1f3974f1974c6c5d6418a6"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/dance.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/dance.anm",
+      "offset": 39919392,
+      "size": 267038,
+      "sha256": "368a34600032176b05fd8d900e1c01f758d2fc0a57d8aae1279e333849d82970"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin5.bin",
+      "localPath": "data/characters/leblanc/skins/skin5.bin",
+      "offset": 62313064,
+      "size": 668013,
+      "sha256": "1b02c502e4358253843b19bff4f17af2cafef55c274c295827e6a738482ad99b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/respawn.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/respawn.anm",
+      "offset": 21911548,
+      "size": 194468,
+      "sha256": "3fddf3c5b745e9fec2089f330779930fbc75d589aea652ea4bea20701f109ee0"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/idle_in.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/idle_in.anm",
+      "offset": 1900490,
+      "size": 297236,
+      "sha256": "391c8123526a55f5614794445464a8e91d286b6830f25429c5d71389e20fb7d8"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin24.bin",
+      "localPath": "data/characters/leblanc/skins/skin24.bin",
+      "offset": 27749301,
+      "size": 54421,
+      "sha256": "dd59039fc6cadbddd279fb5ee58a9003733973fec5fb0c4993edf2a708f892fe"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_root_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin4_skins_skin40_skins_skin41_skins_skin42_skins_skin43_skins_skin44_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin57_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_root_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin.8928b590d9d7a8a6.bin",
+      "offset": 1030251,
+      "size": 12736,
+      "sha256": "94b2aac7e513d930ef5f5fa19d68e751ac1245f0ea9a603c5b2b8d82a9a2dbaf"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_glowmask_thicc.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_glowmask_thicc.tex",
+      "offset": 50117688,
+      "size": 21884,
+      "sha256": "253808f2e1d424c5d9a44ff7d1d697de3a1f2f0e89ad784ebbced156fece0b0b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune03.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune03.tex",
+      "offset": 31404630,
+      "size": 87420,
+      "sha256": "c3d7427f58f1e7083208c93ef5345dc72f75c01adf6284a87d8dabcfb4ccfae2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/gwen_base_w_outeredgemesh001.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/gwen_base_w_outeredgemesh001.scb",
+      "offset": 8898074,
+      "size": 14528,
+      "sha256": "f2b6db14e848ebb9c92fd18ae30ac8b0972fe57ec06ba38a8c43ebf2d50fae02"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_rune01.tex",
+      "offset": 138979434,
+      "size": 174812,
+      "sha256": "91f07afe2157010f07504e1b98ac3377015c0f737ada25ee28e282a94deed68f"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_grad02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_grad02.tex",
+      "offset": 2838956,
+      "size": 10948,
+      "sha256": "c497a2c31247aec33491b581bdb33ef465f601b0e57568825955fa7db842e467"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin15_skins_skin16.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin15_skins_skin16.bin",
+      "offset": 1004513,
+      "size": 3919,
+      "sha256": "1d54ae9702476b512bfa181cdac6f930fd305eca7ad68c1e655367812c10732a"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/kogmaw_skin37_e_erosionshapes01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/kogmaw_skin37_e_erosionshapes01.tex",
+      "offset": 14233934,
+      "size": 43716,
+      "sha256": "1129e317c149b9675d7561afc1caa58407a3e4b98e7a4924f87c4f3daa3f1bc0"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblanc_rma_tx_cm.tex",
+      "localPath": "assets/characters/leblanc/skins/base/leblanc_rma_tx_cm.tex",
+      "offset": 65950948,
+      "size": 174788,
+      "sha256": "348ad60974691b37771e45c758628246c21621635d2d189553afa07929b36aec"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/attack1.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/attack1.anm",
+      "offset": 134851692,
+      "size": 142772,
+      "sha256": "9dd5fd569da3fc1f78fc48c2d365815bbe5710156815e28851c47f0d220393cf"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell1_run.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell1_run.anm",
+      "offset": 44881922,
+      "size": 78298,
+      "sha256": "edd16a622f41afe16375ebabb5067c568bc0338dd4b9f83159db205722a23890"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_global_teamring_mesh.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_global_teamring_mesh.scb",
+      "offset": 16328747,
+      "size": 35072,
+      "sha256": "f3257173940f3451d46aac801759647ccb1d41ceeb8653d16859b5cc5db121e4"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_2x2_shard.tex",
+      "offset": 19885344,
+      "size": 87420,
+      "sha256": "04ebb4cff17fa26422801e28ce7a505629e49b50eb271bdbaf92727518896cee"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin1.bin",
+      "localPath": "data/characters/leblanc/animations/skin1.bin",
+      "offset": 468953,
+      "size": 14883,
+      "sha256": "a2ab827e377e648f9353a3da93ea33275e163fe147999ff1ac05b92ac4bca2b4"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_w_sphere01.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_w_sphere01.scb",
+      "offset": 1601565,
+      "size": 82304,
+      "sha256": "52eaa7843b3c141f478a0c1ef617f7cf6ff6d6089e7dd2f67c3717ab918efa04"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin20.bin",
+      "localPath": "data/characters/leblanc/skins/skin20.bin",
+      "offset": 7792239,
+      "size": 54509,
+      "sha256": "d15c3c6f1c15edfc3702ed44028b9b41c5408b90fd045cf7fceeb9248ad3cf08"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_distort_lifetime.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_clone_distort_lifetime.tex",
+      "offset": 118390,
+      "size": 540,
+      "sha256": "ac9ee2f5b677d1801186ebd7ebe6af13ee1ea4594cc3794fc9cfabdb27be296b"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin3.bin",
+      "localPath": "data/characters/leblanc/skins/skin3.bin",
+      "offset": 62065576,
+      "size": 705349,
+      "sha256": "bf567f0a4a45d8507ad04650d87b54cec78aa7ded26fcd41918a36cad790f62f"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_direction_indicator_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_direction_indicator_dissolve.tex",
+      "offset": 15187331,
+      "size": 10948,
+      "sha256": "17e2d7876d45f177a67e5459669f7a7fbaef178e214b3e53939bb3c0b00d0710"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin24_skins_skin27_skins_skin28_skins_skin34_skins_skin54_skins_skin58.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin24_skins_skin27_skins_skin28_skins_skin34_skins_skin54_skins_skin58.bin",
+      "offset": 3249393,
+      "size": 11222,
+      "sha256": "a439bf25d1c2f66ea1ca1667a13c58bc33e59247fc51a2e6b02ff8a02603d955"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/kogmaw_skin37_animeshapes02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/kogmaw_skin37_animeshapes02.tex",
+      "offset": 21775715,
+      "size": 87420,
+      "sha256": "1d01332b2c378d3fef8803ba759b3a751a5a092bb0048a1fb4412214c1e8f41b"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin0.bin",
+      "localPath": "data/characters/leblanc/animations/skin0.bin",
+      "offset": 5715704,
+      "size": 14919,
+      "sha256": "92528ccaf6b5a1ae1b841d8bc4bc8ad324c49e446f35257a8b70421492224a2a"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin34.bin",
+      "localPath": "data/characters/leblanc/skins/skin34.bin",
+      "offset": 8289379,
+      "size": 54492,
+      "sha256": "7cc62605e9572b175896c6d3ad46ca04a1e4eca6c0906936e3b8bf1d5e4189e0"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin52.bin",
+      "localPath": "data/characters/leblanc/skins/skin52.bin",
+      "offset": 56228212,
+      "size": 118854,
+      "sha256": "01925432c06e0f82472749c8dcbd566413cfc691f23dea59d55557eb30dfd307"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_direction_indicator.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_direction_indicator.tex",
+      "offset": 13319204,
+      "size": 21884,
+      "sha256": "5518259552655811948f761c27966a2da0d2c7ddb44daa9e1a410ac85a972bb9"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin58.bin",
+      "localPath": "data/characters/leblanc/skins/skin58.bin",
+      "offset": 7784574,
+      "size": 45296,
+      "sha256": "0adb12cc6834397b8db2f60c46118614828ad06fe791229ab2702e00ee94e320"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/caitlyn_skin22_passive_groundsmoke02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/caitlyn_skin22_passive_groundsmoke02.tex",
+      "offset": 4272976,
+      "size": 87420,
+      "sha256": "9af3c892c9cd66003fdde192e6b8f503b50eab07bad3dd321aca6c961d00956a"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/channel.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/channel.anm",
+      "offset": 22260511,
+      "size": 52338,
+      "sha256": "98269b5495011be585929a07769eeb5f6f05a954c37716cf56a2f0adfc369b06"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin19.bin",
+      "localPath": "data/characters/leblanc/skins/skin19.bin",
+      "offset": 5694171,
+      "size": 26260,
+      "sha256": "2cbb6e040bd62446a9c7b88290b9882f200e74aa6b80f5b8840956980233639f"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin48.bin",
+      "localPath": "data/characters/leblanc/skins/skin48.bin",
+      "offset": 61991371,
+      "size": 118838,
+      "sha256": "e61df3d5e87ad7c254680f8239bd61a747b17e2bade802f13b74f7171ca56930"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin3.bin",
+      "localPath": "data/characters/leblanc/animations/skin3.bin",
+      "offset": 1771084,
+      "size": 14972,
+      "sha256": "60282659dedc4407363411af0bf5e3e42aa23c703a879b52f6face7fc25389da"
+    },
+    {
+      "path": "data/characters/leblanc/skins/root.bin",
+      "localPath": "data/characters/leblanc/skins/root.bin",
+      "offset": 1148723,
+      "size": 8404,
+      "sha256": "5ebb400795927218c1e0c2dcc9ffce5149c3e728ae345a0606779c9363707fba"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin4_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin4_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "offset": 389557,
+      "size": 2014,
+      "sha256": "304c75b9477be7d583aed93fe12e90a5d6d2f279f9d6034e0c84c0624ce37130"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin39.bin",
+      "localPath": "data/characters/leblanc/skins/skin39.bin",
+      "offset": 57154016,
+      "size": 72507,
+      "sha256": "3bec5217b0b4b3dcc4c83bfb4cf7bebba5d7a732ce280a3d1a538a2cf2f8c197"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_petal.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_petal.tex",
+      "offset": 7774625,
+      "size": 21884,
+      "sha256": "4697536bc958874fb248b6ecd0b393a909bf684f0081b956c29b7c063781f820"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin53.bin",
+      "localPath": "data/characters/leblanc/skins/skin53.bin",
+      "offset": 4489001,
+      "size": 118838,
+      "sha256": "eba92a39906cf5add057745b432cfe2d5891612bd112b9319c7daed1beb2cb8d"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/base_vfx_icon02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/base_vfx_icon02.tex",
+      "offset": 33277428,
+      "size": 87420,
+      "sha256": "09188c6861dd3c6edd7c3bdb9a11b22388844c9cb81594eab01fa39dfddca83b"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin33.bin",
+      "localPath": "data/characters/leblanc/animations/skin33.bin",
+      "offset": 1037747,
+      "size": 15874,
+      "sha256": "33fdacec84838a303c14275f6911c55142dce7e78fd06c0ca3f4d56eaec4ccc2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_sharpedge.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_sharpedge.tex",
+      "offset": 52094962,
+      "size": 87420,
+      "sha256": "f42b36eb2a408522a90dc577269ac458cda0e01c0dc37033ae6a4ad28e56b5af"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/generic_erosion07.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/generic_erosion07.tex",
+      "offset": 4334313,
+      "size": 5500,
+      "sha256": "18f748d93e8a0039d2776fd0b7e641ebd933e71ba339d6fbc550fea5539a54ba"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/channel_wndup.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/channel_wndup.anm",
+      "offset": 2273853,
+      "size": 52978,
+      "sha256": "52ed81daa293f8ad9352484025c5ff58fd5be56e4f96679b1546a24dc3661e2f"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin50.bin",
+      "localPath": "data/characters/leblanc/skins/skin50.bin",
+      "offset": 61230932,
+      "size": 118882,
+      "sha256": "3757adfca6744f9fb42420ffda9e28a8c6ec23411ef920a41856899573a80b24"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/joke.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/joke.anm",
+      "offset": 30125861,
+      "size": 284278,
+      "sha256": "04f09809f2e26593ab82056600f73105f606a75af64462c2dc40f52fa87bf9ab"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile07.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile07.tex",
+      "offset": 888714,
+      "size": 43740,
+      "sha256": "8dd98375dc7e0381a6f1a63a5b101a9fc78ea91959886a83a9348baf7e348bbf"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_return_smoke.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_w_return_smoke.scb",
+      "offset": 7937646,
+      "size": 24832,
+      "sha256": "73caf0c81a4d55f6ed278544ca1db9e8b50b1568f3c707d7f8f28698c307c00a"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin30.bin",
+      "localPath": "data/characters/leblanc/skins/skin30.bin",
+      "offset": 11687672,
+      "size": 60180,
+      "sha256": "9a9c1e3e4f04bca85538600d1cf4b1d90c6d914a40e7f4ed14f4909c4d8f39bd"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin29.bin",
+      "localPath": "data/characters/leblanc/animations/skin29.bin",
+      "offset": 1140495,
+      "size": 15276,
+      "sha256": "b85b33cdd7361d432339b65a87d377e0b9e36537087acaca882e9cb4cb75b40e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_tile01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_tile01.tex",
+      "offset": 11538877,
+      "size": 87420,
+      "sha256": "a55f437d0185fbd974958941506afe1156a2f839a6a5331fbb2dc81859b6940e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/vex_skin01_midglow.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/vex_skin01_midglow.tex",
+      "offset": 2272581,
+      "size": 1404,
+      "sha256": "da31e2a8c07c38e74ce0105e24d9b6065e87bf6b370dec644c0e2ad160ec227f"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin4_skins_skin40_skins_skin41_skins_skin42_skins_skin43_skins_skin44_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin6_skins_skin61_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin2_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_ski.b7d8585d9e65d779.bin",
+      "offset": 103833,
+      "size": 164,
+      "sha256": "6ec572f7a89d4009658bba5d0bc1aafb5904b137222888b58388dfabdbbcca11"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_flare-omnimax.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_flare-omnimax.tex",
+      "offset": 21732890,
+      "size": 43716,
+      "sha256": "452ff1dac9561752a117ea727cbf9e6e24a535ee92da6818df084e09a1b43f33"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin32.bin",
+      "localPath": "data/characters/leblanc/skins/skin32.bin",
+      "offset": 10722433,
+      "size": 60167,
+      "sha256": "ac36c7aa84304277b71b9523cad43b7cd2250f2babde37f8a64f70d988fd6faf"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/laugh.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/laugh.anm",
+      "offset": 138598790,
+      "size": 124318,
+      "sha256": "a0533128ae8fd5f8c198fbe1e48e5f71cc917f8853166f72bf392d1f10ce96a0"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin13_skins_skin14_skins_skin17_skins_skin2_skins_skin4_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin13_skins_skin14_skins_skin17_skins_skin2_skins_skin4_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "offset": 467777,
+      "size": 701,
+      "sha256": "e4c4ba1afd87b495fc01411cbcc5a2a0457139ee6f7ff4c72d57b42104446c90"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_emotemask.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_emotemask.tex",
+      "offset": 11990623,
+      "size": 21884,
+      "sha256": "3b74002b2d21f676b8552ee159188d15ebe0856722500e606f568db984c0fb74"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin26.bin",
+      "localPath": "data/characters/leblanc/skins/skin26.bin",
+      "offset": 22364274,
+      "size": 54613,
+      "sha256": "3e81d2e8706c4f2c0b999431679b1d9183e41ed8881905a7a0e5d587fb4c714d"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin43.bin",
+      "localPath": "data/characters/leblanc/skins/skin43.bin",
+      "offset": 34633343,
+      "size": 72507,
+      "sha256": "4c3bf937179144dc8258b809204ccb1fd88f7b5af785602e0fb049c5add765df"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_distort_3.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_distort_3.tex",
+      "offset": 698852,
+      "size": 43716,
+      "sha256": "ee2ff1b8e374be084af809d6eb49d230993f8d5fb1098c1b5fdbab163dbdbd8b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_skin29_ebeam2.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_skin29_ebeam2.tex",
+      "offset": 187749,
+      "size": 10972,
+      "sha256": "6cd0aabb5b1f3a000a8788f3248f1263f7e5493b41cb53340929642500a0ddc3"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_impactspike_2x2.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_impactspike_2x2.tex",
+      "offset": 11890476,
+      "size": 87420,
+      "sha256": "f010a3a9de630dc6921c62c7e9224589b7bcd5388b9484caa508a4f3ea7b729f"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin51.bin",
+      "localPath": "data/characters/leblanc/skins/skin51.bin",
+      "offset": 31296171,
+      "size": 118838,
+      "sha256": "6096d5af7204b9472499070ffad038c67b59176f331362a06e0bccf179cd7cdf"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_icon03_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_br_icon03_dissolve.tex",
+      "offset": 22125149,
+      "size": 43716,
+      "sha256": "735292bbc45d1f4ecb551912fa54f290be396869e2799cb3832c72cea6ecd668"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_decal001_dissolve.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_decal001_dissolve.tex",
+      "offset": 47010259,
+      "size": 43716,
+      "sha256": "9ac89067ba4959d11787afc2646527491b1cbd1a1d1ef8f82c2bb197dd0adde8"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin59.bin",
+      "localPath": "data/characters/leblanc/skins/skin59.bin",
+      "offset": 22404940,
+      "size": 48050,
+      "sha256": "83bcc3c0aaa62b85d9b04bf63982fa8fb88068e56bdfabf38faa227579ca6f24"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin33_skins_skin34_skins_skin54_skins_skin58.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin33_skins_skin34_skins_skin54_skins_skin58.bin",
+      "offset": 1528340,
+      "size": 39290,
+      "sha256": "3c81fd0d2ec6356e2033b8610f4a1d286fd376c401918b02f806acf897084f43"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin29_skins_skin30_skins_skin31_skins_skin32.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin29_skins_skin30_skins_skin31_skins_skin32.bin",
+      "offset": 33486775,
+      "size": 566954,
+      "sha256": "41435016a5e8eeab32cb4d8a0d68b35907584796cf0fbb852267104c3a52a3c1"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_distortion_shape.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_emote_distortion_shape.tex",
+      "offset": 47447088,
+      "size": 10948,
+      "sha256": "9892824e1d5b43f6d3760588d5c3099a424c019463d9b70d62f92939be6da210"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin20.bin",
+      "localPath": "data/characters/leblanc/animations/skin20.bin",
+      "offset": 6738713,
+      "size": 15874,
+      "sha256": "0533728e049ecc94e6b07d169beb1336a6f34e9a8925c7a7d1efa2e6d31b2598"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/run_homeguard_in.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/run_homeguard_in.anm",
+      "offset": 66274381,
+      "size": 43478,
+      "sha256": "e7e70ca9d7d66c543b5ce8e05e0865cb34f295e01f1d7aa7e4dee55cf878c05f"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_color-hold.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_color-hold.tex",
+      "offset": 107132,
+      "size": 68,
+      "sha256": "bc06557b44402fee1498430bd4008df9598085f44b29fea2f02218473674b2f8"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin35.bin",
+      "localPath": "data/characters/leblanc/animations/skin35.bin",
+      "offset": 3828891,
+      "size": 15853,
+      "sha256": "7561168699b37bd351fe03abb16857d886f13670e5a3d5c61e55f960b0eb4451"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_void_ring.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_void_ring.scb",
+      "offset": 959671,
+      "size": 19576,
+      "sha256": "aa08f0fe60ef0e32392de23cf3f2a1ca4d48082432d64b7699d24cf0971af735"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_glow01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/naafiri_base_foundation_glow01.tex",
+      "offset": 15448642,
+      "size": 21884,
+      "sha256": "de11f38adbd4e48bd42211a456cbfd99ae069479ad58bce5efec342eb311b9e7"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin6.bin",
+      "localPath": "data/characters/leblanc/skins/skin6.bin",
+      "offset": 17339598,
+      "size": 31125,
+      "sha256": "640814f1b7f2ef0b373a259df0a91cda86e582488d82889231e22694e147c7b2"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin5.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin5.bin",
+      "offset": 19975130,
+      "size": 13744,
+      "sha256": "9329e0a08ecccd679c7e8503d4dfb098302ee2dad9741c7497ae0f9fd03eeefa"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin45.bin",
+      "localPath": "data/characters/leblanc/animations/skin45.bin",
+      "offset": 1318411,
+      "size": 16237,
+      "sha256": "a11928e8fdc56437e49f75829e49e19f348e223afbaabc732a9121050054d12b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_symbol01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_symbol01.tex",
+      "offset": 40320038,
+      "size": 87420,
+      "sha256": "053f49b9135147cdb3dac54fddf8ce282e2c945655418b85a50433bafd713a2c"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin23.bin",
+      "localPath": "data/characters/leblanc/skins/skin23.bin",
+      "offset": 33235106,
+      "size": 54542,
+      "sha256": "309f3b5c7475399a9a09dd094797cf14e09acebde23e8c0b5cd8295dcea95bd3"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_beam01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_beam01.tex",
+      "offset": 18396484,
+      "size": 87452,
+      "sha256": "f24dbfebc6b31cabd474afd0aebbcd82b8e7d432eff60f320c5571b3c29d742b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/attack2.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/attack2.anm",
+      "offset": 20497734,
+      "size": 141050,
+      "sha256": "fd5018e5e0b341f3a7d847dcaf0e0c76be07fb7aa668d8fb05cedd10148d7cd9"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2_recast2.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2_recast2.anm",
+      "offset": 11190131,
+      "size": 94698,
+      "sha256": "f4cd5c7f7b5e38a582be83f90844a97550e729270c09877e203d78d8f095734b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblanc_base.skl",
+      "localPath": "assets/characters/leblanc/skins/base/leblanc_base.skl",
+      "offset": 36874216,
+      "size": 21724,
+      "sha256": "6d76d750195123dfcb7ecb6e282260f4b981ec04bc4f19ae36e0eec94419945c"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_saucer6.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_saucer6.scb",
+      "offset": 15190065,
+      "size": 19068,
+      "sha256": "35575b03245fc3a992874f50d28c16b82b56d5239ed5575f1e191fcc26b13335"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_spiritguard_mesh01.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_spiritguard_mesh01.scb",
+      "offset": 11586718,
+      "size": 446944,
+      "sha256": "517267aa8bc435fc8d155b9bc5815f98024aadc02ff45fef5f6196687e5f887e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2_torun.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2_torun.anm",
+      "offset": 2367977,
+      "size": 114528,
+      "sha256": "92f49339e25293b06a7fa7083550786946976c4dc25c03b6735da9174c0b5709"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_grad.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_grad.tex",
+      "offset": 104107,
+      "size": 10948,
+      "sha256": "d35fef08df8f3f7f53b815102fdc94b3ef4569000e3bd04195953fd0f1592978"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain01_vert.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_e_chain01_vert.tex",
+      "offset": 17917450,
+      "size": 43740,
+      "sha256": "e7d8cb5fbaee6e43d3664802c8cf2cddf39d8e289eb7dc1e0e1c15f5308c62c6"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin34.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin34.bin",
+      "offset": 61849356,
+      "size": 786298,
+      "sha256": "b1c2558a83c0500b1c79f574144447c498dd23a9283313dfb0e98d40f4b3be5b"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_glow01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_foundation_glow01.tex",
+      "offset": 15448642,
+      "size": 21884,
+      "sha256": "de11f38adbd4e48bd42211a456cbfd99ae069479ad58bce5efec342eb311b9e7"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin10.bin",
+      "localPath": "data/characters/leblanc/skins/skin10.bin",
+      "offset": 15082424,
+      "size": 31140,
+      "sha256": "05b91227ff69d8424d0cbf46845c6c9b4f0a69522d7c64e33ab379112229b8c6"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/kayn_base_q_spikes.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/kayn_base_q_spikes.scb",
+      "offset": 3824080,
+      "size": 28208,
+      "sha256": "2d810a8e2ffb473b9542b6842b9d1e80f85741d8a8de42c75510acfadee9c914"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2_toidle.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2_toidle.anm",
+      "offset": 22485918,
+      "size": 149660,
+      "sha256": "6b34880a3de0f8f51f4e0a1bcdc2d8049703a66b4fb54f7adcb8c0a254f329a8"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin49.bin",
+      "localPath": "data/characters/leblanc/skins/skin49.bin",
+      "offset": 56532727,
+      "size": 118854,
+      "sha256": "647e9e28b5c2c84080853e3c06980da21f1ad5969fe4c0c5b0ec406df09f89ea"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell3_channel.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell3_channel.anm",
+      "offset": 30986341,
+      "size": 46988,
+      "sha256": "cfc71c24ce5121e1c0101a8fc399dac581063d0a9c3a3890a80502dd43793021"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin45.bin",
+      "localPath": "data/characters/leblanc/skins/skin45.bin",
+      "offset": 37053831,
+      "size": 118805,
+      "sha256": "1a5a799e6b5a4a076dcdf897d7d30f4aa48f90cc39d43cfb2e388151079d01e1"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/run1.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/run1.anm",
+      "offset": 57118676,
+      "size": 70768,
+      "sha256": "aa31df1217ba5144973f85ac5257ac47d09e4fa3926c414d10b4798f25bf1005"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin2_skins_skin4_skins_skin5_skins_skin6_skins_skin61_skins_skin7_skins_skin8_skins_skin9.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_sk.e82ab85c44e2f4e5.bin",
+      "offset": 98661,
+      "size": 703,
+      "sha256": "25a90c3fd813549febb92d52c1898d2a30c5f452c0ddc437d93712570b1b8751"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_fizz_skin04_flarebuilding.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_fizz_skin04_flarebuilding.tex",
+      "offset": 36133309,
+      "size": 43716,
+      "sha256": "8da21cd8679bb769721a25ddfcd2f1aac5011e7206edd87ec9188245f927446a"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_awaken_energyvert.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/udyr_base_vgu_awaken_energyvert.tex",
+      "offset": 18650525,
+      "size": 43740,
+      "sha256": "0e4b83658974e81073ddcf832d8d72cd3bda44b409a8e9afedeb4a4f943e4421"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_clone_glow.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_clone_glow.tex",
+      "offset": 21080916,
+      "size": 21884,
+      "sha256": "8ee21b71477ac4ddf1090f51e9a855a90db7392fe88583faa1caf71d307918ce"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_tile03.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_tile03.tex",
+      "offset": 30270213,
+      "size": 87420,
+      "sha256": "b1e225f06aad5691f32b0b2af2e01dbb159891606b1ab5f73742164265ec7e8e"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/base_vfx_q_energy02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/base_vfx_q_energy02.tex",
+      "offset": 20573966,
+      "size": 87420,
+      "sha256": "30af5f139e9e9a0f944bd52463ade80c9096025cb9e71d3441fa00c66e24c890"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/leblanc_base_weapon_tx_cm.tex",
+      "localPath": "assets/characters/leblanc/skins/base/leblanc_base_weapon_tx_cm.tex",
+      "offset": 14812895,
+      "size": 699076,
+      "sha256": "e65357f0457ab214728ddcb2a2f513a6fbd19aa60186224ea9909afe6f287e82"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_donut.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_donut.tex",
+      "offset": 45151645,
+      "size": 21884,
+      "sha256": "c3945610f204da1f4c972aca0071668c228a2631a9c08f4bfb8443e3073191cc"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/spell2.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/spell2.anm",
+      "offset": 39873592,
+      "size": 39668,
+      "sha256": "193c20406ad632fe34c7ec836ea33bd49330a20ac3d5049896191e6c2fa9549a"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin57.bin",
+      "localPath": "data/characters/leblanc/skins/skin57.bin",
+      "offset": 66520814,
+      "size": 840065,
+      "sha256": "c05d9bf0248735eda718adc810901ab1b2440e860f0af518d160435800e05dd3"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile04.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_lbvu_ribtile04.tex",
+      "offset": 40224021,
+      "size": 43740,
+      "sha256": "286c033c978f773a3797d0bb910ab45b30778d33cbf150804fa204134f242ded"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin40.bin",
+      "localPath": "data/characters/leblanc/skins/skin40.bin",
+      "offset": 30933236,
+      "size": 72507,
+      "sha256": "4c13da6b7e43e7c6940df76ef08d1f11fb409835d7ee785f0ed4e2180f3d17f2"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/color-rampdown32_03.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/color-rampdown32_03.tex",
+      "offset": 390429,
+      "size": 5500,
+      "sha256": "27417dadf26445d6189ccb373aec13c4a87343e2dbcda5cec79c82509b960816"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_ball32_02.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_ball32_02.tex",
+      "offset": 5819586,
+      "size": 87420,
+      "sha256": "0976c09543b07b12fedbaad697c1bb82885289b48c16ba6428d5fa0ad9e54b1d"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/animations/idle3.anm",
+      "localPath": "assets/characters/leblanc/skins/base/animations/idle3.anm",
+      "offset": 38875509,
+      "size": 37082,
+      "sha256": "8d8754a758bd9dcffc4e3ab21bd4bbc1010b7403bdd1d49f20aedc888a8445ca"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin54.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin19_skins_skin54.bin",
+      "offset": 1146327,
+      "size": 19017,
+      "sha256": "ac95ca69e0b8fbd5ec08ebda40d3e0c0775e08fecba64dc6610d8472e016dced"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin13_skins_skin14_skins_skin17_skins_skin18_skins_skin5.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin13_skins_skin14_skins_skin17_skins_skin18_skins_skin5.bin",
+      "offset": 954160,
+      "size": 5984,
+      "sha256": "d2b09591add7f8371659c842573eb1ef5b5d55c28d61853109672c37e403e6de"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/common_flare-sun_11.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/common_flare-sun_11.tex",
+      "offset": 14548054,
+      "size": 43716,
+      "sha256": "69cb3bf8b81858ef95923c4a0171ebde8c3428b6839489608d2476802dc7d924"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_line_hori.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_vgu_awaken_line_hori.tex",
+      "offset": 1216495,
+      "size": 1052,
+      "sha256": "73ee6686c455bfa6f3c34a1e036f6967929648c54118abf8f3167f91d9dc70e6"
+    },
+    {
+      "path": "data/characters/leblanc/animations/skin12.bin",
+      "localPath": "data/characters/leblanc/animations/skin12.bin",
+      "offset": 4628875,
+      "size": 16441,
+      "sha256": "1cd9b10f460a0f74016aee8e894d47adbe7b804b809d7bdb9de0ae7672fcf3c1"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin55_skins_skin56.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin55_skins_skin56.bin",
+      "offset": 47463236,
+      "size": 672477,
+      "sha256": "6a6fcd0877b844a1289ae416a77b5785d77ccab91dfd86a24200de7b1a37d611"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_icon.scb",
+      "localPath": "assets/characters/leblanc/skins/base/particles/leblanc_base_q_icon.scb",
+      "offset": 37234070,
+      "size": 17792,
+      "sha256": "48eb482d54cd92180b7de6691bbe52fc75e7b7cec3b8958f791b70e890109f29"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/generic_2x2_smoke_sharp.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/generic_2x2_smoke_sharp.tex",
+      "offset": 5993691,
+      "size": 87420,
+      "sha256": "01dc9fd6c6c0af085e4b2b76347a2d1f65d9f0aea8979975031900dbb8fe4ad0"
+    },
+    {
+      "path": "data/characters/leblanc/skins/skin0.bin",
+      "localPath": "data/characters/leblanc/skins/skin0.bin",
+      "offset": 7548228,
+      "size": 48348,
+      "sha256": "2654fefb89bcd7b39a3b8d283ee1639e8cb9902a3515a7b6703599b57b7c47e3"
+    },
+    {
+      "path": "assets/characters/leblanc/skins/base/particles/base_vfx_icon01.tex",
+      "localPath": "assets/characters/leblanc/skins/base/particles/base_vfx_icon01.tex",
+      "offset": 22003104,
+      "size": 87420,
+      "sha256": "ea6c6c94bf60df9dc2fc7b37689cd069b3676f6fa41c69f9cbca1daf7315e24e"
+    },
+    {
+      "path": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin2.bin",
+      "localPath": "data/characters/leblanc/leblanc_multi_skins_skin0_skins_skin1_skins_skin2.bin",
+      "offset": 5718656,
+      "size": 7718,
+      "sha256": "ee606c54e15f72c6d3063f9d70480f6ea07c38e0b6ba1a418ad0e0c6515acf07"
+    }
+  ]
+}

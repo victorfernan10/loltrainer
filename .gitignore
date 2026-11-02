@@ -1,0 +1,31 @@
+node_modules/
+dist/
+tools/dotnet/
+tools/extracted/
+tools/animations/
+tools/*.exe
+tools/*install.ps1
+tools/*.png
+tools/*data.json
+tools/*root.json
+release.json
+
+# Local extraction/intermediate output and credentials
+tools/*.glb
+tools/*.zip
+tools/*.msi
+tools/**/__pycache__/
+.env
+.env.*
+!.env.example
+*.log
+
+# Raw game extracts and tool caches stay local; retain the test manifest.
+tools/*/
+!tools/leblanc-original/
+tools/leblanc-original/*
+!tools/leblanc-original/manifest.json
+tools/*.txt
+
+# Diagnostic dumps are not needed to run or build the trainer.
+tools/*.json

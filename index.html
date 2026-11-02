@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mechanics Lab · Kayle, LeBlanc & Syndra</title>
+  </head>
+  <body>
+    <canvas id="arena" tabindex="0" aria-label="Arena de treino. Botão direito move; S para."></canvas>
+    <main id="overlay">
+      <header>
+        <span class="sigil">K</span>
+        <div><small>PRÁTICA DELIBERADA / 03</small><h1><span id="heroName">Kayle</span> <em>Mechanics Lab</em></h1></div>
+        <label id="championPicker">CAMPEÃO<select id="championSelect"><option value="kayle">Kayle</option><option value="leblanc">LeBlanc</option><option value="syndra">Syndra</option><option value="quinn">Quinn</option></select></label>
+        <span id="status">Carregando modelos do jogo…</span>
+      </header>
+      <aside>
+        <div class="setup-copy"><div class="eyebrow">MENOS FILA. MAIS REPETIÇÕES.</div>
+        <h2>Um minuto.<br />Um fundamento.</h2>
+        <p>Treine, veja por que tomou a habilidade e repita a situação. Seu progresso fica salvo neste navegador.</p></div>
+        <button id="openPlaylist" class="setup-copy playlist-launch">Playlist · todos os modos <span>▶</span></button>
+        <div id="drills" class="setup-copy" role="group" aria-label="Fundamento do treino">
+          <button class="drill selected" data-drill="precision" aria-pressed="true"><span>01</span><b>Passos curtos</b><small>Precisão do clique · uma ameaça</small></button>
+          <button class="drill" data-drill="rhythm" aria-pressed="false"><span>02</span><b>Quebra de ritmo</b><small>Leia e contrarie a mira antecipada</small></button>
+          <button class="drill" data-drill="pressure" aria-pressed="false"><span>03</span><b>Esquiva sob pressão</b><small>Até três campeões · linhas e área</small></button>
+          <button class="drill" data-drill="combat" aria-pressed="false"><span>04</span><b>Kiting sob pressão</b><small>Ataque, reposicione e desvie</small></button>
+          <button class="drill" data-drill="yone" aria-pressed="false"><span>05</span><b>Duelo · Yone</b><small>Escape do E · desvie Q e tornado</small></button>
+          <button class="drill" data-drill="ahri" aria-pressed="false"><span>06</span><b>Esquiva · Ahri</b><small>Q de ida e volta · Charme</small></button>
+          <button class="drill" data-drill="locke" aria-pressed="false"><span>07</span><b>Esquiva · Locke</b><small>Desvie dos três Qs consecutivos</small></button>
+          <button class="drill" data-drill="vault" aria-pressed="false"><span>09</span><b>Quinn × LeBlanc</b><small>Interrompa o W com o Salto</small></button>
+          <button class="drill" data-drill="lane" aria-pressed="false"><span>08</span><b>Lane · poke no last hit</b><small>Leia os minions · puna o autoattack</small></button>
+        </div>
+        <div class="session-options setup-copy">
+          <label>Duração<select id="duration"><option value="60">60 segundos</option><option value="90">90 segundos</option><option value="120">120 segundos</option></select></label>
+          <label><span id="difficultyCaption">Pressão</span><select id="difficulty"><option value="1">1 · Leitura</option><option value="2" selected>2 · Consistência</option><option value="3">3 · Intensidade</option></select></label>
+        </div>
+        <label class="setup-copy training-profile">Perfil do treino<select id="trainingProfile"><option value="advanced" selected>Avançado · leitura das animações</option><option value="assisted">Assistido · aprender as janelas</option></select></label>
+        <p id="profileDescription" class="hint setup-copy">Sem linhas auxiliares ou destaque do last hit. Mira com reação, aproximações variáveis e mana normal.</p>
+        <p id="drillTip" class="setup-copy">Clique perto do campeão e mova-se para o lado da habilidade.</p>
+        <div id="playlistHud" hidden><b id="playlistProgress"></b><small id="playlistNext"></small><button id="retryPlaylist" hidden>Tentar carregar novamente</button></div>
+        <div id="sessionHud"><div class="eyebrow" id="sessionName">SEU PRÓXIMO BLOCO</div><div class="session-progress"><b id="sessionClock">01:00</b><span id="sessionPhase">Pronto para começar</span></div><progress id="sessionProgress" value="0" max="60"></progress></div>
+        <div class="live-stats"><div><b id="liveAccuracy">—</b><small>ESQUIVA</small></div><div><b id="liveShort">—</b><small>CLIQUES CURTOS</small></div><div><b id="liveStreak">0</b><small>SEQUÊNCIA</small></div></div>
+        <div class="stats"><div><b id="dodged">0</b><small>DESVIADAS</small></div><div><b id="hits">0</b><small>RECEBIDAS</small></div><div><b id="casts">0</b><small>LANÇADAS</small></div></div>
+        <section id="combatHud" hidden><div class="health-heading"><span>VIDA</span><b id="playerHealth">1000 / 1000</b></div><progress id="playerHealthBar" value="1000" max="1000"></progress><div class="combat-live"><div><b id="liveDamage">0</b><small>DANO</small></div><div><b id="liveAttacks">0</b><small>ACERTOS</small></div><div><b id="liveCancels">0</b><small>CANCELADOS</small></div></div></section>
+        <button id="startChallenge" class="primary">Iniciar treino <span>▶</span></button>
+        <button id="finishSession" hidden>Encerrar e revisar <span>↗</span></button>
+        <button id="reset">Preparar novo bloco <span>↺</span></button>
+        <div id="history" class="setup-copy"></div>
+        <p class="hint setup-copy">Projeto educacional independente, sem afiliação com a Riot Games. League of Legends e seus recursos pertencem à Riot Games.</p>
+      </aside>
+      <section id="settings">
+        <button id="toggle">Ajustes do treino <span>⌃</span></button>
+        <div id="controls" hidden>
+          <section id="animationLibrary" hidden>
+            <div class="ability-title" id="animationTitle">ANIMAÇÕES ORIGINAIS · LEBLANC</div>
+            <label>Visualizar clipe<select id="animationClip"></select></label>
+            <div class="preview-buttons"><button id="playAnimation">Reproduzir</button><button id="stopAnimation">Parar</button><button id="rotatePreview" aria-label="Girar modelo 45 graus">Girar ↻</button></div>
+            <p class="hint" id="animationDescription">31 clipes da skin base. Visualização antes do bloco, sem dano ou deslocamento de habilidades. R reutiliza as animações das habilidades copiadas.</p>
+          </section>
+          <section id="vaultSettings" hidden><div class="ability-title">INTERCEPÇÃO · QUINN E</div><p class="hint">LeBlanc aparece, espera um intervalo variável e usa W em sua posição. Aponte o cursor nela e aperte E para interromper durante o avanço. E, mana e vida são restaurados a cada nova tentativa; apertar E cedo ou após a aterrissagem não conta como interrupção. A pressão varia a distância e a espera, sem acelerar o W. No avançado (pressões 2 e 3), algumas aproximações são apenas caminhada: guarde o E até reconhecer a investida real.</p></section>
+          <section id="laneSettings" hidden><div class="ability-title">LANE · JANELAS DE POKE</div><label><input id="laneCoach" type="checkbox" checked /> Destacar minion em alcance de last hit e preparação do ataque</label><p class="hint">LeBlanc farma uma onda de 7 minions: 3 guerreiros, 1 catapulta e 3 magos. As tropas dos dois lados se enfrentam. Ao morrerem 3 minions vermelhos, as duas ondas reaparecem completas imediatamente. Ela só inicia o ataque quando o dano consegue finalizar o alvo e não cancela para desviar durante a preparação.</p><p class="hint">Fora do ataque, ela alterna os passos, mantém distância e reage à conjuração. No avançado, ela mantém 340 u/s em todas as pressões; a dificuldade altera a reação. Também responde com autoattack se você entrar em alcance sem uma disputa de last hit. No assistido, mantém a calibração 340 / 370 / 400 u/s. Sem torres, aggro contra o jogador ou itens. W da Syndra continua usando esferas. Divida a atenção com seu próprio last hit: o placar registra farm, perdas e catapultas. Gastar uma habilidade fora da janela permite uma resposta mais agressiva.</p></section>
+          <section id="yoneSettings" hidden>
+            <div class="ability-title">ADVERSÁRIO · YONE</div>
+            <label>Sequência<select id="yonePattern"><option value="eq">E + Q/Q3 + ataques</option><option value="full">E + Q/Q3 + W + R + ataques</option></select></label>
+            <div class="hint"><b id="yoneRatingName">Fácil · sem itens</b><output id="yoneASValue">0,625 ataques/s · Q: 3,12 s</output><span id="yoneCastValue"></span></div><p class="hint">A dificuldade à esquerda define os equipamentos. Referência: AS base do Yone, sem crescimento por nível nem fragmentos. Difícil mantém as 6 cargas de Ritmo Fatal durante a investida. Recarga do Q calibrada por dificuldade: 3,12 / 2,40 / 1,54 s. O R prepara por 0,75 s em todos os níveis. No perfil avançado, Yone varia a aproximação lateral e pode segurar o Q3. Com kit completo no médio/difícil, também alterna Q e W na abertura: leia a animação, não memorize a sequência.</p>
+            <label>Cargas de Q ao aparecer<select id="yoneStacks"><option value="2">2 · começa com tornado</option><option value="1">1 · precisa acertar mais um Q</option><option value="0">0 · precisa acertar dois Qs</option></select></label>
+            <label><input id="yoneTelegraphs" type="checkbox" checked /> Mostrar aviso no chão durante a conjuração</label>
+            <p class="hint">O aviso acompanha o tempo do golpe: não adiciona meio segundo ao Q. Desative para ler apenas a animação. A mira alterna entre sua posição e uma previsão de movimento.</p>
+            <p class="hint">E dura 5 s; velocidade cresce de +10% a +30%. Cada nova investida reinicia o inimigo após 2,5 s para acelerar as repetições. Danos e vida são calibrados para treino.</p>
+          </section>
+          <section id="matchupSettings" hidden>
+            <div class="ability-title">DESAFIO DE ESQUIVA</div>
+            <label id="ahriPatternLabel">Sequência da Ahri<select id="matchupPattern"><option value="mixed">Q + Charme · alternar a ordem</option><option value="q">Somente Q · ida e volta</option><option value="e">Somente Charme</option></select></label>
+            <label><input id="matchupTelegraphs" type="checkbox" checked /> Mostrar direção durante a conjuração</label>
+            <p class="hint">O aviso acompanha a conjuração de 0,25 s. A pressão muda a previsão e o intervalo entre tentativas, sem acelerar os projéteis.</p>
+            <p class="hint" id="matchupDescription"></p>
+          </section>
+          <div id="combatSettings" hidden>
+            <div class="ability-title">COMBATE</div>
+            <label>Rotina<select id="combatCircuit"><option value="on" selected>Circuito APM · alvos e reposicionamento</option><option value="off">Livre · aquecimento de kiting</option></select></label>
+            <label><span id="levelCaption">Nível de Kayle</span><select id="level"><option value="1">1 · corpo a corpo · 150 u</option><option value="6" selected>6 · à distância · 525 u</option><option value="11">11 · à distância · 525 u</option><option value="16">16 · à distância · 625 u</option><option value="18">18 · à distância · 625 u</option></select></label>
+            <label>Velocidade de ataque <output id="attackSpeedValue">1,50 / s</output><input id="attackSpeed" type="range" min="0.5" max="3" step="0.01" value="1.5" /></label>
+            <label>Prioridade do ataque-movimento<select id="attackPriority"><option value="cursor">Alvo próximo do cursor</option><option value="champion">Alvo próximo do campeão</option></select></label>
+            <label><input id="bindLeft" type="checkbox" checked /> Vincular ataque-movimento ao esquerdo</label>
+            <label><input id="combatHazards" type="checkbox" checked /> Habilidades durante o combate</label>
+            <p class="hint">A mostra o alcance até o clique esquerdo. Direito no alvo ataca; direito no chão move. S cancela a ordem. Desative as habilidades para aquecer.</p>
+            <p class="hint" id="combatTargetHint">Alvos com 600 de vida reaparecem após cair. Dano fixo de treino: 60 por ataque; cada habilidade recebida tira 100 de vida.</p>
+            <p class="hint" id="combatCircuitHint">Circuito avançado: três alvos, trocas imprevisíveis e passos de 45 / 70 / 95 u para pontuar ataques consecutivos. Intensidade pede três disparos por alvo; os demais, dois. Atacar parado continua causando dano, mas não completa o objetivo. O prazo considera sua velocidade de ataque.</p>
+            <p class="hint" id="kayleAbilityHints">E: próximo ataque causa 120 e reinicia a recarga do ataque (5 s). W: +30% de movimento por 2 s e cura 60 (10 s). Valores simplificados de treino.</p>
+            <div id="leblancSettings" hidden><label>Poder de habilidade<input id="abilityPower" type="number" min="0" max="1000" step="10" value="0" /></label><label><input id="unlimitedMana" type="checkbox" checked /> Mana livre para treinar combos</label></div><p class="hint" id="leblancInfo" hidden>LeBlanc: Q no alvo sob o cursor; W avança e W retorna; E lança a corrente; R imita a última habilidade básica. Conjuração rápida nas teclas. Evolução automática W → Q → E, com R nos níveis 6/11/16. Alvos sem resistência mágica. A passiva de clone não está simulada.</p>
+            <div id="quinnSettings" hidden><label>Dano de ataque adicional<input id="bonusAD" type="number" min="0" max="500" step="10" value="0" /></label><label>Chance de crítico (%)<input id="critChance" type="number" min="0" max="100" step="5" value="0" /></label><label>Aceleração de habilidade<input id="quinnHaste" type="number" min="0" max="200" step="5" value="0" /></label></div><p class="hint" id="quinnInfo" hidden>Quinn: Q dispara Valor e reduz a visão; W revela a área; E avança no alvo sob o cursor, interrompe e recua; R canaliza para voar, e R novamente usa Ataque do Céu. Consumir a marca de Rapina com um ataque ativa o bônus de ataque e movimento do W. E no nível 1; prioridade W → Q → E, R nos níveis 6/11/16. Arena sem terreno, armadura ou névoa de guerra.</p>
+            <div id="syndraSettings" hidden><label>Fragmentos iniciais<select id="syndraSplinters"><option value="-1">Automático · ganho por nível</option><option value="0">0 · sem aprimoramentos</option><option value="40">40 · Q com duas cargas</option><option value="60">60 · W com dano verdadeiro</option><option value="80">80 · E amplo + lentidão</option><option value="100">100 · R executa abaixo de 15%</option><option value="120">120 · +15% AP</option></select></label><label>Aceleração de habilidade<input id="abilityHaste" type="number" min="0" max="200" step="5" value="0" /></label></div>
+            <p class="hint" id="syndraInfo" hidden>Syndra: Q no cursor; W pega a esfera próxima do cursor e W arremessa; E empurra inimigos e esferas; R no alvo. Q → E atordoa. Esferas duram 6 s; W segura por até 5 s. R usa 3–7 esferas. Duas habilidades no mesmo campeão concedem fragmentos. Evolução Q → W → E, R nos níveis 6/11/16. Alvos com 3000 de vida, sem resistências. W usa esferas; pegar minions ainda não está implementado.</p>
+          </div>
+          <label class="standard-hazards">Intervalo entre ondas <output id="paceValue">1,0 s</output><input id="pace" type="range" min="0.3" max="3" step="0.1" value="1" /></label>
+          <label>Meta de clique perto <output id="closeRadiusValue">150 u</output><input id="closeRadius" type="range" min="75" max="300" step="25" value="150" /></label>
+          <p class="hint standard-hazards">A pressão altera aproximações e intervalos, sem acelerar projéteis. Preparação: Ezreal/Nautilus 0,25 s; Thresh/Xerath 0,5 s; Lux 1 s. O avançado oculta as linhas auxiliares dos projéteis; feixes mantêm uma indicação de conjuração.</p>
+          <div class="ability-title standard-hazards">HABILIDADES ATIVAS</div>
+          <label class="ability"><input type="checkbox" data-skill="xerathQ" checked /><span class="badge xerath">X</span><span><b>Xerath · Q</b><small>Arcanopulse</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="nautilusQ" checked /><span class="badge nautilus">N</span><span><b>Nautilus · Q</b><small>Dredge Line</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="threshQ" checked /><span class="badge thresh">T</span><span><b>Thresh · Q</b><small>Death Sentence</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="luxR" checked /><span class="badge lux">L</span><span><b>Lux · R</b><small>Final Spark</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="ezrealQ" checked /><span class="badge ezreal">E</span><span><b>Ezreal · Q</b><small>Mystic Shot</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="morganaQ" checked /><span class="badge morgana">M</span><span><b>Morgana · Q</b><small>Ligação das Trevas</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="blitzcrankQ" checked /><span class="badge blitzcrank">B</span><span><b>Blitzcrank · Q</b><small>Puxão Biônico</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="brandQ" checked /><span class="badge brand">B</span><span><b>Brand · Q</b><small>Cauterizar</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="brandW" checked /><span class="badge brand">B</span><span><b>Brand · W</b><small>Pilar de Chamas · área</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="luxQ" checked /><span class="badge lux">L</span><span><b>Lux · Q</b><small>Ligação da Luz</small></span></label>
+          <label class="ability"><input type="checkbox" data-skill="xerathE" checked /><span class="badge xerath">X</span><span><b>Xerath · E</b><small>Orbe Eletrizante</small></span></label>
+          <p class="hint standard-hazards">Uma habilidade por campeão. Depois do aviso, a mira fica fixa e percorre o alcance completo. Modelos do jogo; regras de treino calibradas localmente.</p>
+          <div class="ability-title">MOVIMENTO E CÂMERA</div>
+          <label>Velocidade <output id="speedValue">335 u/s</output><input id="speed" type="range" min="250" max="550" value="335" /></label>
+          <label>Zoom <output id="heightValue">1510</output><input id="height" type="range" min="650" max="1912" value="1510" /></label>
+          <label>Inclinação <output id="angleValue">56°</output><input id="angle" type="range" min="40" max="65" value="56" /></label>
+          <label><input id="locked" type="checkbox" /> Câmera travada (Y)</label>
+        </div>
+      </section>
+      <section id="vaultHud" hidden><b>QUINN × LEBLANC</b><span id="vaultPhase"></span><span id="vaultScore"></span><small id="vaultFeedback"></small></section>
+      <section id="laneHud" hidden><b id="lanePhase"></b><span id="laneWave"></span><span id="lanePoke"></span><small id="laneFeedback"></small></section>
+      <section id="yoneHud" hidden><b id="yonePhase"></b><span id="yoneTempo"></span><span id="yoneStacksLive"></span><small id="yoneRecord"></small></section>
+      <section id="matchupHud" hidden><b id="matchupName"></b><span id="matchupPhase"></span><small id="matchupEffect"></small></section>
+      <div id="incoming" hidden><b id="incomingName"></b><span id="incomingTimer">0,5</span></div>
+      <div id="champion-label">Kayle</div>
+      <div id="hitFlash" hidden>ACERTO</div>
+      <div id="clickFeedback" hidden></div>
+      <button id="dodgeFlash" hidden title="Flash na direção do cursor · alcance 400 · recarga 10 s"><kbd>F</kbd> Flash <output id="flashCooldown">Pronto · 10 s de recarga</output></button>
+      <div id="attackHud" hidden><div id="combatObjective"></div><b id="attackState">Ataque pronto</b><span id="attackRangeText">525 u</span><progress id="attackProgress" value="1" max="1"></progress><small>A + esquerdo: atacar · direito: reposicionar</small><div class="combat-abilities"><button id="castE"><kbd>E</kbd> <strong>Ataque fortalecido</strong><output id="eCooldown">Pronto</output></button><button id="castW"><kbd>W</kbd> <strong>Acelerar e curar</strong><output id="wCooldown">Pronto</output></button></div><div id="leblancAbilities" hidden><div class="leblanc-buttons"><button id="lbCastQ"><kbd>Q</kbd> <strong>Sigilo</strong><output>Pronto</output></button><button id="lbCastW"><kbd>W</kbd> <strong>Distorção</strong><output>Pronto</output></button><button id="lbCastE"><kbd>E</kbd> <strong>Correntes</strong><output>Pronto</output></button><button id="lbCastR"><kbd>R</kbd> <strong>Mímica</strong><output>Pronto</output></button></div><small id="lbMana"></small><small id="lbFeedback" role="status"></small></div><div id="combatPerformance"></div></div>
+      <footer><div><kbd>BOTÃO DIREITO</kbd> Mover <i></i><kbd>S</kbd> Parar <i></i><kbd>ESPAÇO</kbd> Câmera <i></i><kbd>ESC</kbd> Pausar</div><button id="fullscreen">Tela cheia ↗</button></footer>
+      <div class="corner">MECHANICS LAB <span>•</span> LOCAL</div>
+    </main>
+    <dialog id="playlistDialog" aria-labelledby="playlistTitle">
+      <div class="result-heading"><div><div class="eyebrow">ROTINA COMPLETA</div><h2 id="playlistTitle">Playlist de treino</h2></div><button id="closePlaylist" aria-label="Fechar playlist">✕</button></div>
+      <form id="playlistForm">
+        <p>Percorra os nove modos, um por vez, com a mesma duração e dificuldade.</p>
+        <div class="session-options"><label>Tempo de cada bloco<select id="playlistDuration"><option value="60">60 segundos</option><option value="90">90 segundos</option><option value="120">120 segundos</option></select></label><label>Dificuldade<select id="playlistDifficulty"><option value="1">Fácil · Leitura</option><option value="2" selected>Médio · Consistência</option><option value="3">Difícil · Intensidade</option></select></label></div>
+        <p id="playlistEstimate"></p><ol id="playlistOrder"></ol>
+        <p class="hint">Mantém seu campeão, perfil e ajustes. Quinn × LeBlanc usa Quinn; depois, seu campeão retorna. Pausas e carregamento não contam no relógio. Habilidades em curso terminam antes da troca. Se a vida acabar, ela é restaurada e a queda fica registrada para completar o tempo do bloco.</p>
+        <button id="beginPlaylist" type="submit" class="primary">Iniciar playlist ▶</button>
+      </form>
+      <section id="playlistSummary" hidden><p id="playlistSummaryText"></p><div id="playlistReports"></div></section>
+    </dialog>
+    <dialog id="results" aria-labelledby="resultTitle">
+      <div class="result-heading"><div><div class="eyebrow">PRATICAR → REVISAR → REPETIR</div><h2 id="resultTitle">Seu bloco em detalhe</h2><p id="resultContext"></p></div><button id="closeResults" aria-label="Fechar revisão">✕</button></div>
+      <div id="resultMetrics"></div><div id="combatResults" hidden></div><p id="recommendation"></p>
+      <div class="review-layout"><section><div class="review-heading"><h3>Revisão da tentativa</h3><select id="shotPicker" aria-label="Escolher tentativa"></select></div>
+        <canvas id="reviewCanvas" width="720" height="370" aria-label="Trajetória da habilidade e movimentos do campeão"></canvas>
+        <label class="scrubber">Percorrer tentativa <output id="reviewTimeLabel"></output><input id="reviewTime" type="range" min="0" max="1000" value="1000" /></label>
+        <div class="review-legend"><span class="legend-path">Seu caminho</span><span class="legend-skill">Habilidade</span><span>✕ Destino dos cliques</span></div>
+        <p id="shotFeedback"></p><button id="retryShot" class="primary">Repetir esta habilidade ↻</button>
+      </section><section class="result-breakdown"><h3>Por habilidade</h3><div id="skillBreakdown"></div><p class="hint">“Comando de saída lateral” mede o primeiro clique de movimento que aumenta a distância da trajetória. Ataques, parar e spam na mesma direção não contam. É uma medida de comando, não de reflexo humano.</p><p class="hint">A repetição isola uma habilidade, mantendo a posição inicial e a mira registrada. A colisão desenhada só aparece na revisão.</p></section></div>
+      <div class="result-actions"><button id="backToPlaylist" hidden>← Voltar à playlist</button><button id="repeatSession">Repetir sequência e ajustes</button><button id="nextSession" class="primary">Preparar próximo bloco →</button></div>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

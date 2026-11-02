@@ -1,0 +1,89 @@
+{
+  "sourceManifest": "tools/brand-original/manifest.json",
+  "skinScale": 1.75,
+  "clips": [
+    "brand_idle1",
+    "brand_run",
+    "brand_spell1",
+    "brand_spell2"
+  ],
+  "materials": [
+    "riotRig:lambert4"
+  ],
+  "textures": {
+    "brand_base_tx_cm": "brand",
+    "brand_base_q_radgrad": "brand_q_core",
+    "brand_base_q_smoke_trail": "brand_q_trail",
+    "brand_base_blurnoise": "brand_q_noise",
+    "brand_base_q_mask_01": "brand_q_mask",
+    "srx_infernal_brazier_lavaflow": "brand_q_lava",
+    "brand_base_q_swipe_mult": "brand_q_flame",
+    "brand_base_w_lavacracks": "brand_w_cracks",
+    "brand_base_w_fireup": "brand_w_pillar",
+    "brand_base_w_ring_shockwave_2": "brand_w_ring",
+    "brand_base_e_circlethin": "brand_w_charge",
+    "brand_base_w_13": "brand_w_border"
+  },
+  "meshes": [
+    {
+      "file": "brand_q_missile.obj",
+      "source": "brand_base_q_mis_energyflame.scb",
+      "vertices": 433,
+      "triangles": 840,
+      "bounds": [
+        [
+          -30.097808837890625,
+          30.097808837890625
+        ],
+        [
+          -90.68289184570312,
+          0.0005550030036829412
+        ],
+        [
+          -30.097808837890625,
+          30.097808837890625
+        ]
+      ]
+    },
+    {
+      "file": "brand_w_pillar.obj",
+      "source": "brand_base_w_fireup.scb",
+      "vertices": 126,
+      "triangles": 212,
+      "bounds": [
+        [
+          -26.15696144104004,
+          15.388256072998047
+        ],
+        [
+          -6.172079086303711,
+          85.86778259277344
+        ],
+        [
+          -27.28927993774414,
+          27.28927993774414
+        ]
+      ]
+    },
+    {
+      "file": "brand_w_ring.obj",
+      "source": "brand_base_w_ring_outline.scb",
+      "vertices": 112,
+      "triangles": 112,
+      "bounds": [
+        [
+          -79.30828857421875,
+          82.36410522460938
+        ],
+        [
+          0.0,
+          47.132301330566406
+        ],
+        [
+          -86.01158142089844,
+          84.29267120361328
+        ]
+      ]
+    }
+  ]
+}

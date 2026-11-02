@@ -1,0 +1,122 @@
+{
+  "skinScale": 1.25,
+  "sphereSkinScale": 0.5,
+  "resources": [
+    {
+      "file": "syndra_base_tx_cm.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\syndra_base_tx_cm.tex"
+    },
+    {
+      "file": "common_darksov_blackhole.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\common_darksov_blackhole.tex"
+    },
+    {
+      "file": "common_darksov_blasthole.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\common_darksov_blasthole.tex"
+    },
+    {
+      "file": "common_darksov_forcebubble.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\common_darksov_forcebubble.tex"
+    },
+    {
+      "file": "common_darksov_forcetrail.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\common_darksov_forcetrail.tex"
+    },
+    {
+      "file": "common_darksov_orb_outlines.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\common_darksov_orb_outlines.tex"
+    },
+    {
+      "file": "syndra_base_2021_e_bg.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_e_bg.tex"
+    },
+    {
+      "file": "syndra_base_2021_e_core.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_e_core.tex"
+    },
+    {
+      "file": "syndra_base_2021_e_edge_2.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_e_edge_2.tex"
+    },
+    {
+      "file": "syndra_base_2021_e_lead.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_e_lead.tex"
+    },
+    {
+      "file": "syndra_base_2021_q_cracks.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_q_cracks.tex"
+    },
+    {
+      "file": "syndra_base_2021_q_flash_01.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_q_flash_01.tex"
+    },
+    {
+      "file": "syndra_base_2021_q_lines_01.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_q_lines_01.tex"
+    },
+    {
+      "file": "syndra_base_2021_r_hitflash_core.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_r_hitflash_core.tex"
+    },
+    {
+      "file": "syndra_base_2021_r_hitflash_ring.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_r_hitflash_ring.tex"
+    },
+    {
+      "file": "syndra_base_2021_r_mis_core.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_r_mis_core.tex"
+    },
+    {
+      "file": "syndra_base_2021_r_mis_lead.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_r_mis_lead.tex"
+    },
+    {
+      "file": "syndra_base_e_beam_core_color.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_e_beam_core_color.tex"
+    },
+    {
+      "file": "syndra_base_e_chaintrail.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_e_chaintrail.tex"
+    },
+    {
+      "file": "syndra_base_q_orb_core.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_q_orb_core.tex"
+    },
+    {
+      "file": "syndra_base_w_lightning03.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_w_lightning03.tex"
+    },
+    {
+      "file": "syndra_base_w_void_background.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_w_void_background.tex"
+    },
+    {
+      "file": "orianna_base_tx_cm.png",
+      "source": "tools\\syndra-original\\assets\\characters\\syndrasphere\\skins\\base\\orianna_base_tx_cm.tex"
+    },
+    {
+      "file": "q-flat-sphere.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_2021_q_flatsphere.scb"
+    },
+    {
+      "file": "e-plane.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_e_2021_baseplane.scb"
+    },
+    {
+      "file": "e-wave.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_e_2021_leadingwindwall.scb"
+    },
+    {
+      "file": "q-swirl-sphere.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_q_2021_swirlsphere.scb"
+    },
+    {
+      "file": "w-center.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_w_2021_centerbase.scb"
+    },
+    {
+      "file": "w-ring.json",
+      "source": "tools\\syndra-original\\assets\\characters\\syndra\\skins\\base\\particles\\syndra_base_w_void_ring.scb"
+    }
+  ]
+}
