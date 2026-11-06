@@ -1,0 +1,249 @@
+{
+  "sourceWadSha256": "a29a37e41e65fb3d6692a9c90f3fd7a7806cb8f34c0ec6f9db4ec3fab6653708",
+  "skinScale": 1.7000000476837158,
+  "selfIllumination": 0.699999988079071,
+  "clips": [
+    "spell5end",
+    "spell5loop",
+    "spell5start",
+    "spell5_fast",
+    "xerath_attack1",
+    "xerath_attack2",
+    "xerath_attack3",
+    "xerath_channel",
+    "xerath_channel_windup",
+    "xerath_crit",
+    "xerath_dance",
+    "xerath_death",
+    "xerath_idle1",
+    "xerath_idle2",
+    "xerath_idle3",
+    "xerath_idle4",
+    "xerath_joke",
+    "xerath_laugh",
+    "xerath_run",
+    "xerath_spell1",
+    "xerath_spell2",
+    "xerath_spell2_channel",
+    "xerath_spell3",
+    "xerath_spell4",
+    "xerath_taunt"
+  ],
+  "resources": [
+    {
+      "file": "xerath_base_tx_cm.png",
+      "source": "assets/characters/xerath/skins/base/xerath_base_tx_cm.tex",
+      "sha256": "f2e6ab26e267b34569b9a598954d723c2cb79b70689d6a3e9e7b4176f46e3c51"
+    },
+    {
+      "file": "common_circle-flares.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_circle-flares.tex",
+      "sha256": "5d70095596084ea767596bf0d58d5ee391ddf8bd631674aa0a8b4e5d1aa6ac16"
+    },
+    {
+      "file": "common_flare-blue.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_flare-blue.tex",
+      "sha256": "4bf8842601af8499a821ce6fc3f0ec96a8706b3e2184621f9c9af0b23b9b8b13"
+    },
+    {
+      "file": "common_flashblue_02.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_flashblue_02.tex",
+      "sha256": "338336c6b487ba38316ee97bf34383bb4f43a69f682ef4ed5f93c675e2880fc2"
+    },
+    {
+      "file": "common_glow-soft.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_glow-soft.tex",
+      "sha256": "d21ae5cd9d6a95ffa10f91a1f389f8c958cf73d0c1b33ff593b368ee038913d1"
+    },
+    {
+      "file": "common_lightning02.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_lightning02.tex",
+      "sha256": "262c85fc2e61214128a2edd32fa7b90ac851da88609f2b9191236a6aabf376d2"
+    },
+    {
+      "file": "common_lightning_beam_thin_glow.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_lightning_beam_thin_glow.tex",
+      "sha256": "575839a65a299ce1b9877f59054548354ddef63e5765933f537cb5c43183e141"
+    },
+    {
+      "file": "common_sparks.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_sparks.tex",
+      "sha256": "8bbcc9a82894557c33c77af9e26fa27c8bfee52a6ec5cd17755d5e3d3755f756"
+    },
+    {
+      "file": "common_whitesquare.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_whitesquare.tex",
+      "sha256": "bc06557b44402fee1498430bd4008df9598085f44b29fea2f02218473674b2f8"
+    },
+    {
+      "file": "common_zapball2.png",
+      "source": "assets/characters/xerath/skins/base/particles/common_zapball2.tex",
+      "sha256": "d05cfb252cb0c63887edd9503479a3e3c14f63681793b5e068bda7be306e6f25"
+    },
+    {
+      "file": "xerath_base_q_beam.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beam.tex",
+      "sha256": "93bc7123c77895dfe6b53774cd32e571415aba5c8eb283694ce290e4975580a4"
+    },
+    {
+      "file": "xerath_base_q_beamenergy.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beamenergy.tex",
+      "sha256": "ff817d5845f36448935ad0b9934a27ff2ae4b955ac7f6457522e5b9ef92e3a28"
+    },
+    {
+      "file": "xerath_base_q_beam_01.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beam_01.tex",
+      "sha256": "ddeaee0e1e64f0e835ad9767bdfa8a883c274bcb4f9143939657637a64560231"
+    },
+    {
+      "file": "xerath_base_q_beam_02.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beam_02.tex",
+      "sha256": "25ab2ffcfbacd70ea8dc8685fdc7cd6759e04929c7fabcd06c67f1e9fc76385a"
+    },
+    {
+      "file": "xerath_base_q_beam_03.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beam_03.tex",
+      "sha256": "d2c81f9455165bc81ad3d392230f4a25d924a890ec60925aa3b6e836355e1d6c"
+    },
+    {
+      "file": "xerath_base_q_beam_mult.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_q_beam_mult.tex",
+      "sha256": "6478535fe733f1e12f3a98b2ed4307886d78cf5ec0165b0426bb7c6d73f54b83"
+    },
+    {
+      "file": "xerath_base_r_aoering_tx.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_r_aoering_tx.tex",
+      "sha256": "28513146c4ef9c6c099e84a4c00799222ff3d873fb17bfbd470efa9d0e1c10d1"
+    },
+    {
+      "file": "xerath_base_w_blastdome.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_w_blastdome.tex",
+      "sha256": "cf39651b886a9650890a9076c103cb3dd899dcc345f4a459ced6836eb96daaf6"
+    },
+    {
+      "file": "xerath_base_w_scorch.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_w_scorch.tex",
+      "sha256": "84bd807531e7c6dd4b2024cef3199a65590348fbb9d13dcb6625ef8b7ae23989"
+    },
+    {
+      "file": "xerath_base_w_skybeam.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_w_skybeam.tex",
+      "sha256": "0549be313b7b0dae204abdeaaa02bcef1d49a509a790c1c7752f63e0b797c574"
+    },
+    {
+      "file": "xerath_base_w_targetring.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_w_targetring.tex",
+      "sha256": "84426e87342fadde84315f7522e0dae523e90e30cecade1c552f3d7388a41354"
+    },
+    {
+      "file": "xerath_base_z_aoe_ring.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_aoe_ring.tex",
+      "sha256": "280eec8d75c805c1a173c5f7da7d1ea38deb79a24b9fa444fd789b8dd975afe9"
+    },
+    {
+      "file": "xerath_base_z_blastdarkstreak.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_blastdarkstreak.tex",
+      "sha256": "6e10db770975f8b30b98a6dade93a5864975b940452999d409d6215d282a1997"
+    },
+    {
+      "file": "xerath_base_z_bolts.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_bolts.tex",
+      "sha256": "a0b232825c84899e6fe90474e382b98dc81859159b90459dddd12543f1306ddf"
+    },
+    {
+      "file": "xerath_base_z_boltsblue.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_boltsblue.tex",
+      "sha256": "5338107745d8f068c109f0f15bb966cc0337ce432395bbe897ccf57f55685056"
+    },
+    {
+      "file": "xerath_base_z_boltsthin.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_boltsthin.tex",
+      "sha256": "6157be324454379f682c827924a07aacd5745562f66c18bc8c0421e110fa53fe"
+    },
+    {
+      "file": "xerath_base_z_energystreaks_1x4.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energystreaks_1x4.tex",
+      "sha256": "2bace0d70a3b84ecb131ef08ccad10ce2865b031a6fd38d6962dbab3e11f253e"
+    },
+    {
+      "file": "xerath_base_z_energyswirls_1x4.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energyswirls_1x4.tex",
+      "sha256": "57b50627e3ecd24027fa40d55f376e8b1c52efd1398cd27e3561e2d1d10e38be"
+    },
+    {
+      "file": "xerath_base_z_energywisps.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energywisps.tex",
+      "sha256": "00f13bb504523682bb0825d2c1607285158e383cfc223c28eee51ca61a853463"
+    },
+    {
+      "file": "xerath_base_z_energy_4x4.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energy_4x4.tex",
+      "sha256": "1c4552d7ab9939720bdf43fe44978a5cae79101cbfdded872b945c81ce6c35ca"
+    },
+    {
+      "file": "xerath_base_z_energy_4x4_blur.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energy_4x4_blur.tex",
+      "sha256": "e2aa7ad54ad68200471354e835775695495cc279ef306af50a687897ea20a110"
+    },
+    {
+      "file": "xerath_base_z_energy_4x4_bluralpha.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energy_4x4_bluralpha.tex",
+      "sha256": "b97bc00e872021565b11ff4555f6e7348af4067f4981e524b675b0306e76eded"
+    },
+    {
+      "file": "xerath_base_z_energy_mult.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_energy_mult.tex",
+      "sha256": "e7802484018f2c2fc838dd55386a219387267c31e18c412fd549fa991f00219d"
+    },
+    {
+      "file": "xerath_base_z_mortar.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_mortar.tex",
+      "sha256": "a7c6b33b24982938a22c713e79c96aa770234d143431dcbf0cd4e12a6db067dc"
+    },
+    {
+      "file": "xerath_base_z_mote.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_mote.tex",
+      "sha256": "a6b4302b239f0df89de25e6e8d82231cf6d263caf50e3551bbf4355924b7f430"
+    },
+    {
+      "file": "xerath_base_z_nova.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_nova.tex",
+      "sha256": "10913fe2fc882acbe6013b03439ef066a09f0f51f82268893fb236b79239fc0d"
+    },
+    {
+      "file": "xerath_base_z_praxiswave.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_praxiswave.tex",
+      "sha256": "37c5603441bbc32f27039aea26eb24f24c235e29c0d44bdfbc59c4537843c731"
+    },
+    {
+      "file": "xerath_base_z_rings.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_rings.tex",
+      "sha256": "927e2624bf15a06c363f9d5e6bc3957770917aacc686819fd8496401ebe0b690"
+    },
+    {
+      "file": "xerath_base_z_warpedsphere_tx.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_warpedsphere_tx.tex",
+      "sha256": "0b9be18c4f847b190deebbcd47eeffd2be67a37df1bd16f3ae2f906f80dd8ccc"
+    },
+    {
+      "file": "xerath_base_z_warpedsphere_tx_02.png",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_warpedsphere_tx_02.tex",
+      "sha256": "77502e1990e557b0a6724a6b76906e347b0662c71f082b5bf061eaaec3f2b2ff"
+    },
+    {
+      "file": "r-ring.json",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_r_aoering.scb",
+      "sha256": "30540cf00f4f82727e107c331dad98a317f72d4c045e421c4d84710f8fbfb429"
+    },
+    {
+      "file": "impact-ring.json",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_praxisring.scb",
+      "sha256": "7312a539bc14302cbf7835ea973147f7776b6bfbe2f1b0789e5a0cee5e53908c"
+    },
+    {
+      "file": "warped-sphere.json",
+      "source": "assets/characters/xerath/skins/base/particles/xerath_base_z_warpedsphere.scb",
+      "sha256": "723ccb4052bf62e2ef701dac42d396fb0f61e92a4ad2ad045f3dbef64d80ae2b"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {clone} from 'three/addons/utils/SkeletonUtils.js';
+import {XerathEffects} from './xerath-effects.js';
 import {LeBlancEffects} from './leblanc-effects.js';
 import {QuinnEffects} from './quinn-effects.js';
 import {SyndraEffects} from './syndra-effects.js';
@@ -8,7 +9,7 @@ import {SyndraEffects} from './syndra-effects.js';
 export class CombatView {
   constructor(scene){
     this.scene=scene;this.ready=false;this.combat=null;this.targets=[];this.bolts=new Map();this.numbers=[];
-    this.spellEffects=new LeBlancEffects(scene);
+    this.spellEffects=new LeBlancEffects(scene);this.xerathEffects=new XerathEffects(scene);
     this.syndraEffects=new SyndraEffects(scene);this.quinnEffects=new QuinnEffects(scene);
     this.range=new THREE.Mesh(new THREE.RingGeometry(589,591,128),new THREE.MeshBasicMaterial({color:'#9ee3bc',transparent:true,opacity:.65,side:THREE.DoubleSide,depthWrite:false}));
     this.range.rotation.x=-Math.PI/2;this.range.visible=false;scene.add(this.range);
@@ -31,7 +32,7 @@ export class CombatView {
     this.ready=true;
   }
   bind(combat){
-    this.spellEffects.clear();
+    this.spellEffects.clear();this.xerathEffects.clear();
     this.syndraEffects.clear();this.quinnEffects.clear();
     this.combat=combat;this.range.visible=false;
     for(const bolt of this.bolts.values())this.disposeBolt(bolt);this.bolts.clear();
@@ -47,7 +48,8 @@ export class CombatView {
   }
   disposeBolt(bolt){this.scene.remove(bolt);bolt.traverse(o=>{o.geometry?.dispose();o.material?.dispose();});}
   events(events){
-    if(this.combat?.champion==='quinn')this.quinnEffects.events(events);
+    if(this.combat?.champion==='xerath')this.xerathEffects.events(events);
+    else if(this.combat?.champion==='quinn')this.quinnEffects.events(events);
     else if(this.combat?.champion==='syndra')this.syndraEffects.events(events);
     else this.spellEffects.events(events);
     for(const event of events){
@@ -58,6 +60,7 @@ export class CombatView {
   }
   update(dt,position,camera,armed){
     const combat=this.combat;if(!combat)return;
+    if(combat.champion==='xerath')this.xerathEffects.update(dt,combat,position);
     if(combat.champion==='leblanc')this.spellEffects.update(dt,combat,position);
     if(combat.champion==='quinn')this.quinnEffects.update(dt,combat);
     if(combat.champion==='syndra')this.syndraEffects.update(dt,combat,position);

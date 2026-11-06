@@ -9,11 +9,11 @@ test('playlist visits all drills once with fixed duration/difficulty and restore
     const p=new TrainingPlaylist(base,{duration,difficulty});
     for(let i=0;i<PLAYLIST_MODES.length;i++){
       const config=p.config();assert.equal(config.duration,duration);assert.equal(config.difficulty,difficulty);assert.equal(config.abilityPower,200);
-      assert.equal(config.trainingProfile,'advanced');assert.equal(config.champion,config.drill==='vault'?'quinn':'syndra');assert.equal(config.speed,config.drill==='vault'?330:340);
+      assert.equal(config.trainingProfile,'advanced');assert.equal(config.champion,config.drill==='aim'?'xerath':config.drill==='vault'?'quinn':'syndra');assert.equal(config.speed,config.drill==='vault'?330:340);
       config.skills.push('modified');assert.deepEqual(base.skills,['ezrealQ']);assert.deepEqual(p.base.skills,['ezrealQ']);
       assert.equal(p.complete({config}),i<PLAYLIST_MODES.length-1);
     }
-    assert.equal(p.config(),null);assert.equal(p.reports.length,9);
+    assert.equal(p.config(),null);assert.equal(p.reports.length,PLAYLIST_MODES.length);
   }
 });
 test('playlist rejects duplicate/foreign completions and stops after the current block on request',()=>{

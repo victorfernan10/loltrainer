@@ -12,6 +12,10 @@ import {trainingConfig,MovementObserver,engagementPlan} from './training-rules.j
 import {TrainingUI} from './training-ui.js';
 import {TrainingPlaylist} from './playlist.js';
 import {Combat} from './combat.js';
+import {XerathCombat} from './xerath-combat.js';
+import {xerathClipLabels} from './xerath-animation.js';
+import {AimEncounter,aimTargets} from './aim-encounter.js';
+import {AimView} from './aim-view.js';
 import {QuinnCombat} from './quinn-combat.js';
 import {VaultEncounter} from './vault-encounter.js';
 import {VaultView} from './vault-view.js';
@@ -58,6 +62,7 @@ let dodgeFlash=new DodgeFlash();
 let combat=null,attackArmed=false;
 let vault=null;const vaultView=new VaultView(scene);
 let lane=null;const laneView=new LaneView(scene);
+let aim=null;const aimView=new AimView(scene);
 const combatView=new CombatView(scene);
 const yoneView=new YoneView(scene),yoneEffects=new YoneEffects(scene);
 let yone=null;const yoneShots=new Map();
@@ -94,24 +99,27 @@ async function selectChampion(id,{defaults=true}={}){
     model.rotation.y=0;actor.add(model);$('championSelect').value=id;
     $('heroName').textContent=champions[id].name;document.querySelector('.sigil').textContent=champions[id].name[0];$('champion-label').textContent=champions[id].name;document.body.dataset.champion=id;
     $('levelCaption').textContent='Nível de '+champions[id].name;
-    if(id==='syndra'||id==='quinn'){const selected=$('level').value;$('level').replaceChildren(...Array.from({length:18},(_,i)=>{const option=document.createElement('option');option.value=i+1;return option;}));$('level').value=selected;}
+    if(id==='syndra'||id==='quinn'||id==='xerath'){const selected=$('level').value;$('level').replaceChildren(...Array.from({length:18},(_,i)=>{const option=document.createElement('option');option.value=i+1;return option;}));$('level').value=selected;}
     for(const option of $('level').options){const level=+option.value;option.textContent=level+' · '+(id==='kayle'&&level<6?'corpo a corpo':'à distância')+' · '+championRange(id,level)+' u';}
     const mage=id!=='kayle';
+    $('xerathSettings').hidden=id!=='xerath';$('xerathInfo').hidden=id!=='xerath';
+    if(id==='xerath')await combatView.xerathEffects.load();
     $('quinnSettings').hidden=id!=='quinn';$('quinnInfo').hidden=id!=='quinn';
     if(id==='quinn')await combatView.quinnEffects.load();
     $('kayleAbilityHints').hidden=id!=='kayle';$('leblancInfo').hidden=id!=='leblanc';$('syndraInfo').hidden=id!=='syndra';$('syndraSettings').hidden=id!=='syndra';$('animationLibrary').hidden=!mage;
     document.querySelector('.combat-abilities').hidden=id!=='kayle';
     $('leblancAbilities').hidden=!mage;$('leblancSettings').hidden=!mage;
-    const labels=id==='quinn'?['Investida Anuviante','Sentidos Apurados','Salto','Retaguarda do Inimigo']:id==='syndra'?['Esfera Negra','Determinação','Dispersar','Poder Irrestrito']:['Sigilo','Distorção','Correntes','Mímica'];
+    const labels=id==='xerath'?['Pulso Arcano','Olho da Destruição','Orbe Eletrizante','Ritual Arcano']:id==='quinn'?['Investida Anuviante','Sentidos Apurados','Salto','Retaguarda do Inimigo']:id==='syndra'?['Esfera Negra','Determinação','Dispersar','Poder Irrestrito']:['Sigilo','Distorção','Correntes','Mímica'];
     ['Q','W','E','R'].forEach((key,i)=>$(`lbCast${key}`).querySelector('strong').textContent=labels[i]);
     if(mage){
       $('animationTitle').textContent='ANIMAÇÕES ORIGINAIS · '+champions[id].name.toUpperCase();
       $('animationDescription').textContent=clips.length+' clipes originais da skin base. Visualização antes do bloco, sem dano ou deslocamento de habilidades.';
-      $('animationClip').replaceChildren(...clips.map(c=>{const option=document.createElement('option');option.value=c.name;option.textContent=(leblancClipLabels[c.name]||c.name)+' · '+c.name;return option;}));$('animationClip').value=id==='quinn'?'quinn_idle1':id==='syndra'?'syndra_idle1':'idle1';
+      $('animationClip').replaceChildren(...clips.map(c=>{const option=document.createElement('option');option.value=c.name;option.textContent=(xerathClipLabels[c.name]||leblancClipLabels[c.name]||c.name)+' · '+c.name;return option;}));$('animationClip').value=id==='xerath'?'xerath_idle1':id==='quinn'?'quinn_idle1':id==='syndra'?'syndra_idle1':'idle1';
     }
     combatView.syndraEffects.setOrbAnchors?.(id==='syndra'?[1,2,3].map(n=>model.getObjectByName('Buffbone_CSTM_Orb_'+n)):[]);
-    if(defaults&&id==='quinn'){if(ui.drill!=='vault')ui.selectDrill('combat');const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.668*(1+.031*growth)).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
-    if(defaults&&id==='syndra'){ui.selectDrill('combat');$('controls').hidden=false;const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.658+.625*.02*growth).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
+    if(defaults&&id==='quinn'){if(!['vault','aim'].includes(ui.drill))ui.selectDrill('combat');const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.668*(1+.031*growth)).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
+    if(defaults&&id==='syndra'){if(ui.drill!=='aim')ui.selectDrill('combat');$('controls').hidden=false;const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.658+.625*.02*growth).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
+    if(defaults&&id==='xerath'){if(+$('level').value<6)$('level').value='6';ui.selectDrill('aim');const lv=+$('level').value,growth=.7025*(lv-1)+.0175*(lv*lv-1);$('attackSpeed').value=(.658+.625*.0136*growth).toFixed(2);$('attackSpeed').dispatchEvent(new Event('input'));}
     if(defaults){speed=champions[id].moveSpeed;$('speed').value=speed;$('speedValue').textContent=speed+' u/s';}
     setPlayerAnimation(false);window.__modelLoaded=true;$('status').textContent='● '+champions[id].name+' pronta · modelos e animações originais';
     return true;
@@ -119,7 +127,7 @@ async function selectChampion(id,{defaults=true}={}){
   finally{if(request===championRequest){championLoading=false;ui?.update(session);}}
 }
 
-function setPlayerAnimation(walk,dt=0){playerAnimator?.update(dt,{time:combat?.time??elapsed,moving:walk,level:combat?.level??1,speed:speed*(combat?.speedMultiplier??1),windup:combat?.windup,attackUntil:combat?.animationUntil??0,holding:!!combat?.holding,valor:!!combat?.valor,dashPhase:combat?.dash?.phase});}
+function setPlayerAnimation(walk,dt=0){playerAnimator?.update(dt,{time:combat?.time??elapsed,moving:walk,level:combat?.level??1,speed:speed*(combat?.speedMultiplier??1),windup:combat?.windup,attackUntil:combat?.animationUntil??0,holding:!!combat?.holding,valor:!!combat?.valor,dashPhase:combat?.dash?.phase,charge:combat?.charge??null,channel:combat?.channel??null});}
 function playPlayerAttack(event){
   if(!playerAnimator)return;const victim=combat.target(event.targetId),bearing=Math.atan2(victim.position.x-position.x,victim.position.z-position.z)-model.rotation.y;
   playerAnimator.attack(event,{time:combat.time,attackSpeed:combat.attackSpeed,angle:Math.atan2(Math.sin(bearing),Math.cos(bearing))});
@@ -422,14 +430,14 @@ function scheduleAttack(){
 function setChallenge(active){
   if(session&&session.state!=='finished'){
     if(active)session.state=session.resumeState||'running';
-    else{session.resumeState=session.state==='draining'?'draining':'running';session.state='paused';}
+    else{combat?.cancelCharge?.('paused');session.resumeState=session.state==='draining'?'draining':'running';session.state='paused';}
   }
-  challengeActive=active&&session?.state==='running'&&!session.config.rehearsal&&session.config.drill!=='yone'&&session.config.drill!=='lane'&&session.config.drill!=='vault'&&!matchupProfiles[session.config.drill]&&(session.config.drill!=='combat'||session.config.combatHazards!==false);
+  challengeActive=active&&session?.state==='running'&&!session.config.rehearsal&&session.config.drill!=='yone'&&session.config.drill!=='lane'&&session.config.drill!=='vault'&&session.config.drill!=='aim'&&!matchupProfiles[session.config.drill]&&(session.config.drill!=='combat'||session.config.combatHazards!==false);
   $('status').textContent=active?'● Treino em andamento · Esc para pausar':'Treino pausado · tempo e habilidades congelados';
   ui?.update(session);
 }
 function clearHazards(){for(const w of warnings){removeObject(w.lane);removeObject(w.center);}warnings.length=0;for(const p of projectiles){removeObject(p.sprite,!p.sharedGeometry);removeObject(p.trail);}projectiles.length=0;for(const effect of effects)removeObject(effect.object);effects.length=0;$('incoming').hidden=true;}
-function resetChallenge(){vault=null;vaultView.bind(null);$('vaultHud').hidden=true;lane=null;laneView.bind(null);$('laneHud').hidden=true;matchup=null;matchupShots.clear();matchupView.bind(null);$('matchupHud').hidden=true;yone=null;yoneShots.clear();yoneView.bind(null);yoneEffects.clear();$('yoneHud').hidden=true;playerAnimator?.reset();session=null;combat=null;dodgeFlash=new DodgeFlash();attackArmed=false;combatView.bind(null);$('attackHud').hidden=true;setChallenge(false);clearHazards();endWave();for(const enemy of enemies.values()){enemy.active=false;enemy.moving=false;enemy.castRemaining=0;enemy.dismissWhenCastComplete=false;enemy.hasCast=false;enemy.group.position.copy(enemy.initialPosition);enemy.group.visible=false;setEnemyLocomotion(enemy);}waveNumber=0;waveRemaining=0;waveCooldown=0;wavePlan=null;waveCastIndex=0;lastWaveCastAt=null;aimLeadNext=false;lastAimMode='current';position.set(0,0,0);playerVelocity.set(0,0,0);target.copy(position);focus.copy(position);moving=false;elapsed=0;dodged=0;hits=0;casts=0;lastSkillId='';nextAttack=0;updateCounters();$('hitFlash').hidden=true;$('clickFeedback').hidden=true;$('status').textContent='● Escolha um fundamento e comece seu bloco';ui?.update(null);}
+function resetChallenge(){aim=null;aimView.bind(null);$('aimHud').hidden=true;vault=null;vaultView.bind(null);$('vaultHud').hidden=true;lane=null;laneView.bind(null);$('laneHud').hidden=true;matchup=null;matchupShots.clear();matchupView.bind(null);$('matchupHud').hidden=true;yone=null;yoneShots.clear();yoneView.bind(null);yoneEffects.clear();$('yoneHud').hidden=true;playerAnimator?.reset();session=null;combat=null;dodgeFlash=new DodgeFlash();attackArmed=false;combatView.bind(null);$('attackHud').hidden=true;setChallenge(false);clearHazards();endWave();for(const enemy of enemies.values()){enemy.active=false;enemy.moving=false;enemy.castRemaining=0;enemy.dismissWhenCastComplete=false;enemy.hasCast=false;enemy.group.position.copy(enemy.initialPosition);enemy.group.visible=false;setEnemyLocomotion(enemy);}waveNumber=0;waveRemaining=0;waveCooldown=0;wavePlan=null;waveCastIndex=0;lastWaveCastAt=null;aimLeadNext=false;lastAimMode='current';position.set(0,0,0);playerVelocity.set(0,0,0);target.copy(position);focus.copy(position);moving=false;elapsed=0;dodged=0;hits=0;casts=0;lastSkillId='';nextAttack=0;updateCounters();$('hitFlash').hidden=true;$('clickFeedback').hidden=true;$('status').textContent='● Escolha um fundamento e comece seu bloco';ui?.update(null);}
 
 function startPlaylist(options){
   if(playlist||(session&&session.state!=='finished'))return;
@@ -462,9 +470,11 @@ function resetUserTraining(){playlist=null;resetChallenge();}
 function startSession(config=ui.config()){
   if(config.playlistId&&config.playlistId!==playlist?.id)return;
   config=trainingConfig({champion:$('championSelect').value,level:6,attackSpeed:1.5,attackPriority:'cursor',bindLeft:true,combatHazards:true,combatCircuit:'on',...config});
+  if(config.drill==='aim'&&config.champion!=='xerath')config={...config,champion:'xerath',speed:340,level:Math.max(6,config.level)};
   if(config.drill==='vault'&&config.champion!=='quinn')config={...config,champion:'quinn',speed:330};
   if(config.champion!==championId||championLoading)return selectChampion(config.champion,{defaults:false}).then(ok=>ok?startSession(config):undefined);
-  const vaultMode=config.drill==='vault',laneMode=config.drill==='lane',matchupMode=!!matchupProfiles[config.drill],yoneMode=config.drill==='yone',combatMode=config.drill==='combat'||yoneMode||laneMode||vaultMode,hazards=!vaultMode&&!laneMode&&!matchupMode&&!yoneMode&&(!combatMode||config.combatHazards);
+  const aimMode=config.drill==='aim',vaultMode=config.drill==='vault',laneMode=config.drill==='lane',matchupMode=!!matchupProfiles[config.drill],yoneMode=config.drill==='yone',combatMode=config.drill==='combat'||yoneMode||laneMode||vaultMode||aimMode,hazards=!aimMode&&!vaultMode&&!laneMode&&!matchupMode&&!yoneMode&&(!combatMode||config.combatHazards);
+  if(aimMode){config={...config,skills:[],combatCircuit:'off',combatHazards:false};if(!aimView.ready)return aimView.load().then(()=>startSession(config)).catch(error=>{console.error(error);$('status').textContent='Falha ao carregar alvo de precisão';});}
   if(vaultMode){config={...config,skills:[],combatCircuit:'off',combatHazards:false,vaultVersion:1};if(!vaultView.ready)return vaultView.load().then(()=>startSession(config)).catch(error=>{console.error(error);$('status').textContent='Falha ao carregar LeBlanc';});}
   if(laneMode){config={...config,skills:[],combatCircuit:'off',combatHazards:false,laneVersion:2};if(!laneView.ready)return laneView.load().then(()=>startSession(config)).catch(error=>{console.error(error);$('status').textContent='Falha ao carregar adversária da lane';});}
   if(matchupMode){config={...config,matchupVersion:1,skills:config.drill==='ahri'&&config.matchupPattern==='q'?['ahriQ','ahriQReturn']:config.drill==='ahri'&&config.matchupPattern==='e'?['ahriE']:matchupProfiles[config.drill].skills};if(!matchupView.models.has(config.drill)){$('status').textContent='Carregando '+matchupProfiles[config.drill].name+'…';return matchupView.load(config.drill).then(()=>startSession(config)).catch(error=>{console.error(error);$('status').textContent='Falha ao carregar o adversário. Tente novamente.';});}}
@@ -473,16 +483,17 @@ function startSession(config=ui.config()){
   if(hazards&&!config.skills.length){$('status').textContent='Selecione pelo menos uma habilidade nos ajustes';return;}
   
   resetChallenge();movementObserver=new MovementObserver();movementObserver.record(0,position);session=new TrainingSession(config);dodgeFlash=new DodgeFlash();dodgeDeck=new DodgeDeck(session.random);speed=config.speed;challengeActive=hazards;nextAttack=.4;
-  if(combatMode){const Engine=championId==='quinn'?QuinnCombat:championId==='syndra'?SyndraCombat:championId==='leblanc'?LeBlancCombat:Combat;combat=new Engine({advanced:config.trainingProfile==='advanced'&&config.drill==='combat',champion:championId,level:config.level,attackSpeed:config.attackSpeed,priority:config.attackPriority,circuit:config.combatCircuit==='on',difficulty:config.difficulty,random:session.random,bonusAD:config.bonusAD,critChance:config.critChance,abilityPower:config.abilityPower,unlimitedMana:config.unlimitedMana,abilityHaste:config.abilityHaste,syndraSplinters:config.syndraSplinters,targets:vaultMode?[{id:'vault-leblanc',kind:'champion',position:{x:0,z:-550},maxHealth:3000}]:laneMode?laneTargets():yoneMode?[{id:'yone',position:{x:0,z:650},maxHealth:1800}]:(config.drill==='combat'&&config.trainingProfile==='advanced'&&config.combatCircuit==='on'?[{id:'ryze-1',position:{x:-320,z:-230}},{id:'ryze-2',position:{x:350,z:-180}},{id:'ryze-3',position:{x:0,z:-440}}].map(t=>({...t,maxHealth:championId==='syndra'?3000:600})):undefined)});combatView.bind(combat);session.combat=combat.summary();$('controls').hidden=true;$('attackHud').hidden=false;}
+  if(combatMode){const Engine=championId==='xerath'?XerathCombat:championId==='quinn'?QuinnCombat:championId==='syndra'?SyndraCombat:championId==='leblanc'?LeBlancCombat:Combat;combat=new Engine({advanced:config.trainingProfile==='advanced'&&config.drill==='combat',champion:championId,level:config.level,attackSpeed:config.attackSpeed,priority:config.attackPriority,circuit:config.combatCircuit==='on',difficulty:config.difficulty,random:session.random,bonusAD:config.bonusAD,critChance:config.critChance,abilityPower:config.abilityPower,unlimitedMana:config.unlimitedMana,abilityHaste:config.abilityHaste,syndraSplinters:config.syndraSplinters,targets:aimMode?aimTargets():vaultMode?[{id:'vault-leblanc',kind:'champion',position:{x:0,z:-550},maxHealth:3000}]:laneMode?laneTargets():yoneMode?[{id:'yone',position:{x:0,z:650},maxHealth:1800}]:(config.drill==='combat'&&config.trainingProfile==='advanced'&&config.combatCircuit==='on'?[{id:'ryze-1',position:{x:-320,z:-230}},{id:'ryze-2',position:{x:350,z:-180}},{id:'ryze-3',position:{x:0,z:-440}}].map(t=>({...t,maxHealth:['syndra','xerath'].includes(championId)?3000:600})):undefined)});combatView.bind(combat);session.combat=combat.summary();$('controls').hidden=true;$('attackHud').hidden=false;}
+  if(aimMode){aim=new AimEncounter({combat,random:session.random,difficulty:config.difficulty});aimView.bind(aim);focus.set(0,0,-300);$('aimHud').hidden=false;}
   if(vaultMode){vault=new VaultEncounter({combat,random:session.random,difficulty:config.difficulty,interval:config.pace,advanced:config.trainingProfile==='advanced'});vaultView.bind(vault);$('vaultHud').hidden=false;}
   if(laneMode){lane=new LaneEncounter({combat,random:session.random,difficulty:config.difficulty,coach:config.laneCoach!==false,advanced:config.trainingProfile==='advanced'});laneView.bind(lane);focus.set(0,0,-300);$('laneHud').hidden=false;}
   if(yoneMode){yone=new YoneEncounter({target:combat.target('yone'),random:session.random,pattern:config.yonePattern??'eq',initialStacks:config.yoneStacks??2,difficulty:config.difficulty,advanced:config.trainingProfile==='advanced'});yoneView.bind(yone);$('yoneHud').hidden=false;}
   if(matchupMode){matchup=new MatchupEncounter({champion:config.drill,difficulty:config.difficulty,random:session.random,interval:config.pace,pattern:config.matchupPattern??'mixed',advanced:config.trainingProfile==='advanced'});matchupView.bind(matchup);$('matchupHud').hidden=false;$('controls').hidden=true;}
-  if(hazards)beginWave();else $('status').textContent=vaultMode?'● Quinn × LeBlanc · intercepte o W com o E no alvo':laneMode?'● Lane · observe o last hit e acerte o poke durante o autoattack':matchupMode?'● Esquiva · '+matchupProfiles[config.drill].name+' em aproximação':yoneMode?'● Duelo · Yone usa E, persegue e retorna. Leia os Qs e reposicione.':'● Aquecimento · ataque os alvos e reposicione entre os disparos';ui.update(session);
+  if(hazards)beginWave();else $('status').textContent=aimMode?'● Precisão livre · antecipe passos, force o dash e puna a aterrissagem':vaultMode?'● Quinn × LeBlanc · intercepte o W com o E no alvo':laneMode?'● Lane · observe o last hit e acerte o poke durante o autoattack':matchupMode?'● Esquiva · '+matchupProfiles[config.drill].name+' em aproximação':yoneMode?'● Duelo · Yone usa E, persegue e retorna. Leia os Qs e reposicione.':'● Aquecimento · ataque os alvos e reposicione entre os disparos';ui.update(session);
 }
 function finishSession(){
   if(!session||session.state==='finished')return;
-  challengeActive=false;session.state='draining';session.drainStarted=true;session.attackStoppedAt??=session.time;attackArmed=false;combat?.endAttacks();vault?.stop();lane?.stop();yone?.stop();matchup?.stop();
+  challengeActive=false;session.state='draining';session.drainStarted=true;session.attackStoppedAt??=session.time;attackArmed=false;combat?.endAttacks();aim?.stop();vault?.stop();lane?.stop();yone?.stop();matchup?.stop();
   for(const enemy of waveEnemies){enemy.active=false;enemy.moving=false;if(!enemy.hasCast)enemy.group.visible=false;setEnemyLocomotion(enemy);}
   ui.update(session);
 }
@@ -549,7 +560,7 @@ function useCombatAbility(key){
   if(!combat||session?.state!=='running'||(yone&&yone.time<yone.playerLockedUntil))return;
   if(combat.castAbility){
     raycaster.setFromCamera(mouse,camera);const point=new THREE.Vector3();if(!raycaster.ray.intersectPlane(ground,point))return;
-    const targetId=vaultView.pick(raycaster)??laneView.pick(raycaster)??yoneView.pick(raycaster)??combatView.pick(raycaster)??combat.targets.filter(t=>t.alive&&Math.hypot(t.position.x-point.x,t.position.z-point.z)<=t.radius).sort((a,b)=>Math.hypot(a.position.x-point.x,a.position.z-point.z)-Math.hypot(b.position.x-point.x,b.position.z-point.z))[0]?.id;
+    const targetId=aimView.pick(raycaster)??vaultView.pick(raycaster)??laneView.pick(raycaster)??yoneView.pick(raycaster)??combatView.pick(raycaster)??combat.targets.filter(t=>t.alive&&Math.hypot(t.position.x-point.x,t.position.z-point.z)<=t.radius).sort((a,b)=>Math.hypot(a.position.x-point.x,a.position.z-point.z)-Math.hypot(b.position.x-point.x,b.position.z-point.z))[0]?.id;
     if(combat.castAbility(key,point,position,targetId)){attackArmed=false;session.command(position,point,key);}
   }else if((key==='E'&&combat.castE())||(key==='W'&&combat.castW()))session.command(position,position,key);
 }
@@ -564,10 +575,10 @@ renderer.domElement.addEventListener('mousedown',event=>{
   if(event.button!==0&&event.button!==2)return;
   renderer.domElement.focus({preventScroll:true});
   const point=pointAtPointer(event);if(!point)return;
-  if(event.button===2){event.preventDefault();const id=vaultView.pick(raycaster)??laneView.pick(raycaster)??yoneView.pick(raycaster)??combatView.pick(raycaster);if(combat&&id)issueAttackTarget(id);else issueMove(point);}
+  if(event.button===2){event.preventDefault();const id=aimView.pick(raycaster)??vaultView.pick(raycaster)??laneView.pick(raycaster)??yoneView.pick(raycaster)??combatView.pick(raycaster);if(combat&&id)issueAttackTarget(id);else issueMove(point);}
   else if(combat&&(attackArmed||session.config.bindLeft)){event.preventDefault();issueAttackMove(point);}
 });
-const autoPause=()=>{pointerInside=false;if(session&&['running','draining'].includes(session.state))setChallenge(false);};
+const autoPause=()=>{pointerInside=false;combat?.cancelCharge?.('focus-lost');if(session&&['running','draining'].includes(session.state))setChallenge(false);};
 window.addEventListener('blur',autoPause);document.addEventListener('visibilitychange',()=>{if(document.hidden)autoPause();});
 window.addEventListener('keydown',event=>{
   if($('results').open)return;
@@ -580,6 +591,7 @@ window.addEventListener('keydown',event=>{
   if(event.code==='KeyS'){event.preventDefault();if(!event.repeat)issueStop();}
   if(event.code==='KeyY'&&!event.repeat){locked=!locked;$('locked').checked=locked;}
 });
+window.addEventListener('keyup',event=>{if(event.code==='KeyQ'&&combat?.charge){if(session?.state==='running'){raycaster.setFromCamera(mouse,camera);const point=new THREE.Vector3();if(raycaster.ray.intersectPlane(ground,point))combat.releaseAbility('Q',point,position);}else combat.cancelCharge?.('paused');}});
 $('locked').onchange=event=>locked=event.target.checked;
 $('toggle').onclick=()=>{$('controls').hidden=!$('controls').hidden;};
 $('dodgeFlash').onclick=()=>{useDodgeFlash();renderer.domElement.focus({preventScroll:true});};
@@ -670,8 +682,10 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
   session?.tick(dt);if(session?.state==='draining'&&!session.drainStarted)finishSession();
   previousPlayerPosition.copy(position);
   if(dt>0){
+    if(combat?.updateAim){raycaster.setFromCamera(mouse,camera);const cursor=new THREE.Vector3();if(raycaster.ray.intersectPlane(ground,cursor))combat.updateAim(cursor);}
+    if(aim)aim.update(dt,position,{allowStart:session.state==='running'});
     moving=combat?combat.update(dt,position,target,speed,{allowStart:session.state==='running'&&!(yone&&yone.time<yone.playerLockedUntil),allowActions:!(yone&&yone.time<yone.playerLockedUntil)}):matchup?.charmed?matchup.moveCharmedPlayer(position,speed,dt):advance(position,target,matchup?effectivePlayerSpeed():speed,dt);
-    if(combat){const events=combat.drainEvents();for(const event of events){if(event.type==='blink'){previousPlayerPosition.copy(position);target.copy(position);}if(event.type==='spell'){playerAnimator?.cast?.(event,combat.time);if(model&&!event.returning)model.rotation.y=Math.atan2(event.point.x-position.x,event.point.z-position.z);}if(event.type==='start')playPlayerAttack(event);if(event.type==='empower'&&event.attack)playPlayerAttack(event.attack);if(event.type==='boost')playerAnimator?.boost({time:combat.time,windup:combat.windup});if(event.type==='release')playerAnimator?.release(event.id);if(event.type==='cancel')playerAnimator?.cancel(event.id);if(event.type==='cancel-spell')playerAnimator?.cancelSpell?.();}lane?.observe(events);vault?.observe(events);combatView.events(events);}
+    if(combat){const events=combat.drainEvents();for(const event of events){if(event.type==='blink'){previousPlayerPosition.copy(position);target.copy(position);}if(event.type==='spell'){playerAnimator?.cast?.(event,combat.time);if(model&&event.point&&!event.returning)model.rotation.y=Math.atan2(event.point.x-position.x,event.point.z-position.z);}if(event.type==='start')playPlayerAttack(event);if(event.type==='empower'&&event.attack)playPlayerAttack(event.attack);if(event.type==='boost')playerAnimator?.boost({time:combat.time,windup:combat.windup});if(event.type==='release')playerAnimator?.release(event.id);if(event.type==='cancel')playerAnimator?.cancel(event.id);if(event.type==='cancel-spell')playerAnimator?.cancelSpell?.();}aim?.observe(events);lane?.observe(events);vault?.observe(events);combatView.events(events);}
     playerVelocity.subVectors(position,previousPlayerPosition).multiplyScalar(1/dt);
     if(session)movementObserver.record(session.time,position);
   }
@@ -688,17 +702,19 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
     const response=facingTarget?4.6/Math.max(.045,combat.profile.windupFraction/combat.attackSpeed):20+14*Math.min(1,Math.abs(delta)/Math.PI);
     model.rotation.y+=delta*(1-Math.exp(-response*dt));
   }
+  if(model&&combat?.charge&&combat.aimPoint)model.rotation.y=Math.atan2(combat.aimPoint.x-position.x,combat.aimPoint.z-position.z);
   if(dt>0)setPlayerAnimation(moving,dt);
   if(challengeActive){if(waveEnemies.length){waveRemaining-=dt;const waveComplete=waveEnemies.every(enemy=>enemy.hasCast&&!enemy.group.visible)&&!warnings.length&&!projectiles.length;if(waveComplete||(waveRemaining<=0&&!warnings.length&&!projectiles.length))endWave();}else{waveCooldown-=dt;if(waveCooldown<=0)beginWave();}nextAttack-=dt;if(nextAttack<=0){scheduleAttack();nextAttack=.025;}}
   if(dt>0){for(const enemy of enemies.values())updateEnemyPose(enemy,dt);session?.sample(position);updateWarnings(dt);updateProjectiles(dt);updateEffects(dt);}
   if(combat){
-    session.combat=combat.summary(Math.min(session.time,session.attackStoppedAt??session.config.duration));if(yone)session.combat.yone=yone.summary();if(lane)session.combat.lane=lane.summary();if(vault)session.combat.vault=vault.summary();
+    session.combat=combat.summary(Math.min(session.time,session.attackStoppedAt??session.config.duration));if(yone)session.combat.yone=yone.summary();if(lane)session.combat.lane=lane.summary();if(vault)session.combat.vault=vault.summary();if(aim)session.combat.aim=aim.summary();
     if(combat.playerHealth===0&&session.state==='running'){
       if(playlist&&session.config.playlistId===playlist.id){session.playlistKnockouts=(session.playlistKnockouts??0)+1;combat.playerHealth=combat.maxPlayerHealth;$('status').textContent=`● Vida restaurada · ${session.playlistKnockouts} queda(s) neste bloco`;}
       else finishSession();
     }
     const winding=combat.windup,ready=combat.time>=combat.readyAt;
     $('attackState').textContent=paused?'Pausado':winding?'Preparando ataque':ready?'Ataque pronto':'Pode reposicionar';
+    if(!paused&&combat.charge)$('attackState').textContent=`Carregando Q · ${Math.round(combat.qRange)} u`;
     if(!paused&&combat.busy)$('attackState').textContent=combat.dash?(combat.champion==='quinn'?'Salto em curso':'Distorção em curso'):'Conjurando habilidade';
     $('attackHud').dataset.phase=winding?'windup':ready?'ready':'cooldown';
     $('attackProgress').value=winding?(combat.time-winding.startedAt)/(winding.releaseAt-winding.startedAt):Math.max(0,1-(combat.readyAt-combat.time)*combat.attackSpeed);
@@ -706,7 +722,7 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
     $('combatObjective').textContent=combat.circuit?`ALVO ${combat.markedId?.split('-').at(-1)} · ${combat.markedProgress}/${combat.markRequired} disparos · ${Math.max(0,combat.markedUntil-combat.time).toFixed(1)} s`:'LIVRE · ataque e dê um passo entre disparos';if(combat.advancedCircuit)$('combatObjective').textContent+=` · ${combat.circuitHint||'passos de '+combat.stepRequired+' u'}`;
     for(const key of ['e','w']){const remaining=Math.max(0,combat[`${key}ReadyAt`]-combat.time);$(`${key}Cooldown`).textContent=key==='e'&&combat.empowered?'Preparado':key==='w'&&combat.speedMultiplier>1?`+30% · ${(combat.boostUntil-combat.time).toFixed(1)} s`:remaining>0?`${remaining.toFixed(1)} s`:'Pronto';$(`cast${key.toUpperCase()}`).disabled=session.state!=='running'||remaining>0;}
     if(combat.castAbility){
-      for(const key of ['Q','W','E','R']){const state=combat.abilityState(key),button=$(`lbCast${key}`);button.disabled=session.state!=='running'||!state.ready;button.querySelector('output').textContent=!state.rank?'Não aprendido':state.returning?`${combat.champion==='syndra'?'Arremessar':'Voltar'} · ${state.returnRemaining.toFixed(1)} s`:state.remaining>0?`${state.remaining.toFixed(1)} s`:`Grau ${state.rank} · pronto`;if(combat.champion==='syndra'){if(key==='Q'&&state.rank)button.querySelector('output').textContent=`${state.charges}/${combat.maxQCharges} · ${state.remaining>0?state.remaining.toFixed(1)+' s':'pronto'}`;if(key==='R')button.querySelector('strong').textContent=state.label;}else if(combat.champion==='quinn'&&key==='R')button.querySelector('strong').textContent=state.label;else if(key==='R')button.querySelector('strong').textContent=`Mímica · ${state.returning?'W ↩':combat.lastBasic}`;}
+      for(const key of ['Q','W','E','R']){const state=combat.abilityState(key),button=$(`lbCast${key}`);button.disabled=session.state!=='running'||!state.ready;button.querySelector('output').textContent=!state.rank?'Não aprendido':state.returning?`${combat.champion==='syndra'?'Arremessar':'Voltar'} · ${state.returnRemaining.toFixed(1)} s`:state.remaining>0?`${state.remaining.toFixed(1)} s`:`Grau ${state.rank} · pronto`;if(combat.champion==='syndra'){if(key==='Q'&&state.rank)button.querySelector('output').textContent=`${state.charges}/${combat.maxQCharges} · ${state.remaining>0?state.remaining.toFixed(1)+' s':'pronto'}`;if(key==='R')button.querySelector('strong').textContent=state.label;}else if(combat.champion==='quinn'&&key==='R')button.querySelector('strong').textContent=state.label;else if(combat.champion==='xerath'){button.querySelector('strong').textContent=({Q:'Pulso Arcano',W:'Olho da Destruição',E:'Orbe Eletrizante',R:'Rito Arcano'})[key];if(state.charging)button.querySelector('output').textContent=`Solte Q · ${Math.round(combat.qRange)} u`;if(state.channeling)button.querySelector('output').textContent=`${state.charges} disparos · ${state.remaining>0?state.remaining.toFixed(1)+' s':'R para disparar'}`;}else if(key==='R')button.querySelector('strong').textContent=`Mímica · ${state.returning?'W ↩':combat.lastBasic}`;}
       $('lbMana').textContent=combat.unlimitedMana?'Mana livre · treino':`Mana ${Math.floor(combat.mana)} / ${Math.round(combat.maxMana)}`;
       if(combat.champion==='syndra')$('lbMana').textContent+=` · ${combat.splinters}/120 fragmentos · ${Math.round(combat.abilityPower)} AP`;
       $('lbFeedback').textContent=combat.feedback;
@@ -714,12 +730,12 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
     const c=session.combat;$('combatPerformance').textContent=`${c.apm} APM · ${c.changedApm} comandos distintos/min · passos ${c.kiteSteps}/${c.kiteOpportunities}${combat.circuit?` · ${c.completedMarks} trocas`:''}`;
   }
   if(session?.config.rehearsal&&session.state==='running'&&session.shots.every(s=>s.resolved))finishSession();
-  if(session?.state==='draining'&&!warnings.length&&!projectiles.length&&!combat?.pending&&!lane?.pending&&!vault?.pending&&!yone?.pending&&!matchup?.pending)completeSession();
+  if(session?.state==='draining'&&!warnings.length&&!projectiles.length&&!combat?.pending&&!aim?.pending&&!lane?.pending&&!vault?.pending&&!yone?.pending&&!matchup?.pending)completeSession();
   const flashMode=FLASH_MODES.has(session?.config.drill??ui.drill);$('dodgeFlash').hidden=!flashMode;const flashRemaining=dodgeFlash.remaining(session?.time??0);$('dodgeFlash').disabled=session?.state!=='running'||flashRemaining>0||!!matchup?.charmed;$('flashCooldown').textContent=session?.state==='paused'?'Pausado':flashRemaining>0?flashRemaining.toFixed(1)+' s':'Pronto · 10 s de recarga';
   hudUpdate+=rawDt;if(hudUpdate>.1){ui.update(session);hudUpdate=0;}
   if(locked)focus.copy(position);else if(pointerInside){const edge=.975,edgePanSpeed=1250;if(Math.abs(mouse.x)>edge)focus.x+=Math.sign(mouse.x)*edgePanSpeed*dt;if(Math.abs(mouse.y)>edge)focus.z-=Math.sign(mouse.y)*edgePanSpeed*dt;}
   if(championId==='syndra'&&!combat)combatView.syndraEffects.update(dt,{time:elapsed},position);
-  updateCamera();vaultView.update(dt,position,camera);updateVaultHud();laneView.update(dt,camera);updateLaneHud();updateEnemyLabels();combatView.update(dt,position,camera,attackArmed);yoneView.update(dt,position,camera);yoneEffects.update(yone,session?.config.yoneTelegraphs!==false);updateYoneHud();matchupView.update(dt,session?.config.matchupTelegraphs!==false,camera);updateMatchupHud();const label=position.clone().add(new THREE.Vector3(0,260,0)).project(camera);$('champion-label').style.left=(label.x+1)*innerWidth/2+'px';$('champion-label').style.top=(-label.y+1)*innerHeight/2+'px';renderer.render(scene,camera);
+  updateCamera();aimView.update(dt,position,camera);updateAimHud();vaultView.update(dt,position,camera);updateVaultHud();laneView.update(dt,camera);updateLaneHud();updateEnemyLabels();combatView.update(dt,position,camera,attackArmed);yoneView.update(dt,position,camera);yoneEffects.update(yone,session?.config.yoneTelegraphs!==false);updateYoneHud();matchupView.update(dt,session?.config.matchupTelegraphs!==false,camera);updateMatchupHud();const label=position.clone().add(new THREE.Vector3(0,260,0)).project(camera);$('champion-label').style.left=(label.x+1)*innerWidth/2+'px';$('champion-label').style.top=(-label.y+1)*innerHeight/2+'px';renderer.render(scene,camera);
 }
 window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
 window.__trainer={position,target,camera,get playlist(){return playlist;},get enemies(){return [...enemies.values()];},get warnings(){return warnings;},get projectiles(){return projectiles;},get wave(){return {number:waveNumber,remaining:waveRemaining,active:waveEnemies.map(enemy=>enemy.name),aimMode:lastAimMode};},get stats(){return {dodged,hits,casts,challengeActive};},get skills(){return dodgeSkills;},get visualDiagnostics(){return {playerRingHitbox:actor.children.some(child=>child.geometry?.type==='RingGeometry'),warningTargetMarkers:warnings.some(item=>'targetMark'in item),telegraphWidths:warnings.map(item=>item.lane.children[0]?.geometry?.parameters?.width)};},spawn:id=>{const skill=dodgeSkills[id],enemy=[...enemies.values()].find(item=>item.skills.includes(id));if(skill&&enemy){enemy.active=true;enemy.group.visible=true;makeWarning(skill,enemy);}},moveTo:point=>target.copy(point.clone()),get loadedEnemies(){return [...enemies.values()].filter(enemy=>!!enemy.model).map(enemy=>enemy.name);},get enemyAnimations(){return [...enemies.values()].map(enemy=>({name:enemy.name,skinnedMeshes:countSkinnedMeshes(enemy.model),clips:enemy.actions.length,action:enemy.action?.getClip().name,time:enemy.action?.time??0,idleTracks:enemy.idleAction?.getClip().tracks.length,idleDuration:enemy.idleAction?.getClip().duration,idleWeight:enemy.idleAction?.getEffectiveWeight(),idleRunning:enemy.idleAction?.isRunning(),runClip:enemy.runAction?.getClip().name,runTracks:enemy.runAction?.getClip().tracks.length,runWeight:enemy.runAction?.getEffectiveWeight(),moving:enemy.moving,active:enemy.active,dismissWhenCastComplete:!!enemy.dismissWhenCastComplete,hasCast:!!enemy.hasCast,castClip:enemy.castClip?.name,castTracks:enemy.castClip?.tracks.length,castWeight:enemy.castAction?.getEffectiveWeight(),castDuration:enemy.castDuration,casting:enemy.castRemaining>0}));}};
@@ -762,3 +778,13 @@ function updateVaultHud(){
 Object.defineProperty(window.__trainer,'vaultVisual',{get:()=>vaultView.diagnostics});
 
 Object.defineProperty(window.__trainer,'flash',{get:()=>({uses:dodgeFlash.uses,remaining:dodgeFlash.remaining(session?.time??0),range:dodgeFlash.range})});
+
+function updateAimHud(){
+  if(!aim)return;const a=aim.summary();
+  $('aimScore').textContent=`${a.hits}/${a.casts} habilidades · ${a.accuracy??'—'}% de acerto`;
+  $('aimAbilities').textContent=Object.entries(a.byAbility).map(([k,v])=>`${k} ${v.hits}/${v.casts}`).join(' · ');
+  $('aimMovement').textContent=`${a.dashes} dashes · ${a.feints} mudanças de ritmo · ${a.landingHits} acertos na aterrissagem`;
+  $('aimFeedback').textContent=aim.feedback;$('combatObjective').textContent='PRECISÃO LIVRE · LEIA O MOVIMENTO E COMBINE SEU KIT';
+}
+Object.defineProperties(window.__trainer,{aim:{get:()=>aim},aimVisual:{get:()=>aimView.diagnostics}});
+Object.assign(window.__trainer,{releaseAbility:(key,point)=>combat?.releaseAbility?.(key,point,position)});
