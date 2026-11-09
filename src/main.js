@@ -1,4 +1,5 @@
 import './asset-loading.js';
+import {CapturedPointer} from './captured-pointer.js';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OBJLoader} from 'three/addons/loaders/OBJLoader.js';
@@ -92,6 +93,7 @@ const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCan
 const shadowTexture=new THREE.CanvasTexture(shadowCanvas),shadow=new THREE.Mesh(new THREE.CircleGeometry(78,40),new THREE.MeshBasicMaterial({map:shadowTexture,transparent:true,depthWrite:false}));
 shadow.rotation.x=-Math.PI/2;shadow.position.y=1;actor.add(shadow);
 
+let capturedPointer=null;
 let championId='kayle',championLoading=true,championRequest=0;
 async function selectChampion(id,{defaults=true}={}){
   if(!champions[id])id='kayle';
@@ -435,6 +437,7 @@ function scheduleAttack(){
   lastSkillId=enemy.skill.id;makeWarning(enemy.skill,enemy);lastWaveCastAt=elapsed;waveCastIndex++;return true;
 }
 function setChallenge(active){
+  if(!active)capturedPointer?.release();
   if(session&&session.state!=='finished'){
     if(active)session.state=session.resumeState||'running';
     else{combat?.cancelCharge?.('paused');session.resumeState=session.state==='draining'?'draining':'running';session.state='paused';}
@@ -508,6 +511,7 @@ function finishSession(){
   ui.update(session);
 }
 function completeSession(){
+  capturedPointer?.release();
   challengeActive=false;session.state='finished';target.copy(position);endWave();
   attackArmed=false;$('attackHud').hidden=true;
   const report=session.report();report.playlistKnockouts=session.playlistKnockouts??0;ui.save(report);
@@ -528,7 +532,7 @@ function retryShot(shot,config){
   $('status').textContent='● Repetição · mesma posição e mesma mira. Experimente outra saída.';
 }
 
-function pointAtPointer(event){mouse.set(event.clientX/innerWidth*2-1,-event.clientY/innerHeight*2+1);raycaster.setFromCamera(mouse,camera);const point=new THREE.Vector3();return raycaster.ray.intersectPlane(ground,point)?point:null;}
+function pointAtPointer(event){if(!capturedPointer?.active)mouse.set(event.clientX/innerWidth*2-1,-event.clientY/innerHeight*2+1);raycaster.setFromCamera(mouse,camera);const point=new THREE.Vector3();return raycaster.ray.intersectPlane(ground,point)?point:null;}
 function useDodgeFlash(){
   if(!session||session.state!=='running'||!FLASH_MODES.has(session.config.drill)||matchup?.charmed)return false;
   raycaster.setFromCamera(mouse,camera);const aim=new THREE.Vector3();if(!raycaster.ray.intersectPlane(ground,aim))return false;
@@ -578,8 +582,8 @@ function useCombatAbility(key){
 $('castE').onclick=()=>useCombatAbility('E');$('castW').onclick=()=>useCombatAbility('W');
 for(const key of ['Q','W','E','R'])$(`lbCast${key}`).onclick=()=>{useCombatAbility(key);renderer.domElement.focus({preventScroll:true});};
 renderer.domElement.addEventListener('contextmenu',event=>event.preventDefault());
-renderer.domElement.addEventListener('pointermove',event=>{mouse.set(event.clientX/innerWidth*2-1,-event.clientY/innerHeight*2+1);pointerInside=true;});
-renderer.domElement.addEventListener('pointerleave',()=>pointerInside=false);
+renderer.domElement.addEventListener('pointermove',event=>{if(capturedPointer?.active)return;mouse.set(event.clientX/innerWidth*2-1,-event.clientY/innerHeight*2+1);pointerInside=true;});
+renderer.domElement.addEventListener('pointerleave',()=>{if(!capturedPointer?.active)pointerInside=false;});
 // mousedown fires for each physical button, including a second button pressed
 // while the first is held. pointerdown/click would lose that kiting input.
 renderer.domElement.addEventListener('mousedown',event=>{
@@ -590,9 +594,11 @@ renderer.domElement.addEventListener('mousedown',event=>{
   else if(combat&&(attackArmed||session.config.bindLeft)){event.preventDefault();issueAttackMove(point);}
 });
 const autoPause=()=>{pointerInside=false;combat?.cancelCharge?.('focus-lost');if(session&&['running','draining'].includes(session.state))setChallenge(false);};
+capturedPointer=new CapturedPointer({canvas:renderer.domElement,button:$('captureMouse'),cursor:$('capturedCursor'),mouse,onMove:()=>{pointerInside=true;},onEscape:()=>{pointerInside=false;autoPause();},onError:message=>{$('status').textContent=message;},canCapture:()=>session?.state==='running'});
 window.addEventListener('blur',autoPause);document.addEventListener('visibilitychange',()=>{if(document.hidden)autoPause();});
 window.addEventListener('keydown',event=>{
   if($('results').open)return;
+  if(event.code==='Escape'&&!event.repeat&&capturedPointer.handlesEscape()){event.preventDefault();capturedPointer.release();autoPause();return;}
   if(event.code==='Escape'&&!event.repeat&&session&&session.state!=='finished'){event.preventDefault();if(attackArmed)attackArmed=false;else setChallenge(session.state==='paused');return;}
   if(document.activeElement.isContentEditable||/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))return;
   if(event.code==='KeyF'&&!event.repeat){event.preventDefault();useDodgeFlash();}
@@ -745,7 +751,7 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
   if(session?.config.rehearsal&&session.state==='running'&&session.shots.every(s=>s.resolved))finishSession();
   if(session?.state==='draining'&&!warnings.length&&!projectiles.length&&!combat?.pending&&!spacing?.pending&&!aim?.pending&&!lane?.pending&&!vault?.pending&&!yone?.pending&&!matchup?.pending)completeSession();
   const flashMode=FLASH_MODES.has(session?.config.drill??ui.drill);$('dodgeFlash').hidden=!flashMode;const flashRemaining=dodgeFlash.remaining(session?.time??0);$('dodgeFlash').disabled=session?.state!=='running'||flashRemaining>0||!!matchup?.charmed;$('flashCooldown').textContent=session?.state==='paused'?'Pausado':flashRemaining>0?flashRemaining.toFixed(1)+' s':'Pronto · 10 s de recarga';
-  hudUpdate+=rawDt;if(hudUpdate>.1){ui.update(session);hudUpdate=0;}
+  hudUpdate+=rawDt;if(hudUpdate>.1){ui.update(session);$('captureMouse').disabled=session?.state!=='running'||capturedPointer.active;hudUpdate=0;}
   if(locked)focus.copy(position);else if(pointerInside){const edge=.975,edgePanSpeed=1250;if(Math.abs(mouse.x)>edge)focus.x+=Math.sign(mouse.x)*edgePanSpeed*dt;if(Math.abs(mouse.y)>edge)focus.z-=Math.sign(mouse.y)*edgePanSpeed*dt;}
   if(championId==='syndra'&&!combat)combatView.syndraEffects.update(dt,{time:elapsed},position);
   updateCamera();spacingView.update(dt,position,camera);updateSpacingHud();aimView.update(dt,position,camera);updateAimHud();vaultView.update(dt,position,camera);updateVaultHud();laneView.update(dt,camera);updateLaneHud();updateEnemyLabels();combatView.update(dt,position,camera,attackArmed);yoneView.update(dt,position,camera);yoneEffects.update(yone,session?.config.yoneTelegraphs!==false);updateYoneHud();matchupView.update(dt,session?.config.matchupTelegraphs!==false,camera);updateMatchupHud();const label=position.clone().add(new THREE.Vector3(0,260,0)).project(camera);$('champion-label').style.left=(label.x+1)*innerWidth/2+'px';$('champion-label').style.top=(-label.y+1)*innerHeight/2+'px';renderer.render(scene,camera);
@@ -753,6 +759,7 @@ function frame(){requestAnimationFrame(frame);const rawDt=Math.min(clock.getDelt
 window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
 window.__trainer={position,target,camera,get playlist(){return playlist;},get enemies(){return [...enemies.values()];},get warnings(){return warnings;},get projectiles(){return projectiles;},get wave(){return {number:waveNumber,remaining:waveRemaining,active:waveEnemies.map(enemy=>enemy.name),aimMode:lastAimMode};},get stats(){return {dodged,hits,casts,challengeActive};},get skills(){return dodgeSkills;},get visualDiagnostics(){return {playerRingHitbox:actor.children.some(child=>child.geometry?.type==='RingGeometry'),warningTargetMarkers:warnings.some(item=>'targetMark'in item),telegraphWidths:warnings.map(item=>item.lane.children[0]?.geometry?.parameters?.width)};},spawn:id=>{const skill=dodgeSkills[id],enemy=[...enemies.values()].find(item=>item.skills.includes(id));if(skill&&enemy){enemy.active=true;enemy.group.visible=true;makeWarning(skill,enemy);}},moveTo:point=>target.copy(point.clone()),get loadedEnemies(){return [...enemies.values()].filter(enemy=>!!enemy.model).map(enemy=>enemy.name);},get enemyAnimations(){return [...enemies.values()].map(enemy=>({name:enemy.name,skinnedMeshes:countSkinnedMeshes(enemy.model),clips:enemy.actions.length,action:enemy.action?.getClip().name,time:enemy.action?.time??0,idleTracks:enemy.idleAction?.getClip().tracks.length,idleDuration:enemy.idleAction?.getClip().duration,idleWeight:enemy.idleAction?.getEffectiveWeight(),idleRunning:enemy.idleAction?.isRunning(),runClip:enemy.runAction?.getClip().name,runTracks:enemy.runAction?.getClip().tracks.length,runWeight:enemy.runAction?.getEffectiveWeight(),moving:enemy.moving,active:enemy.active,dismissWhenCastComplete:!!enemy.dismissWhenCastComplete,hasCast:!!enemy.hasCast,castClip:enemy.castClip?.name,castTracks:enemy.castClip?.tracks.length,castWeight:enemy.castAction?.getEffectiveWeight(),castDuration:enemy.castDuration,casting:enemy.castRemaining>0}));}};
 
+Object.defineProperty(window.__trainer,'capturedPointer',{get:()=>({active:capturedPointer.active,x:mouse.x,y:mouse.y})});
 Object.defineProperty(window.__trainer,'session',{get:()=>session});
 Object.defineProperties(window.__trainer,{champion:{get:()=>championId},playerYaw:{get:()=>model?.rotation.y},championLoading:{get:()=>championLoading},playerClips:{get:()=>clips.map(c=>({name:c.name,duration:c.duration,tracks:c.tracks.length}))},combat:{get:()=>combat},combatReady:{get:()=>combatView.ready},attackArmed:{get:()=>attackArmed},attackAnimation:{get:()=>playerAnimator?.diagnostics},kayleSpellClips:{get:()=>clips.filter(c=>c.name.includes('spell')).map(c=>({name:c.name,duration:c.duration,tracks:c.tracks.length}))},kaylePose:{get:()=>{const root=model?.getObjectByName('Root');return {root:root?.position.toArray(),finite:model?new THREE.Box3().setFromObject(model).min.toArray().every(Number.isFinite):false};}}});
 Object.assign(window.__trainer,{start:startSession,finish:finishSession,retry:retryShot,moveTo:issueMove,attackMove:issueAttackMove,attackTarget:issueAttackTarget});

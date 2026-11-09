@@ -72,3 +72,6 @@ body[data-drill=spacing] .ability,body[data-drill=spacing] .stats,body[data-dril
 body[data-drill=spacing] #settings:has(#controls:not([hidden]))~#spacingHud{display:none}
 body[data-drill=spacing] #attackHud{left:auto;right:28px;transform:none;width:330px}
 @media(max-width:900px){body[data-drill=spacing] #attackHud{right:10px;width:280px}#spacingHud{right:10px;width:220px}}
+
+#capturedCursor{position:fixed;z-index:9999;pointer-events:none;filter:drop-shadow(0 1px 2px #0008)}
+#captureMouse{margin-left:auto;margin-right:10px}#captureMouse[aria-pressed=true]{color:#d8e8af;opacity:1}

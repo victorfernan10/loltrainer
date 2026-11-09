@@ -7,6 +7,7 @@
   </head>
   <body>
     <canvas id="arena" tabindex="0" aria-label="Arena de treino. Botão direito move; S para."></canvas>
+    <svg id="capturedCursor" hidden width="20" height="27" viewBox="0 0 20 27" aria-hidden="true"><path d="M1 1V22L6 17L10 25L14 23L10 15H18Z" fill="#fff3cd" stroke="#101b19" stroke-width="2" /></svg>
     <main id="overlay">
       <header>
         <span class="sigil">K</span>
@@ -131,7 +132,7 @@
       <div id="clickFeedback" hidden></div>
       <button id="dodgeFlash" hidden title="Flash na direção do cursor · alcance 400 · recarga 10 s"><kbd>F</kbd> Flash <output id="flashCooldown">Pronto · 10 s de recarga</output></button>
       <div id="attackHud" hidden><div id="combatObjective"></div><b id="attackState">Ataque pronto</b><span id="attackRangeText">525 u</span><progress id="attackProgress" value="1" max="1"></progress><small>A + esquerdo: atacar · direito: reposicionar</small><div class="combat-abilities"><button id="castE"><kbd>E</kbd> <strong>Ataque fortalecido</strong><output id="eCooldown">Pronto</output></button><button id="castW"><kbd>W</kbd> <strong>Acelerar e curar</strong><output id="wCooldown">Pronto</output></button></div><div id="leblancAbilities" hidden><div class="leblanc-buttons"><button id="lbCastQ"><kbd>Q</kbd> <strong>Sigilo</strong><output>Pronto</output></button><button id="lbCastW"><kbd>W</kbd> <strong>Distorção</strong><output>Pronto</output></button><button id="lbCastE"><kbd>E</kbd> <strong>Correntes</strong><output>Pronto</output></button><button id="lbCastR"><kbd>R</kbd> <strong>Mímica</strong><output>Pronto</output></button></div><small id="lbMana"></small><small id="lbFeedback" role="status"></small></div><div id="combatPerformance"></div></div>
-      <footer><div><kbd>BOTÃO DIREITO</kbd> Mover <i></i><kbd>S</kbd> Parar <i></i><kbd>ESPAÇO</kbd> Câmera <i></i><kbd>ESC</kbd> Pausar</div><button id="fullscreen">Tela cheia ↗</button></footer>
+      <footer><div><kbd>BOTÃO DIREITO</kbd> Mover <i></i><kbd>S</kbd> Parar <i></i><kbd>ESPAÇO</kbd> Câmera <i></i><kbd>ESC</kbd> Pausar</div><button id="captureMouse" disabled aria-pressed="false" title="Inicie o treino e prenda o cursor na arena. Esc libera o mouse e pausa.">Prender mouse</button><button id="fullscreen">Tela cheia ↗</button></footer>
       <div class="corner">MECHANICS LAB <span>•</span> LOCAL</div>
     </main>
     <dialog id="playlistDialog" aria-labelledby="playlistTitle">
