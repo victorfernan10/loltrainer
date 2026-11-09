@@ -1,0 +1,13 @@
+# Caitlyn playable reconstruction
+
+Source: installed Caitlyn.wad.client, decoded in tools/caitlyn-original/character.json and skin0/animation-map JSON. Hashes and export limitations are recorded in caitlyn-assets.md and public/assets/caitlyn/resources.json. REA returned unsupported-format for this WAD; CDTB/lol2gltf supplied the format-aware extraction. These observations are client metadata, not server script or runtime proof.
+
+The [official champion overview](https://www.leagueoflegends.com/en-us/champions/caitlyn/) corroborates passive, trap/net marks and doubled marked-target range. Numeric simulation uses the local snapshot in src/caitlyn-data.js, including 650 AA range, 325 movement, .1770833 windup fraction and 2500 missile speed.
+
+Implemented: five ordinary AA releases prepare the next passive Headshot; trap and net grant separately consumed target marks at 1300 range. Critical outcome is committed at AA start so animation and damage agree. Marked shots preserve cooldown. Q waits .625s, pierces with .6 secondary damage and full damage on trap-vulnerable targets. W has sequential charges/recharge, placement limits, persistent animated entities, arming, root, per-target immunity and target marks. E waits .15s, shoots a first-hit missile, slows/marks and recoils400 units; Q/W can cast during recoil. R has a one-second channel, homing projectile and first-champion interception. Hard CC or target loss interrupts its channel. Released bullets survive draining; untriggered traps do not prolong a block.
+
+Native assets: 46 Caitlyn clips, original Q projectile/net/CaitlynTrap rigs and texture layers. Rendering, blending, collision and AI are reconstructed in Three.js. No Riot renderer, server simulation, cloth solver or audio event scheduler is executed.
+
+Calibration/limits: W arm delay .9s and trigger radius75, E recoil speed1000, mark durations, empowered-windup commitment and R interruption recovery are trainer interpretations of client resources and gameplay behavior. The arena has no brush, terrain blockers, stealth, targetability states, resistances or item interactions. Brush double-stack generation is therefore not exercised. Damage is unmitigated. The port is not bit-identical to League.
+
+Validation: caitlyn-combat.test.js covers piercing, trap arming/charges/marks, E recoil/Q during recoil, passive/crit/marked AA range, R delay/interception/interruption/draining, mana and pause. caitlyn-animation.test.js samples original rigs/transitions at eight bearings. check-caitlyn.mjs exercises UI controls, AA-only restriction, all four skills, moving Lucian and reports.

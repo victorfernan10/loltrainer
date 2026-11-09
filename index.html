@@ -11,7 +11,7 @@
       <header>
         <span class="sigil">K</span>
         <div><small>PRÁTICA DELIBERADA / 03</small><h1><span id="heroName">Kayle</span> <em>Mechanics Lab</em></h1></div>
-        <label id="championPicker">CAMPEÃO<select id="championSelect"><option value="kayle">Kayle</option><option value="leblanc">LeBlanc</option><option value="syndra">Syndra</option><option value="quinn">Quinn</option><option value="xerath">Xerath</option></select></label>
+        <label id="championPicker">CAMPEÃO<select id="championSelect"><option value="kayle">Kayle</option><option value="leblanc">LeBlanc</option><option value="syndra">Syndra</option><option value="quinn">Quinn</option><option value="xerath">Xerath</option><option value="caitlyn">Caitlyn</option></select></label>
         <span id="status">Carregando modelos do jogo…</span>
       </header>
       <aside>
@@ -28,6 +28,7 @@
           <button class="drill" data-drill="ahri" aria-pressed="false"><span>06</span><b>Esquiva · Ahri</b><small>Q de ida e volta · Charme</small></button>
           <button class="drill" data-drill="locke" aria-pressed="false"><span>07</span><b>Esquiva · Locke</b><small>Desvie dos três Qs consecutivos</small></button>
           <button class="drill" data-drill="vault" aria-pressed="false"><span>09</span><b>Quinn × LeBlanc</b><small>Interrompa o W com o Salto</small></button>
+          <button class="drill" data-drill="spacing" aria-pressed="false"><span>11</span><b>Spacing · Caitlyn × Lucian</b><small>650 contra 500 · ataque sem resposta</small></button>
           <button class="drill" data-drill="aim" aria-pressed="false"><span>10</span><b>Precisão livre · Xerath</b><small>Antecipe esquivas · puna o dash</small></button>
           <button class="drill" data-drill="lane" aria-pressed="false"><span>08</span><b>Lane · poke no last hit</b><small>Leia os minions · puna o autoattack</small></button>
         </div>
@@ -90,6 +91,7 @@
             <p class="hint" id="kayleAbilityHints">E: próximo ataque causa 120 e reinicia a recarga do ataque (5 s). W: +30% de movimento por 2 s e cura 60 (10 s). Valores simplificados de treino.</p>
             <div id="leblancSettings" hidden><label>Poder de habilidade<input id="abilityPower" type="number" min="0" max="1000" step="10" value="0" /></label><label><input id="unlimitedMana" type="checkbox" checked /> Mana livre para treinar combos</label></div><p class="hint" id="leblancInfo" hidden>LeBlanc: Q no alvo sob o cursor; W avança e W retorna; E lança a corrente; R imita a última habilidade básica. Conjuração rápida nas teclas. Evolução automática W → Q → E, com R nos níveis 6/11/16. Alvos sem resistência mágica. A passiva de clone não está simulada.</p>
             <div id="quinnSettings" hidden><label>Dano de ataque adicional<input id="bonusAD" type="number" min="0" max="500" step="10" value="0" /></label><label>Chance de crítico (%)<input id="critChance" type="number" min="0" max="100" step="5" value="0" /></label><label>Aceleração de habilidade<input id="quinnHaste" type="number" min="0" max="200" step="5" value="0" /></label></div><p class="hint" id="quinnInfo" hidden>Quinn: Q dispara Valor e reduz a visão; W revela a área; E avança no alvo sob o cursor, interrompe e recua; R canaliza para voar, e R novamente usa Ataque do Céu. Consumir a marca de Rapina com um ataque ativa o bônus de ataque e movimento do W. E no nível 1; prioridade W → Q → E, R nos níveis 6/11/16. Arena sem terreno, armadura ou névoa de guerra.</p>
+            <div id="spacingSettings" hidden><p class="hint">Lucian tenta encurtar a distância para responder. Solte seu ataque entre 500 e 650 unidades de borda a borda e recue após o disparo. Um projétil já lançado continua seguindo você.</p><label><input id="spacingSkills" type="checkbox" /> Permitir habilidades no spacing</label><p class="hint">O placar de spacing conta apenas autoattacks sem controle de grupo. O kit completo fica disponível ao habilitar a opção.</p></div><p id="caitlynInfo" class="hint" hidden>Caitlyn: passiva acumula Headshot; Q atravessa alvos; W coloca armadilhas com cargas; E dispara a rede e recua; R canaliza um tiro no campeão sob o cursor. W e E concedem Headshots de alcance aumentado naquele alvo. Q → W → E; R nos níveis 6/11/16. Arena sem arbustos, resistências ou obstáculos.</p>
             <div id="xerathSettings" hidden><label>Aceleração de habilidade<input id="xerathHaste" type="number" min="0" max="200" step="5" value="0" /></label></div><p class="hint" id="xerathInfo" hidden>Q: segure para aumentar o alcance, solte para disparar. W: acerte o centro para intensificar dano e lentidão. E: atordoa o primeiro alvo. R: canalize e pressione R novamente para cada disparo; S encerra. A passiva restaura mana com ataques básicos.</p><p id="aimSettings" class="hint" hidden>Kit livre contra LeBlanc em movimento. Dificuldades maiores reduzem o tempo de reação e melhoram esquivas e uso do dash, preservando velocidade e recarga. Force o dash, aproveite a aterrissagem e combine controle com dano.</p>
             <div id="syndraSettings" hidden><label>Fragmentos iniciais<select id="syndraSplinters"><option value="-1">Automático · ganho por nível</option><option value="0">0 · sem aprimoramentos</option><option value="40">40 · Q com duas cargas</option><option value="60">60 · W com dano verdadeiro</option><option value="80">80 · E amplo + lentidão</option><option value="100">100 · R executa abaixo de 15%</option><option value="120">120 · +15% AP</option></select></label><label>Aceleração de habilidade<input id="abilityHaste" type="number" min="0" max="200" step="5" value="0" /></label></div>
             <p class="hint" id="syndraInfo" hidden>Syndra: Q no cursor; W pega a esfera próxima do cursor e W arremessa; E empurra inimigos e esferas; R no alvo. Q → E atordoa. Esferas duram 6 s; W segura por até 5 s. R usa 3–7 esferas. Duas habilidades no mesmo campeão concedem fragmentos. Evolução Q → W → E, R nos níveis 6/11/16. Alvos com 3000 de vida, sem resistências. W usa esferas; pegar minions ainda não está implementado.</p>
@@ -117,6 +119,7 @@
           <label><input id="locked" type="checkbox" /> Câmera travada (Y)</label>
         </div>
       </section>
+      <section id="spacingHud" hidden><b>SPACING · CAITLYN × LUCIAN</b><span id="spacingDistance"></span><span id="spacingScore"></span><span id="spacingTiming"></span><small id="spacingFeedback"></small></section>
       <section id="aimHud" hidden><b>PRECISÃO LIVRE</b><span id="aimScore"></span><span id="aimAbilities"></span><span id="aimMovement"></span><small id="aimFeedback"></small></section>
       <section id="vaultHud" hidden><b>QUINN × LEBLANC</b><span id="vaultPhase"></span><span id="vaultScore"></span><small id="vaultFeedback"></small></section>
       <section id="laneHud" hidden><b id="lanePhase"></b><span id="laneWave"></span><span id="lanePoke"></span><small id="laneFeedback"></small></section>
@@ -134,10 +137,10 @@
     <dialog id="playlistDialog" aria-labelledby="playlistTitle">
       <div class="result-heading"><div><div class="eyebrow">ROTINA COMPLETA</div><h2 id="playlistTitle">Playlist de treino</h2></div><button id="closePlaylist" aria-label="Fechar playlist">✕</button></div>
       <form id="playlistForm">
-        <p>Percorra os dez modos, um por vez, com a mesma duração e dificuldade.</p>
+        <p>Percorra os onze modos, um por vez, com a mesma duração e dificuldade.</p>
         <div class="session-options"><label>Tempo de cada bloco<select id="playlistDuration"><option value="60">60 segundos</option><option value="90">90 segundos</option><option value="120">120 segundos</option></select></label><label>Dificuldade<select id="playlistDifficulty"><option value="1">Fácil · Leitura</option><option value="2" selected>Médio · Consistência</option><option value="3">Difícil · Intensidade</option></select></label></div>
         <p id="playlistEstimate"></p><ol id="playlistOrder"></ol>
-        <p class="hint">Mantém seu campeão e perfil. Kiting sempre inclui circuito e habilidades inimigas. Quinn × LeBlanc usa Quinn e Precisão livre usa Xerath. Nos outros blocos, seu campeão retorna. Pausas e carregamento não contam no relógio. Habilidades em curso terminam antes da troca. Se a vida acabar, ela é restaurada e a queda fica registrada para completar o tempo do bloco.</p>
+        <p class="hint">Mantém seu campeão e perfil. Kiting sempre inclui circuito e habilidades inimigas. Quinn × LeBlanc usa Quinn , Precisão livre usa Xerath e Spacing usa Caitlyn. Nos outros blocos, seu campeão retorna. Pausas e carregamento não contam no relógio. Habilidades em curso terminam antes da troca. Se a vida acabar, ela é restaurada e a queda fica registrada para completar o tempo do bloco.</p>
         <button id="beginPlaylist" type="submit" class="primary">Iniciar playlist ▶</button>
       </form>
       <section id="playlistSummary" hidden><p id="playlistSummaryText"></p><div id="playlistReports"></div></section>

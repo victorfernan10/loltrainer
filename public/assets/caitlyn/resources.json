@@ -1,0 +1,774 @@
+{
+  "sourceWadSha256": "8b23e9cdd4470acd22846e50f4ee422a3805ef9b91d13995ba91db3e7066fd01",
+  "skinScale": 1.0499999523162842,
+  "hiddenMaterials": [
+    "Teacup",
+    "Flag"
+  ],
+  "trapScale": 2.0,
+  "models": [
+    {
+      "file": "caitlyn.glb",
+      "mesh": "ASSETS/Characters/Caitlyn/Skins/Base/Caitlyn_Base.skn",
+      "skeleton": "ASSETS/Characters/Caitlyn/Skins/Base/Caitlyn_Base.skl",
+      "animations": [
+        "assets/characters/caitlyn/skins/base/animations/attack1.anm",
+        "assets/characters/caitlyn/skins/base/animations/attack1_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/attack2.anm",
+        "assets/characters/caitlyn/skins/base/animations/attack2_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/attack_to_run.anm",
+        "assets/characters/caitlyn/skins/base/animations/channel.anm",
+        "assets/characters/caitlyn/skins/base/animations/channelin.anm",
+        "assets/characters/caitlyn/skins/base/animations/crit.anm",
+        "assets/characters/caitlyn/skins/base/animations/dance_in.anm",
+        "assets/characters/caitlyn/skins/base/animations/dance_loop.anm",
+        "assets/characters/caitlyn/skins/base/animations/death.anm",
+        "assets/characters/caitlyn/skins/base/animations/idle1.anm",
+        "assets/characters/caitlyn/skins/base/animations/idle2.anm",
+        "assets/characters/caitlyn/skins/base/animations/idle3.anm",
+        "assets/characters/caitlyn/skins/base/animations/idle_in.anm",
+        "assets/characters/caitlyn/skins/base/animations/joke.anm",
+        "assets/characters/caitlyn/skins/base/animations/knockup_loop.anm",
+        "assets/characters/caitlyn/skins/base/animations/knockup_start.anm",
+        "assets/characters/caitlyn/skins/base/animations/laugh.anm",
+        "assets/characters/caitlyn/skins/base/animations/passive.anm",
+        "assets/characters/caitlyn/skins/base/animations/passive_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/recall.anm",
+        "assets/characters/caitlyn/skins/base/animations/run.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_fast.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_fast_variant.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_haste.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_in.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_variant.anm",
+        "assets/characters/caitlyn/skins/base/animations/run_variant2.anm",
+        "assets/characters/caitlyn/skins/base/animations/spawn.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell1.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell1_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell1_to_run.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell2.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell2_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell2_to_run.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell3.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell3_toidle.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell3_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell4.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell4_-90.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell4_90.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell4_to_idle.anm",
+        "assets/characters/caitlyn/skins/base/animations/spell4_to_run.anm",
+        "assets/characters/caitlyn/skins/base/animations/stunned.anm",
+        "assets/characters/caitlyn/skins/base/animations/taunt.anm"
+      ],
+      "clips": [
+        "attack1",
+        "attack1_to_idle",
+        "attack2",
+        "attack2_to_idle",
+        "attack_to_run",
+        "channel",
+        "channelin",
+        "crit",
+        "dance_in",
+        "dance_loop",
+        "death",
+        "idle1",
+        "idle2",
+        "idle3",
+        "idle_in",
+        "joke",
+        "knockup_loop",
+        "knockup_start",
+        "laugh",
+        "passive",
+        "passive_to_idle",
+        "recall",
+        "run",
+        "run_fast",
+        "run_fast_variant",
+        "run_haste",
+        "run_in",
+        "run_variant",
+        "run_variant2",
+        "spawn",
+        "spell1",
+        "spell1_to_idle",
+        "spell1_to_run",
+        "spell2",
+        "spell2_to_idle",
+        "spell2_to_run",
+        "spell3",
+        "spell3_toidle",
+        "spell3_to_idle",
+        "spell4",
+        "spell4_-90",
+        "spell4_90",
+        "spell4_to_idle",
+        "spell4_to_run",
+        "stunned",
+        "taunt"
+      ],
+      "materials": [
+        "Body",
+        "Flag",
+        "Teacup",
+        "Weapon"
+      ],
+      "bytes": 36078044
+    },
+    {
+      "file": "trap.glb",
+      "mesh": "ASSETS/Characters/CaitlynTrap/Skins/Base/CaitlynTrap_Base.skn",
+      "skeleton": "ASSETS/Characters/CaitlynTrap/Skins/Base/CaitlynTrap_Base.skl",
+      "animations": [
+        "assets/characters/caitlyntrap/skins/base/animations/set.anm",
+        "assets/characters/caitlyntrap/skins/base/animations/idle.anm",
+        "assets/characters/caitlyntrap/skins/base/animations/attack1.anm",
+        "assets/characters/caitlyntrap/skins/base/animations/death.anm"
+      ],
+      "clips": [
+        "attack1",
+        "death",
+        "idle",
+        "set"
+      ],
+      "materials": [
+        "Trap"
+      ],
+      "bytes": 113296
+    },
+    {
+      "file": "q-missile.glb",
+      "mesh": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_qvfx_rg.skn",
+      "skeleton": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_qvfx_rg.skl",
+      "animations": [
+        "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_1_loop.anm",
+        "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_2_anim.anm"
+      ],
+      "clips": [
+        "caitlyn_base_q_1_loop",
+        "caitlyn_base_q_2_anim"
+      ],
+      "materials": [
+        "Q_MAT"
+      ],
+      "bytes": 72628
+    },
+    {
+      "file": "e-net.glb",
+      "mesh": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_entrapment_mis_net.skn",
+      "skeleton": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_entrapment_mis_net.skl",
+      "animations": [
+        "assets/characters/caitlyn/skins/base/particles/caitlyn_base_entrapment_mis_net.anm"
+      ],
+      "clips": [
+        "caitlyn_base_entrapment_mis_net"
+      ],
+      "materials": [
+        "lambert5"
+      ],
+      "bytes": 112704
+    }
+  ],
+  "textures": [
+    {
+      "file": "bowmaster_diffuse_cmask.png",
+      "source": "assets/characters/caitlyn/skins/base/bowmaster_diffuse_cmask.tex",
+      "sha256": "93f8c7b7114eeede6ae075d4634380db1dcacc9ffd1766875c695c71b2b25302"
+    },
+    {
+      "file": "caitlyn_base_flag_tx_cm.png",
+      "source": "assets/characters/caitlyn/skins/base/caitlyn_base_flag_tx_cm.tex",
+      "sha256": "0eb424b1e4484a284c99323dec24b93fe2221bbdee649db4b9d42f5957b0a2c7"
+    },
+    {
+      "file": "caitlyn_base_teacup_tx_cm.png",
+      "source": "assets/characters/caitlyn/skins/base/caitlyn_base_teacup_tx_cm.tex",
+      "sha256": "72a85dc8232c7f37c827c3d3e5f2191c2401fa9f47407d1194db202b6198a31b"
+    },
+    {
+      "file": "caitlyn_base_tx_cm.png",
+      "source": "assets/characters/caitlyn/skins/base/caitlyn_base_tx_cm.tex",
+      "sha256": "213d7a52a2d243f7038096959d8fd1a23f03807d22d461055fba4578b67c34fb"
+    },
+    {
+      "file": "alphaslice_mesh.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/alphaslice_mesh.tex",
+      "sha256": "8f686b5f4173fadeb43af18e38a873a48cafb6a2f5c957ebcd224a5295f47501"
+    },
+    {
+      "file": "bolts_crit.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/bolts_crit.tex",
+      "sha256": "ebc3766451e1ac3735bcca57576d1b60e769826d32a4a8d9b6c1fc884dfef495"
+    },
+    {
+      "file": "bolts_headshot.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/bolts_headshot.tex",
+      "sha256": "ebc3766451e1ac3735bcca57576d1b60e769826d32a4a8d9b6c1fc884dfef495"
+    },
+    {
+      "file": "caitlyn_alpha_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_alpha_02.tex",
+      "sha256": "f62c949410e9cd8161c6ac5df32c0a55b8830e22a26782865e2a80a544e7365f"
+    },
+    {
+      "file": "caitlyn_alpha_12.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_alpha_12.tex",
+      "sha256": "d9296f1a062e56072233c2ca58e88a4b3e909ab35671e8a419708fe7fe27b22e"
+    },
+    {
+      "file": "caitlyn_arrow_indicator_03.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_arrow_indicator_03.tex",
+      "sha256": "d0b09cb914b1a07b43a95123b66644ecf52df82e6c52ac4b3a26e3b360fcefc6"
+    },
+    {
+      "file": "caitlyn_ascforcebubble_flash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_ascforcebubble_flash.tex",
+      "sha256": "95d6035167815177953768515b111f0f60302152bba671021a3d2e37342e605e"
+    },
+    {
+      "file": "caitlyn_base_ba_color-bellcurve.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_color-bellcurve.tex",
+      "sha256": "15aa99c5555d17997d5498b987e586f65e6d12da86178571e43eaa98cd2f428d"
+    },
+    {
+      "file": "caitlyn_base_ba_global_indicator_ring_bright.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_global_indicator_ring_bright.tex",
+      "sha256": "3aaf8e64d2a851e26764b4ed5774297c8872db959e21b05f32f96aac1963409c"
+    },
+    {
+      "file": "caitlyn_base_ba_global_indicator_shafts.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_global_indicator_shafts.tex",
+      "sha256": "a8acc8df5c2b6db6c930ba08f1c382c90b3638d8a70d4bdc4a6b6fe498a873fe"
+    },
+    {
+      "file": "caitlyn_base_ba_hit_tar_muzzle.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_hit_tar_muzzle.tex",
+      "sha256": "c1444ff7320c7d9cae7179d98e89b5d11e1676adff87bb93980edd5ae664cf5c"
+    },
+    {
+      "file": "caitlyn_base_ba_hit_tar_muzzle_erosion.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_hit_tar_muzzle_erosion.tex",
+      "sha256": "2fcbb349ff74b1064d35767a3d7bafc231efa2a1515e578d89cd840047e87e26"
+    },
+    {
+      "file": "caitlyn_base_ba_ring_highres.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ba_ring_highres.tex",
+      "sha256": "d417dc226199af9d8f7ac70822d2a8b4be05d0b0669967f547c03c5cda826784"
+    },
+    {
+      "file": "caitlyn_base_cas_distort.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_cas_distort.tex",
+      "sha256": "6393a62a2d8405823533b3ee183567490c78d5be80b18213d3f13cf40f39a504"
+    },
+    {
+      "file": "caitlyn_base_color-rampdown32_03.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_color-rampdown32_03.tex",
+      "sha256": "6728b2303c1eb8cfd96ca3f955070d6f5bcbf689027faeee3b08c0f82c5b76bd"
+    },
+    {
+      "file": "caitlyn_base_distortion_soundwaves_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_distortion_soundwaves_01.tex",
+      "sha256": "601a1c099146e9fffc48ebc3206b67fd1d8265b9f64562bfbc5b42326245d81b"
+    },
+    {
+      "file": "caitlyn_base_dust_2x2.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_dust_2x2.tex",
+      "sha256": "809739b1bd069dbc893a65a7ea7bf560f8e551f82f955970fb895373ab0348ab"
+    },
+    {
+      "file": "caitlyn_base_einstein_04_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_einstein_04_mult.tex",
+      "sha256": "6f68f480a366189e42f37b7910a7c42cc6dcfe2c7473a26a2f06395a529af1a1"
+    },
+    {
+      "file": "caitlyn_base_entrapment_mis_net.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_entrapment_mis_net.tex",
+      "sha256": "0c82e865a62817bfad1a4746f765bb64a731c3a35cf68be58e32fa4ced726454"
+    },
+    {
+      "file": "caitlyn_base_e_waves.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_e_waves.tex",
+      "sha256": "ad5198e936133c34c60e89fdb192b2580e962558bd4d97f0e9b7052e38c347fc"
+    },
+    {
+      "file": "caitlyn_base_flash_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_flash_01.tex",
+      "sha256": "e2d4ac8cf4a4588aa2be4b1ac49e7d1ffb31286de2f7484bff696011d21a3492"
+    },
+    {
+      "file": "caitlyn_base_flash_sharp.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_flash_sharp.tex",
+      "sha256": "0102d746c065bb953fc01790fe4207813742ae04038ff4a46f8baf92e8693110"
+    },
+    {
+      "file": "caitlyn_base_fog.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_fog.tex",
+      "sha256": "b17710eea1d4f20cbef8092658b63a7de29ac97c59f34aee701cec65c99b328c"
+    },
+    {
+      "file": "caitlyn_base_gemstone.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_gemstone.tex",
+      "sha256": "039c9f05a405b5964d184d5a9b102d47bd949a22d4ef6f9292ea2e8c5b8aa8db"
+    },
+    {
+      "file": "caitlyn_base_glowstar_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_glowstar_01.tex",
+      "sha256": "69a60e79158504c19ca387618f291955ceaa48e9dee5fb24ad22d6837b826fa7"
+    },
+    {
+      "file": "caitlyn_base_glowtrail.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_glowtrail.tex",
+      "sha256": "56ecc15aacf54342b6d9f80a49e21e71036e094e36ffdd8bd130c7a7ed301681"
+    },
+    {
+      "file": "caitlyn_base_glow_03.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_glow_03.tex",
+      "sha256": "e8f9c893748b836306469a28e3e4339a86672aebd919d0e6570661a129c4bd9d"
+    },
+    {
+      "file": "caitlyn_base_gradientv.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_gradientv.tex",
+      "sha256": "31543e17d94608a8021c46e7284634f9398a0ad1b34cc0cded5278fb3117496b"
+    },
+    {
+      "file": "caitlyn_base_groundglowalpha.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_groundglowalpha.tex",
+      "sha256": "32de4c04d5894a999a46572f4137abfd0174097762e762ec7cde2dfd0ebf89a3"
+    },
+    {
+      "file": "caitlyn_base_impactglow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_impactglow.tex",
+      "sha256": "f7a4187631b5e4570e66dbf145a54f1894826b22a91ff3d9977062ed59ec8967"
+    },
+    {
+      "file": "caitlyn_base_leaf.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_leaf.tex",
+      "sha256": "f92b3d016e9e16743b43f40ad34c683bcf660f15b7100d72826be9e3653941ef"
+    },
+    {
+      "file": "caitlyn_base_mesh_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_mesh_01.tex",
+      "sha256": "e94dadb0273c4404b08c2d66d722bf9328480c4df7f841f12e1057b7c746310c"
+    },
+    {
+      "file": "caitlyn_base_mis_add.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_mis_add.tex",
+      "sha256": "b4f6754ebbb2b9441248da053133b24c03334eac605755e939627f3642283b5a"
+    },
+    {
+      "file": "caitlyn_base_mis_ribbon.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_mis_ribbon.tex",
+      "sha256": "e7c1970475f5a29aecd59713b32f1b1df93bc14a630d87b3017a6cc00674f600"
+    },
+    {
+      "file": "caitlyn_base_mis_shootingstars_smooth.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_mis_shootingstars_smooth.tex",
+      "sha256": "87d85014eb8194d4a1aadc20ce40b824c4c0079ec43bf9d4fba93765792ebaa9"
+    },
+    {
+      "file": "caitlyn_base_proj.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_proj.tex",
+      "sha256": "a892d2e4e56a8f72939b3a5b3a7b5a297bd42c10cedfad0908b8046c9defdc2f"
+    },
+    {
+      "file": "caitlyn_base_q2_bullet_head_glow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q2_bullet_head_glow.tex",
+      "sha256": "275685e5226f6ba2b334cc26167364cf65ddd0bff5386ec87b25bec95d5cd8c8"
+    },
+    {
+      "file": "caitlyn_base_q_flamehead.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_flamehead.tex",
+      "sha256": "7d01be41a66189eca49907aeb373afff6f5f51211678038ac2ce540cf4d53a0b"
+    },
+    {
+      "file": "caitlyn_base_q_mis_trail_2x2.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_mis_trail_2x2.tex",
+      "sha256": "cd75a6291d0e2ab5d0c425b3599d12f4df4df6c3059e3f5acf84df5db7c2ccb7"
+    },
+    {
+      "file": "caitlyn_base_q_shield_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_shield_mult.tex",
+      "sha256": "cc0e139c773dc5d5a8c3a164fb241eff09968ed145b61c8d42ffc10adf2d05c2"
+    },
+    {
+      "file": "caitlyn_base_q_trail.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_trail.tex",
+      "sha256": "c3484fa9753ba780cd46b1eb9168d2fc665a54b155ac259eeb36dda281a70fca"
+    },
+    {
+      "file": "caitlyn_base_q_tx_cm.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_q_tx_cm.tex",
+      "sha256": "3d2d2391cebcc0ccdd33dd43873701bf8d48ca0a28932acae16baf661f0c7b1b"
+    },
+    {
+      "file": "caitlyn_base_r_decal_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_r_decal_01.tex",
+      "sha256": "84ca06697bd9e0d44b20c7164eff68da6551b271b9cd3b22f21d5ec6b875d5a3"
+    },
+    {
+      "file": "caitlyn_base_r_decal_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_r_decal_02.tex",
+      "sha256": "4406a5d728dba87654ed07baa709ec0056a75a4723a1cdd50eee39c84785fe83"
+    },
+    {
+      "file": "caitlyn_base_r_hexlines.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_r_hexlines.tex",
+      "sha256": "88c6de24d7262d3b8436185cf6a6cdba85c26bee249c085d9127981dd64038a8"
+    },
+    {
+      "file": "caitlyn_base_r_hit_flash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_r_hit_flash.tex",
+      "sha256": "a4c99ed95cb64ee30282cfe8b3cf48c3beb937503bd8898b8397074be3ea55c5"
+    },
+    {
+      "file": "caitlyn_base_smokeerode.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_smokeerode.tex",
+      "sha256": "d502c1c112180e1886c304bfb0bb4330bbe4159a688799e756f82e830696f548"
+    },
+    {
+      "file": "caitlyn_base_smoketraill.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_smoketraill.tex",
+      "sha256": "4765d7273c60077b620bd8e71213d417ef9ded324793d2a596702b6790614ad1"
+    },
+    {
+      "file": "caitlyn_base_smoke_erode.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_smoke_erode.tex",
+      "sha256": "d502c1c112180e1886c304bfb0bb4330bbe4159a688799e756f82e830696f548"
+    },
+    {
+      "file": "caitlyn_base_soft_glow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_soft_glow.tex",
+      "sha256": "b9a388cde0688e413bab13a0a4fb1319de0de08fc57936187e9ddb4f3188fd94"
+    },
+    {
+      "file": "caitlyn_base_trail.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_trail.tex",
+      "sha256": "c3484fa9753ba780cd46b1eb9168d2fc665a54b155ac259eeb36dda281a70fca"
+    },
+    {
+      "file": "caitlyn_base_ult_mis_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_ult_mis_mult.tex",
+      "sha256": "bbdb970ee240ac56d2ce39613884a486badbe0f58b6846a0c194c0d48a363642"
+    },
+    {
+      "file": "caitlyn_base_voidslash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_voidslash.tex",
+      "sha256": "df5bcd3380eda13ce3f35a072e56faa52a6f2e7d32ad51e669bfd93f140f4bdd"
+    },
+    {
+      "file": "caitlyn_base_white_rgb.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_white_rgb.tex",
+      "sha256": "cf589f62041fec1401d8737e05736f60ba8fc54b56f2a5d72019712451039037"
+    },
+    {
+      "file": "caitlyn_base_wisplayertrail.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_wisplayertrail.tex",
+      "sha256": "37f28225f63e3dcb2442bb3914aaaeb17e73631d1dfa9833759d4482de054b07"
+    },
+    {
+      "file": "caitlyn_base_wisps_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_wisps_01.tex",
+      "sha256": "37419b0da2f97067082e5e3d8f9133e4ce77b9b92040566dca46c4f6f11ed932"
+    },
+    {
+      "file": "caitlyn_base_wisps_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_wisps_mult.tex",
+      "sha256": "2f6bf6ceb1f38ec7018ecfbb8d040e4506ccfa8818431d0f7add5b18cc82765c"
+    },
+    {
+      "file": "caitlyn_base_wisp_mask.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_wisp_mask.tex",
+      "sha256": "6b1b4f68af3bf0669aef6cdcc26af353010a7b82cd84b18f14dbcb3666b7b457"
+    },
+    {
+      "file": "caitlyn_base_wisp_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_wisp_mult.tex",
+      "sha256": "818e25ab2973a2e84382e3d5edee4b0c3704ec048c4a5b8279ecdaed6c551ad8"
+    },
+    {
+      "file": "caitlyn_base_w_indicator_ring.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_w_indicator_ring.tex",
+      "sha256": "7fa93f2ffb7189a1baf77c2596cfcc9d57e705c4b5fe9788cab256468ebbab28"
+    },
+    {
+      "file": "caitlyn_base_w_trap_gadget.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_w_trap_gadget.tex",
+      "sha256": "340ca33a974eb2add28fd70a80dc7023052f7876cd6c4969e52838ef140e8f30"
+    },
+    {
+      "file": "caitlyn_base_z_gunspin.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_z_gunspin.tex",
+      "sha256": "d7109afcd56e7a3b46b83b43caaaf1aae14efacb87b8e61c1e8fdd7c229c6ed3"
+    },
+    {
+      "file": "caitlyn_base_z_ring_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_z_ring_02.tex",
+      "sha256": "b01339867417dd18506bcaa1c51ba9bb7135ce1c740975f3f5f77f487c12d141"
+    },
+    {
+      "file": "caitlyn_base_z_shell.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_base_z_shell.tex",
+      "sha256": "b7fecd66b95aa88863605931f9a09ca2942da4860498ecccea2ac75d85f5ca00"
+    },
+    {
+      "file": "caitlyn_black.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_black.tex",
+      "sha256": "205d2cc3f5485e2d03b3ac29b82c6e9e9a9986f43d2b017ace3db6e52898a5b3"
+    },
+    {
+      "file": "caitlyn_blast_nova_bunny_04.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_blast_nova_bunny_04.tex",
+      "sha256": "712435cc73978aad95487df999924aafbfa9b6f7424d709a1617cd193d1c4e33"
+    },
+    {
+      "file": "caitlyn_color-bellcurve.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-bellcurve.tex",
+      "sha256": "15aa99c5555d17997d5498b987e586f65e6d12da86178571e43eaa98cd2f428d"
+    },
+    {
+      "file": "caitlyn_color-firemissile.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-firemissile.tex",
+      "sha256": "cf4db0cd7a4880a642b69c80394665dd9fdb388d6986c4e91a51ac5f114a3ebc"
+    },
+    {
+      "file": "caitlyn_color-hold.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-hold.tex",
+      "sha256": "bc06557b44402fee1498430bd4008df9598085f44b29fea2f02218473674b2f8"
+    },
+    {
+      "file": "caitlyn_color-lasersight_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-lasersight_02.tex",
+      "sha256": "000f6002bae6ede06a00bdaf56e9e2dc0ccd1981d93d50bb3476bcd4bc27fbe4"
+    },
+    {
+      "file": "caitlyn_color-rampdown.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-rampdown.tex",
+      "sha256": "3fac764e02b2cb8dc91ff01feb7401681e8dffd631f9661a3452d210eea43220"
+    },
+    {
+      "file": "caitlyn_color-slowwake_slow_fade_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-slowwake_slow_fade_02.tex",
+      "sha256": "cabd50911bc290f0d621883c89147bfff7f49b68f13b1cd3e59dae622805267b"
+    },
+    {
+      "file": "caitlyn_color-smoke32.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-smoke32.tex",
+      "sha256": "8e510838d9caee19e71ab4ae34ec8beea820fb859736e298272f92348315120f"
+    },
+    {
+      "file": "caitlyn_color-white32.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_color-white32.tex",
+      "sha256": "cf589f62041fec1401d8737e05736f60ba8fc54b56f2a5d72019712451039037"
+    },
+    {
+      "file": "caitlyn_gear_05.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_gear_05.tex",
+      "sha256": "bad1d498c61aa43642e4663d91da94d192c4ec272890d5e1a7d282cd3aa6f4bc"
+    },
+    {
+      "file": "caitlyn_gear_glow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_gear_glow.tex",
+      "sha256": "7e41020c66f823ac1ec3afdac299bbaa1a3e9d572a2d7777c920d4708247e260"
+    },
+    {
+      "file": "caitlyn_gear_glow_2.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_gear_glow_2.tex",
+      "sha256": "fb887d5ea3460baed1fbfa757843ee2d0f06325d29b228d7bc381946d298817e"
+    },
+    {
+      "file": "caitlyn_gear_glow_3.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_gear_glow_3.tex",
+      "sha256": "42fad25367c749eeb82de1180a95e00a22d77479bf608110792dec6090177b61"
+    },
+    {
+      "file": "caitlyn_global_indicator_ring.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_global_indicator_ring.tex",
+      "sha256": "391eefd9c09e90d3b7ff7d4aefc16d6153842ab4d2f9ccf3081700bdb283bbdb"
+    },
+    {
+      "file": "caitlyn_hex_net.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_hex_net.tex",
+      "sha256": "db54c36a9c75b29bfa3d4efa766fe8898c38ee7cc206eb52c546136342eb1bd1"
+    },
+    {
+      "file": "caitlyn_lasersight_beam.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_lasersight_beam.tex",
+      "sha256": "589778cab36795a38bd89eadf833a03fbbaaa74714e6b16d014aba733c77206e"
+    },
+    {
+      "file": "caitlyn_lrheadshottarget_beam.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_lrheadshottarget_beam.tex",
+      "sha256": "8cde9048879874b2f99ef92f71511f52da69bbaca80c1370d28472ece0ca6196"
+    },
+    {
+      "file": "caitlyn_musket_ball_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_musket_ball_02.tex",
+      "sha256": "2b36e816ba8598bd0c4675517459053d495067e11e295e863692cc28c20c7903"
+    },
+    {
+      "file": "caitlyn_ring_highres.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_ring_highres.tex",
+      "sha256": "d417dc226199af9d8f7ac70822d2a8b4be05d0b0669967f547c03c5cda826784"
+    },
+    {
+      "file": "caitlyn_ring_purp_03.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_ring_purp_03.tex",
+      "sha256": "26a0022cc36fb2522546075b2c3e1cb23775e9c4408c014274215a79ea252670"
+    },
+    {
+      "file": "caitlyn_r_snipersight.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_r_snipersight.tex",
+      "sha256": "1c967c93a687fccdb58413d352a8965c7a0c9e2b8472b3d51183e147a9ab9826"
+    },
+    {
+      "file": "caitlyn_sand_04.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_sand_04.tex",
+      "sha256": "f131c777cf4367926173b3228bda8240e6d881fed420ebb15dec09e6dc127bae"
+    },
+    {
+      "file": "caitlyn_skin06_balll_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_skin06_balll_01.tex",
+      "sha256": "a184b768dbaf5cf6025c17d809f6ef6c4bd82ef5f2fd9a8e4367eaa18867748a"
+    },
+    {
+      "file": "caitlyn_sliver.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_sliver.tex",
+      "sha256": "b67db25d8914dd064cf835142c3550c895540fdf858e3c1163b403de4d46d26e"
+    },
+    {
+      "file": "caitlyn_slow_lines_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_slow_lines_02.tex",
+      "sha256": "10bb67b1c1eb0b6e8e0527e2b6495a186a15f43de083d53d29f608b9c2743955"
+    },
+    {
+      "file": "caitlyn_voidslash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_voidslash.tex",
+      "sha256": "fd50f8d9eed48761d517a556bb9ab7223e9719014bdefade8a3d79e530e7d63e"
+    },
+    {
+      "file": "caitlyn_whitebox.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/caitlyn_whitebox.tex",
+      "sha256": "5b2d79f7978d19750af7af3bbb3b2adb89e470e93d40f24b0ea5ea630ee31b23"
+    },
+    {
+      "file": "clouds_erosion.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/clouds_erosion.tex",
+      "sha256": "6353995943bc12b9ec20e43225cc7ab892a8c2c5db524f763d2130662202c857"
+    },
+    {
+      "file": "color-rainbow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/color-rainbow.tex",
+      "sha256": "59071c3f55e1a97d9766ca8e63d4c6522024a0202e95de0fca0a8c583fc5977a"
+    },
+    {
+      "file": "color-rainbow_02.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/color-rainbow_02.tex",
+      "sha256": "f3285ae5ac1a0e9a4a538909a69d628494c3acab3ba84b7a04bfd04a8dd7811a"
+    },
+    {
+      "file": "defaultfalloff.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/defaultfalloff.tex",
+      "sha256": "670fd6f2bb17fde156579652b504342a5cb6e62387c3d79e0371f8543a486373"
+    },
+    {
+      "file": "dome_clouds.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/dome_clouds.tex",
+      "sha256": "b231253745be1c200106a20f90fed44c573058dbdbf3f97f5fb9ec865662686e"
+    },
+    {
+      "file": "env_mb_brazier_dust.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/env_mb_brazier_dust.tex",
+      "sha256": "5b506f62abd76162d52f5a70e1a6d7152e77241f1c8773d71e314734967fcc14"
+    },
+    {
+      "file": "flash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/flash.tex",
+      "sha256": "c121a2391aba4a292d206f6346459650651c37f2dc96fe4a5236d613c91799b7"
+    },
+    {
+      "file": "heal_sparks.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/heal_sparks.tex",
+      "sha256": "6095659050f6038c848cec741f93725c406d59db91d2c2a915ca3374c60c39e9"
+    },
+    {
+      "file": "hiteffect.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/hiteffect.tex",
+      "sha256": "1c4fedc1a87cdccb3641b3faa13c312b9116cc68fd8a22bde757d63b56b87f89"
+    },
+    {
+      "file": "hiteffect_gradient_64.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/hiteffect_gradient_64.tex",
+      "sha256": "dc9807463354d41df294a02ac43c982a0dc22988504a452c6b4362c1a4d4d358"
+    },
+    {
+      "file": "hit_bits.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/hit_bits.tex",
+      "sha256": "45bf6e039a752783b52031e71a7d7aea50586c6c08f79782cc9d86a804defc20"
+    },
+    {
+      "file": "hit_spark_blue.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/hit_spark_blue.tex",
+      "sha256": "d8c0016be9ec0ba13e5e36f7feb1f0fa4a80ba98f0a69729c8c35b2becac677b"
+    },
+    {
+      "file": "hit_splash.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/hit_splash.tex",
+      "sha256": "fe9e74c7535c88831c235260279a509736b134f1b3a9b818985758538f37b406"
+    },
+    {
+      "file": "livingforge_indicator_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/livingforge_indicator_mult.tex",
+      "sha256": "098550e4002b4ca863bc6dd04c796d2c37e63d6b6dfd07bd42ced1a755cb1bc3"
+    },
+    {
+      "file": "lux_skin07_smoke.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/lux_skin07_smoke.tex",
+      "sha256": "01430621ee32b76fd6384d348548c2e7c8f045bcc88da5bd5b1640b775767dae"
+    },
+    {
+      "file": "lux_skin07_trail.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/lux_skin07_trail.tex",
+      "sha256": "681a3c952d59ec35535e936918b238f659cc48683196a4d19d2841bde19e1e23"
+    },
+    {
+      "file": "morgana_skin05_wisps_mis_mult.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/morgana_skin05_wisps_mis_mult.tex",
+      "sha256": "c148451a108bb585f777de00f0113bb0415261b359e40172bdbec2ee0bf74e44"
+    },
+    {
+      "file": "radial_crit.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/radial_crit.tex",
+      "sha256": "97a4b2af9f06be572888c8a3cd5c2800f1262c67bb953887c2633369a709a589"
+    },
+    {
+      "file": "radial_headshot.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/radial_headshot.tex",
+      "sha256": "97a4b2af9f06be572888c8a3cd5c2800f1262c67bb953887c2633369a709a589"
+    },
+    {
+      "file": "sion_base_sl_dust_01.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/sion_base_sl_dust_01.tex",
+      "sha256": "3265b6f79e61e988d523b9c6a3fdd756bf9c8b43c1eb25f1e71d626a3fed65e7"
+    },
+    {
+      "file": "softglow.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/softglow.tex",
+      "sha256": "171de3f10861dc01bba80381e8ae7eb2ca74475fd5a7164e6d7a41247503ebf3"
+    },
+    {
+      "file": "spark.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/spark.tex",
+      "sha256": "938f91619f0bf2b08354fe26221628bb25e16ad1a9a298242189566623a74a94"
+    },
+    {
+      "file": "sparks.png",
+      "source": "assets/characters/caitlyn/skins/base/particles/sparks.tex",
+      "sha256": "0d7b4aaf984f621168c9df0bba62be4d766a135eb41cd02914f1e2f52368a203"
+    },
+    {
+      "file": "caitlyntrap_base_tx_cm.png",
+      "source": "assets/characters/caitlyntrap/skins/base/caitlyntrap_base_tx_cm.tex",
+      "sha256": "b192d7df652c736d5e9c14c488433bef79bfdc070528ebc04bb90fd4c2546580"
+    }
+  ]
+}

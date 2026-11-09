@@ -67,8 +67,14 @@ export class Combat {
   }
   move(point){this.recordCommand('move',point);this.cancel();this.order={type:'move',point:copy(point)};this.activeTargetId=null;}
   stop(){this.recordCommand('stop');this.cancel('stop');this.order={type:'stop'};this.activeTargetId=null;}
+  rangeFor(target){return this.range;}
+  selectTarget(position,cursor){
+    const anchor=this.priority==='champion'?position:cursor;
+    return this.targets.filter(t=>inAttackRange(position,t,this.rangeFor(t))).sort((a,b)=>distance(a.position,anchor)-distance(b.position,anchor)||a.id.localeCompare(b.id))[0]??null;
+  }
+  attackPayload(attack,target){return {damage:Math.round(this.attackDamage??ATTACK_DAMAGE)*(this.empowered?2:1),metadata:{attackId:attack.id,isBasicAttack:true}};}
   attackMove(point,position){
-    const next=selectAttackMoveTarget(position,point,this.targets,this.range,this.priority);
+    const next=this.selectTarget(position,point);
     this.recordCommand('attackMove',next?null:point,next?.id??null);
     if(this.windup&&next?.id!==this.windup.targetId)this.cancel('retarget');
     this.order={type:'attackMove',point:copy(point)};
@@ -105,7 +111,7 @@ export class Combat {
     for(const target of this.targets){if(!target.alive&&this.time>=target.respawnAt){target.alive=true;target.health=target.maxHealth;target.generation++;}}
     for(let i=this.bolts.length-1;i>=0;i--){const bolt=this.bolts[i],victim=this.target(bolt.targetId);bolt.remaining-=dt;
       if(!victim?.alive||victim.generation!==bolt.generation){this.bolts.splice(i,1);continue;}
-      if(bolt.remaining<=0){this.damageTarget(victim,bolt.damage,bolt.priorityHit);this.bolts.splice(i,1);}
+      if(bolt.remaining<=0){this.damageTarget(victim,bolt.damage,bolt.priorityHit,bolt.metadata);this.bolts.splice(i,1);}
     }
     const wasWinding=!!this.windup;
     if(this.windup){
@@ -113,7 +119,7 @@ export class Combat {
       if(!victim?.alive||victim.generation!==attack.generation)this.cancel('target-lost');
       else if(this.time+1e-8>=attack.releaseAt){
         this.windup=null;this.released++;this.readyAt=attack.startedAt+attack.period;
-        const damage=Math.round(this.attackDamage??ATTACK_DAMAGE)*(this.empowered?2:1),priorityHit=this.circuit&&victim.id===this.markedId;
+        const payload=this.attackPayload(attack,victim),damage=payload.damage,priorityHit=this.circuit&&victim.id===this.markedId;
         this.empowered=false;
         if(this.lastReleasePosition){this.kiteOpportunities++;if(distance(position,this.lastReleasePosition)>=60)this.kiteSteps++;}
         this.lastReleasePosition=copy(position);
@@ -122,24 +128,24 @@ export class Combat {
           if(spaced){this.markedProgress++;this.markReleasePosition=copy(position);this.circuitHint='';if(this.markedProgress>=this.markRequired)this.rotateMark(true);}
           else{this.stationaryReleases++;this.circuitHint=`Reposicione ${this.stepRequired} u para pontuar o próximo disparo`;}
         }else if(this.advancedCircuit){this.offTargetReleases++;this.circuitHint='Troque para o alvo marcado';}
-        this.events.push({type:'release',id:attack.id,targetId:victim.id});
-        if(this.ranged){const duration=distance(position,victim.position)/this.profile.missileSpeed;this.bolts.push({id:attack.id,targetId:victim.id,generation:victim.generation,origin:copy(position),duration,remaining:duration,damage,priorityHit});}
-        else this.damageTarget(victim,damage,priorityHit);
+        this.events.push({type:'release',id:attack.id,targetId:victim.id,...payload.metadata});
+        if(this.ranged){const duration=distance(position,victim.position)/this.profile.missileSpeed;this.bolts.push({id:attack.id,targetId:victim.id,generation:victim.generation,origin:copy(position),duration,remaining:duration,damage,priorityHit,metadata:payload.metadata});}
+        else this.damageTarget(victim,damage,priorityHit,payload.metadata);
       }
       // Never translate the actor during the preparation/release frame.
       if(wasWinding)return false;
     }
     if(this.playerHealth<=0||!allowActions)return false;
     const direct=this.order.type==='attack'?this.target(this.order.targetId):null;
-    const selected=direct?.alive?direct:this.order.type==='attackMove'?selectAttackMoveTarget(position,this.order.point,this.targets,this.range,this.priority):null;
+    const selected=direct?.alive?direct:this.order.type==='attackMove'?this.selectTarget(position,this.order.point):null;
     this.activeTargetId=selected?.id??null;
-    if(selected&&inAttackRange(position,selected,this.range)){
+    if(selected&&inAttackRange(position,selected,this.rangeFor(selected))){
       if(allowStart&&this.time+1e-8>=this.readyAt)this.beginAttack(selected);
       return false;
     }
-    if(allowStart&&this.time>=this.readyAt&&this.targets.some(t=>inAttackRange(position,t,this.range)))this.readyIdleTime+=dt;
+    if(allowStart&&this.time>=this.readyAt&&this.targets.some(t=>inAttackRange(position,t,this.rangeFor(t))))this.readyIdleTime+=dt;
     if(direct?.alive){
-      const d=distance(position,direct.position),remaining=Math.max(0,d-this.range-PLAYER_RADIUS-direct.radius+1);
+      const d=distance(position,direct.position),remaining=Math.max(0,d-this.rangeFor(direct)-PLAYER_RADIUS-direct.radius+1);
       if(d>0){moveTarget.x=position.x+(direct.position.x-position.x)/d*remaining;moveTarget.z=position.z+(direct.position.z-position.z)/d*remaining;}
     }else if(this.order.type==='move'||this.order.type==='attackMove')Object.assign(moveTarget,this.order.point);
     else return false;

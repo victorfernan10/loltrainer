@@ -1,3 +1,4 @@
+import {CaitlynAnimator} from './caitlyn-animation.js';
 import {XerathAnimator} from './xerath-animation.js';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -14,7 +15,9 @@ export function loadPlayerModel(id){
 }
 async function load(id){
   const loader=new GLTFLoader();let gltf,clips,maps;
-  if(id==='xerath'){
+  if(id==='caitlyn'){
+    [gltf,...maps]=await Promise.all([loader.loadAsync('/assets/caitlyn/caitlyn.glb'),texture('/assets/caitlyn/caitlyn_base_tx_cm.png'),texture('/assets/caitlyn/caitlyn_base_teacup_tx_cm.png'),texture('/assets/caitlyn/caitlyn_base_flag_tx_cm.png')]);clips=gltf.animations;
+  }else if(id==='xerath'){
     [gltf,...maps]=await Promise.all([loader.loadAsync('/assets/xerath/xerath.glb'),texture('/assets/xerath/xerath_base_tx_cm.png')]);clips=gltf.animations;
   }else if(id==='quinn'){
     [gltf,...maps]=await Promise.all([loader.loadAsync('/assets/quinn/quinn.glb'),texture('/assets/quinn/quinn_base_tx_cm.png')]);clips=gltf.animations;
@@ -27,13 +30,14 @@ async function load(id){
     const [base,spells,...textures]=await Promise.all([loader.loadAsync('/assets/kayle.glb'),loader.loadAsync('/assets/kayle-spells.glb'),...names.map(n=>texture(`/assets/${n}.png`))]);
     gltf=base;clips=[...base.animations,...spells.animations];maps=Object.fromEntries(names.map((n,i)=>[n,textures[i]]));
   }
-  const model=gltf.scene;model.scale.setScalar(id==='xerath'?1.7:id==='quinn'?1.3:id==='kayle'?1.175:id==='syndra'?1.25:1);
+  const model=gltf.scene;model.scale.setScalar(id==='caitlyn'?1.05:id==='xerath'?1.7:id==='quinn'?1.3:id==='kayle'?1.175:id==='syndra'?1.25:1);
   model.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.frustumCulled=false;const name=o.material.name.toLowerCase();
-    o.material.map=(id==='syndra'||id==='quinn'||id==='xerath')?maps[0]:id==='leblanc'?maps[name==='weapon'||name==='cape'?1:0]:maps[name.includes('wings')?'kayle_base_wings_tx_cm':name.includes('sword')?'kayle_base_sword_tx_cm':name==='level11'?'kayle_base_lvl11_tx_cm':'kayle_base_tx_cm'];
+    o.material.map=id==='caitlyn'?maps[name==='teacup'?1:name==='flag'?2:0]:(id==='syndra'||id==='quinn'||id==='xerath'||id==='caitlyn')?maps[0]:id==='leblanc'?maps[name==='weapon'||name==='cape'?1:0]:maps[name.includes('wings')?'kayle_base_wings_tx_cm':name.includes('sword')?'kayle_base_sword_tx_cm':name==='level11'?'kayle_base_lvl11_tx_cm':'kayle_base_tx_cm'];
+    if(id==='caitlyn'&&['teacup','flag'].includes(name))o.visible=false;
     if(id==='xerath'){o.material.vertexColors=false;if(o.material.emissive){o.material.emissive.set('#376f95');o.material.emissiveMap=maps[0];o.material.emissiveIntensity=.5;}}
     o.material.side=THREE.DoubleSide;o.material.transparent=false;o.material.alphaTest=name==='kayle_base_body_mat'?0:.05;o.material.depthWrite=true;o.material.needsUpdate=true;
   });
-  const animator=id==='xerath'?new XerathAnimator(model,clips):id==='quinn'?new QuinnAnimator(model,clips):id==='syndra'?new SyndraAnimator(model,clips):id==='leblanc'?new LeBlancAnimator(model,clips):new KayleAnimator(model,clips);
+  const animator=id==='caitlyn'?new CaitlynAnimator(model,clips):id==='xerath'?new XerathAnimator(model,clips):id==='quinn'?new QuinnAnimator(model,clips):id==='syndra'?new SyndraAnimator(model,clips):id==='leblanc'?new LeBlancAnimator(model,clips):new KayleAnimator(model,clips);
   if(id==='quinn'){
     const [valor,map]=await Promise.all([loader.loadAsync('/assets/quinn/valor.glb'),texture('/assets/quinn/quinnvalor_base_tx_cm.png')]);
     valor.scene.traverse(o=>{if(o.isMesh){o.material.map=map;o.material.side=THREE.DoubleSide;o.material.alphaTest=.05;o.frustumCulled=false;o.castShadow=true;}});

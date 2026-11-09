@@ -66,3 +66,9 @@ body[data-drill=aim] .ability,body[data-drill=aim] .stats,body[data-drill=aim] .
 body[data-drill=aim] #settings:has(#controls:not([hidden]))~#aimHud{display:none}
 body[data-drill=aim] #attackHud{left:auto;right:28px;transform:none;width:330px}
 @media(max-width:900px){body[data-drill=aim] #attackHud{right:10px;width:280px}#aimHud{right:10px;width:220px}}
+
+#spacingHud{position:absolute;right:28px;top:175px;width:250px;padding:15px;border:1px solid #d4bc8066;border-radius:9px;background:#13231feb;display:flex;flex-direction:column;gap:10px;font-size:11px;color:#dfd2bb}#spacingHud b{color:#e8cf91}#spacingHud small{line-height:1.5;color:#b9c8bb}
+body[data-drill=spacing] .ability,body[data-drill=spacing] .stats,body[data-drill=spacing] .standard-hazards,body[data-drill=spacing] #combatSettings>label:has(#combatCircuit),body[data-drill=spacing] label:has(#combatHazards){display:none}
+body[data-drill=spacing] #settings:has(#controls:not([hidden]))~#spacingHud{display:none}
+body[data-drill=spacing] #attackHud{left:auto;right:28px;transform:none;width:330px}
+@media(max-width:900px){body[data-drill=spacing] #attackHud{right:10px;width:280px}#spacingHud{right:10px;width:220px}}

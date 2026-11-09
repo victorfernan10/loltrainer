@@ -6,11 +6,11 @@ page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()
 try{
   await page.goto(process.env.TRAINER_URL||'http://127.0.0.1:5173');await page.waitForFunction(()=>window.__modelLoaded&&__trainer.combatReady&&__trainer.loadedEnemies.length===8,null,{timeout:90000});
   await page.click('#openPlaylist');await page.selectOption('#playlistDuration','90');await page.selectOption('#playlistDifficulty','3');
-  assert.match(await page.textContent('#playlistEstimate'),/15:00/);assert.equal(await page.locator('#playlistOrder li').count(),PLAYLIST_MODES.length);
+  assert.match(await page.textContent('#playlistEstimate'),/16:30/);assert.equal(await page.locator('#playlistOrder li').count(),PLAYLIST_MODES.length);
   await page.screenshot({path:'tools/playlist-setup.png'});await page.click('#beginPlaylist');
   for(let i=0;i<PLAYLIST_MODES.length;i++){
     await page.waitForFunction(index=>__trainer.playlist?.index===index&&!__trainer.playlist.loading&&__trainer.session?.state==='running',i,{timeout:90000});
-    const config=await page.evaluate(()=>__trainer.session.config);assert.equal(config.drill,PLAYLIST_MODES[i]);assert.equal(config.duration,90);assert.equal(config.difficulty,3);assert.equal(config.champion,config.drill==='aim'?'xerath':config.drill==='vault'?'quinn':'kayle');assert.equal(await page.locator('#results').isVisible(),false);
+    const config=await page.evaluate(()=>__trainer.session.config);assert.equal(config.drill,PLAYLIST_MODES[i]);assert.equal(config.duration,90);assert.equal(config.difficulty,3);assert.equal(config.champion,config.drill==='spacing'?'caitlyn':config.drill==='aim'?'xerath':config.drill==='vault'?'quinn':'kayle');assert.equal(await page.locator('#results').isVisible(),false);
     if(i===0){await page.keyboard.press('Escape');const time=await page.evaluate(()=>__trainer.session.time);await page.waitForTimeout(250);assert.equal(await page.evaluate(()=>__trainer.session.time),time);await page.keyboard.press('Escape');await page.screenshot({path:'tools/playlist-running.png'});}
     if(config.drill==='combat'){await page.evaluate(()=>{__trainer.combat.playerHealth=0;});await page.waitForFunction(()=>__trainer.session.playlistKnockouts===1);assert.equal(await page.evaluate(()=>__trainer.playlist.index),i);assert.ok(await page.evaluate(()=>__trainer.combat.playerHealth>0));}
     blocks.push({mode:config.drill,duration:config.duration,difficulty:config.difficulty,champion:config.champion});

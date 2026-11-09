@@ -9,7 +9,7 @@ test('playlist visits all drills once with fixed duration/difficulty and restore
     const p=new TrainingPlaylist(base,{duration,difficulty});
     for(let i=0;i<PLAYLIST_MODES.length;i++){
       const config=p.config();assert.equal(config.duration,duration);assert.equal(config.difficulty,difficulty);assert.equal(config.abilityPower,200);
-      assert.equal(config.trainingProfile,'advanced');assert.equal(config.champion,config.drill==='aim'?'xerath':config.drill==='vault'?'quinn':'syndra');assert.equal(config.speed,config.drill==='vault'?330:340);
+      assert.equal(config.trainingProfile,'advanced');assert.equal(config.champion,config.drill==='spacing'?'caitlyn':config.drill==='aim'?'xerath':config.drill==='vault'?'quinn':'syndra');assert.equal(config.speed,config.drill==='spacing'?325:config.drill==='vault'?330:340);
       config.skills.push('modified');assert.deepEqual(base.skills,['ezrealQ']);assert.deepEqual(p.base.skills,['ezrealQ']);
       assert.equal(p.complete({config}),i<PLAYLIST_MODES.length-1);
     }

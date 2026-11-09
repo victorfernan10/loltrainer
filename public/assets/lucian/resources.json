@@ -1,0 +1,18 @@
+{
+  "sourceWadSha256": "d6520dd06b4d1b2ea18e5204b7797f613e4ffae9b98b90ad234f1fa6f7c318f7",
+  "skinScale": 1.0499999523162842,
+  "texture": "lucian_base_tx_cm.png",
+  "clips": [
+    "lucian_attack1",
+    "lucian_attack2",
+    "lucian_death",
+    "lucian_idle1",
+    "lucian_idle_ready",
+    "lucian_run1",
+    "lucian_run1_in",
+    "lucian_run2"
+  ],
+  "materials": [
+    "Lucian_Base_Mat"
+  ]
+}
